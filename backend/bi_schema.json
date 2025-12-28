@@ -1,0 +1,66 @@
+{
+  "dimensions": [
+    {
+      "name": "Dim_User",
+      "columns": [
+        {"name": "user_id", "type": "INTEGER", "primary_key": true},
+        {"name": "name", "type": "TEXT"},
+        {"name": "join_date", "type": "TEXT"},
+        {"name": "premium_status", "type": "TEXT"},
+        {"name": "location_id", "type": "INTEGER"}
+      ]
+    },
+    {
+      "name": "Dim_Device",
+      "columns": [
+        {"name": "device_id", "type": "INTEGER", "primary_key": true},
+        {"name": "device_type", "type": "TEXT"},
+        {"name": "firmware_version", "type": "TEXT"},
+        {"name": "manufacturer", "type": "TEXT"}
+      ]
+    },
+    {
+      "name": "Dim_Location",
+      "columns": [
+        {"name": "location_id", "type": "INTEGER", "primary_key": true},
+        {"name": "city", "type": "TEXT"},
+        {"name": "state", "type": "TEXT"},
+        {"name": "country", "type": "TEXT"},
+        {"name": "timezone", "type": "TEXT"}
+      ]
+    },
+    {
+      "name": "Dim_Time",
+      "columns": [
+        {"name": "time_key", "type": "TEXT", "primary_key": true},
+        {"name": "date", "type": "TEXT"},
+        {"name": "hour", "type": "INTEGER"},
+        {"name": "day_of_week", "type": "TEXT"},
+        {"name": "is_holiday", "type": "BOOLEAN"}
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "name": "Fact_Device_Readings",
+      "columns": [
+        {"name": "reading_id", "type": "INTEGER", "primary_key": true},
+        {"name": "device_id", "type": "INTEGER", "foreign_key": "Dim_Device.device_id"},
+        {"name": "time_key", "type": "TEXT", "foreign_key": "Dim_Time.time_key"},
+        {"name": "value", "type": "REAL"},
+        {"name": "unit", "type": "TEXT"}
+      ]
+    },
+    {
+      "name": "Fact_User_Actions",
+      "columns": [
+        {"name": "action_id", "type": "INTEGER", "primary_key": true},
+        {"name": "user_id", "type": "INTEGER", "foreign_key": "Dim_User.user_id"},
+        {"name": "device_id", "type": "INTEGER", "foreign_key": "Dim_Device.device_id"},
+        {"name": "time_key", "type": "TEXT", "foreign_key": "Dim_Time.time_key"},
+        {"name": "action_type", "type": "TEXT"},
+        {"name": "duration_ms", "type": "INTEGER"}
+      ]
+    }
+  ]
+}
