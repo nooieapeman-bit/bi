@@ -2,281 +2,638 @@
   "dimensions": [
     {
       "name": "Dim_User",
-      "description": "用户维度表",
       "columns": [
+        {
+          "name": "surrogate_key",
+          "type": "INTEGER",
+          "primary_key": true,
+          "foreign_key": null,
+          "description": "\u4ee3\u7406\u4e3b\u952e (App/Region\u72ec\u7acb)"
+        },
         {
           "name": "user_id",
           "type": "INTEGER",
-          "primary_key": true,
-          "description": "用户ID"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u4e1a\u52a1\u7528\u6237ID (Source ID)"
         },
         {
-          "name": "name",
-          "type": "TEXT",
-          "description": "用户姓名"
+          "name": "app_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Dim_App.app_key",
+          "description": "\u6240\u5c5e\u5e94\u7528ID"
+        },
+        {
+          "name": "region_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Dim_Region.region_key",
+          "description": "\u6240\u5c5e\u533a\u57dfID"
         },
         {
           "name": "join_date",
           "type": "TEXT",
-          "description": "注册日期"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u6ce8\u518c\u65e5\u671f"
         },
         {
           "name": "premium_status",
           "type": "TEXT",
-          "description": "会员状态"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u4f1a\u5458\u72b6\u6001"
         },
         {
-          "name": "location_id",
+          "name": "first_bind_time",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u9996\u6b21\u7ed1\u5b9a\u8bbe\u5907\u65f6\u95f4"
+        },
+        {
+          "name": "first_trial_time",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u9996\u6b21\u8bd5\u7528\u65f6\u95f4"
+        },
+        {
+          "name": "first_payment_time",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u9996\u6b21\u652f\u4ed8\u65f6\u95f4"
+        },
+        {
+          "name": "plan_key",
           "type": "INTEGER",
-          "description": "位置ID (关联Dim_Location)"
+          "primary_key": false,
+          "foreign_key": "Dim_Plan.plan_key",
+          "description": "\u5957\u9910\u4e3b\u952e"
         }
-      ]
+      ],
+      "description": "\u7528\u6237\u7ef4\u5ea6\u8868"
     },
     {
       "name": "Dim_Device",
-      "description": "设备维度表",
       "columns": [
+        {
+          "name": "surrogate_key",
+          "type": "INTEGER",
+          "primary_key": true,
+          "foreign_key": null,
+          "description": "\u4ee3\u7406\u4e3b\u952e"
+        },
         {
           "name": "device_id",
           "type": "INTEGER",
-          "primary_key": true,
-          "description": "设备ID"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u4e1a\u52a1\u8bbe\u5907ID"
+        },
+        {
+          "name": "app_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Dim_App.app_key",
+          "description": "\u6240\u5c5e\u5e94\u7528ID"
+        },
+        {
+          "name": "region_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Dim_Region.region_key",
+          "description": "\u6240\u5c5e\u533a\u57dfID"
         },
         {
           "name": "device_type",
           "type": "TEXT",
-          "description": "设备类型 (灯, 温控器等)"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u8bbe\u5907\u7c7b\u578b (\u706f, \u6e29\u63a7\u5668\u7b49)"
         },
         {
           "name": "firmware_version",
           "type": "TEXT",
-          "description": "固件版本"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u56fa\u4ef6\u7248\u672c"
         },
         {
           "name": "manufacturer",
           "type": "TEXT",
-          "description": "生产厂商"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u751f\u4ea7\u5382\u5546"
+        },
+        {
+          "name": "model_key",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": "Dim_Model.model_key",
+          "description": "\u8bbe\u5907\u578b\u53f7"
         }
-      ]
-    },
-    {
-      "name": "Dim_Location",
-      "description": "地理位置维度表",
-      "columns": [
-        {
-          "name": "location_id",
-          "type": "INTEGER",
-          "primary_key": true,
-          "description": "位置ID"
-        },
-        {
-          "name": "city",
-          "type": "TEXT",
-          "description": "城市"
-        },
-        {
-          "name": "state",
-          "type": "TEXT",
-          "description": "省/州"
-        },
-        {
-          "name": "country",
-          "type": "TEXT",
-          "description": "国家"
-        },
-        {
-          "name": "timezone",
-          "type": "TEXT",
-          "description": "时区"
-        }
-      ]
+      ],
+      "description": "\u8bbe\u5907\u7ef4\u5ea6\u8868"
     },
     {
       "name": "Dim_Time",
-      "description": "时间维度表",
       "columns": [
         {
           "name": "time_key",
           "type": "TEXT",
           "primary_key": true,
-          "description": "时间键 (YYYYMMDDHH)"
+          "foreign_key": null,
+          "description": "\u65f6\u95f4\u952e (YYYYMMDD)"
         },
         {
           "name": "date",
           "type": "TEXT",
-          "description": "日期"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u65e5\u671f"
         },
         {
-          "name": "hour",
+          "name": "year",
           "type": "INTEGER",
-          "description": "小时"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u5e74\u4efd"
+        },
+        {
+          "name": "month",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u6708\u4efd"
         },
         {
           "name": "day_of_week",
           "type": "TEXT",
-          "description": "星期几"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u661f\u671f\u51e0"
         },
         {
           "name": "is_holiday",
           "type": "BOOLEAN",
-          "description": "是否节假日"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u662f\u5426\u8282\u5047\u65e5"
         }
-      ]
+      ],
+      "description": "\u65f6\u95f4\u7ef4\u5ea6\u8868"
     },
     {
       "name": "Dim_App",
-      "description": "应用维度表 (不同品牌App)",
       "columns": [
         {
-          "name": "app_id",
+          "name": "app_key",
           "type": "INTEGER",
           "primary_key": true,
-          "description": "应用ID"
+          "foreign_key": null,
+          "description": "\u5e94\u7528ID"
         },
         {
           "name": "app_name",
           "type": "TEXT",
-          "description": "应用名称 (品牌)"
-        },
-        {
-          "name": "platform",
-          "type": "TEXT",
-          "description": "平台 (iOS, Android)"
-        },
-        {
-          "name": "version",
-          "type": "TEXT",
-          "description": "应用版本"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u5e94\u7528\u540d\u79f0 (\u54c1\u724c)"
         }
-      ]
+      ],
+      "description": "\u5e94\u7528\u7ef4\u5ea6\u8868 (\u4e0d\u540c\u54c1\u724cApp)"
     },
     {
       "name": "Dim_Region",
-      "description": "部署区域维度表",
       "columns": [
         {
-          "name": "region_id",
+          "name": "region_key",
           "type": "INTEGER",
           "primary_key": true,
-          "description": "区域ID"
+          "foreign_key": null,
+          "description": "\u533a\u57dfID"
         },
         {
           "name": "region_name",
           "type": "TEXT",
-          "description": "区域名称 (如: 北美, 欧洲, 亚太)"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u533a\u57df\u540d\u79f0 (\u5982: \u5317\u7f8e, \u6b27\u6d32, \u4e9a\u592a)"
+        }
+      ],
+      "description": "\u90e8\u7f72\u533a\u57df\u7ef4\u5ea6\u8868"
+    },
+    {
+      "name": "Dim_Model",
+      "columns": [
+        {
+          "name": "model_key",
+          "type": "INTEGER",
+          "primary_key": true,
+          "foreign_key": null,
+          "description": "\u578b\u53f7\u4e3b\u952e"
         },
         {
-          "name": "data_center",
+          "name": "model_name",
           "type": "TEXT",
-          "description": "数据中心代码"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u578b\u53f7\u540d"
+        },
+        {
+          "name": "sub_model_name",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u5b50\u578b\u53f7\u540d"
         }
-      ]
+      ],
+      "description": "\u578b\u53f7\u6e29\u5ea6\u8868"
+    },
+    {
+      "name": "Dim_Plan",
+      "columns": [
+        {
+          "name": "plan_key",
+          "type": "INTEGER",
+          "primary_key": true,
+          "foreign_key": null,
+          "description": "\u5957\u9910\u4e3b\u952e"
+        },
+        {
+          "name": "plan_name",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u5957\u9910\u540d\u79f0"
+        },
+        {
+          "name": "plan_price",
+          "type": "REAL",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u5957\u9910\u4ef7\u683c"
+        },
+        {
+          "name": "plan_period",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u5957\u9910\u5468\u671f-\u6708/\u5e74"
+        },
+        {
+          "name": "license_number",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "license\u4e2a\u6570"
+        },
+        {
+          "name": "app_key",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": "Dim_App.app_key",
+          "description": "\u6240\u5c5e\u5e94\u7528key"
+        },
+        {
+          "name": "region_key",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": "Dim_Region.region_key",
+          "description": "\u6240\u5c5e\u533a\u57dfkey"
+        }
+      ],
+      "description": "\u5957\u9910\u7ef4\u5ea6\u8868"
     }
   ],
   "facts": [
     {
-      "name": "Fact_Device_Readings",
-      "description": "设备读数事实表",
+      "name": "Fact_Order",
       "columns": [
         {
-          "name": "reading_id",
+          "name": "order_surrogate_key",
           "type": "INTEGER",
           "primary_key": true,
-          "description": "读数ID"
+          "foreign_key": null,
+          "description": "\u8ba2\u5355\u4ee3\u7406\u4e3b\u952e (App/Region\u72ec\u7acb)"
         },
         {
-          "name": "device_id",
+          "name": "subscription_key",
           "type": "INTEGER",
-          "foreign_key": "Dim_Device.device_id",
-          "description": "设备ID"
+          "primary_key": false,
+          "foreign_key": "Fact_Subscription.subscription_key",
+          "description": "\u5173\u8054\u8ba2\u9605KEY (\u591a\u5bf9\u4e00)"
         },
         {
-          "name": "user_id",
+          "name": "order_id",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u4e1a\u52a1\u8ba2\u5355ID"
+        },
+        {
+          "name": "user_surrogate_key",
           "type": "INTEGER",
-          "foreign_key": "Dim_User.user_id",
-          "description": "关联用户ID (如果是用户触发)"
+          "primary_key": false,
+          "foreign_key": "Dim_User.surrogate_key",
+          "description": "\u7528\u6237\u4ee3\u7406\u4e3b\u952e"
+        },
+        {
+          "name": "plan_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Dim_Plan.plan_key",
+          "description": "\u5957\u9910\u4e3b\u952e"
+        },
+        {
+          "name": "quantity",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u8d2d\u4e70\u6570\u91cf"
         },
         {
           "name": "time_key",
           "type": "TEXT",
+          "primary_key": false,
           "foreign_key": "Dim_Time.time_key",
-          "description": "时间键"
+          "description": "\u65f6\u95f4\u952e"
         },
         {
-          "name": "app_id",
+          "name": "app_key",
           "type": "INTEGER",
-          "foreign_key": "Dim_App.app_id",
-          "description": "应用ID (来源App)"
+          "primary_key": false,
+          "foreign_key": "Dim_App.app_key",
+          "description": "\u5e94\u7528\u4e3b\u952e"
         },
         {
-          "name": "region_id",
+          "name": "region_key",
           "type": "INTEGER",
-          "foreign_key": "Dim_Region.region_id",
-          "description": "区域ID"
+          "primary_key": false,
+          "foreign_key": "Dim_Region.region_key",
+          "description": "\u533a\u57df\u4e3b\u952e"
         },
         {
-          "name": "value",
+          "name": "amount",
           "type": "REAL",
-          "description": "读数值"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u91d1\u989d"
         },
         {
-          "name": "unit",
+          "name": "discount_amount",
+          "type": "REAL",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u6298\u6263\u91d1\u989d"
+        },
+        {
+          "name": "credit_amount",
+          "type": "REAL",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u4fe1\u7528\u91d1\u989d"
+        },
+        {
+          "name": "currency",
           "type": "TEXT",
-          "description": "单位"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u8d27\u5e01"
+        },
+        {
+          "name": "status",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u8ba2\u5355\u72b6\u6001 (\u9996\u8d39, \u7eed\u8d39)"
         }
-      ]
+      ],
+      "description": "\u8ba2\u5355\u4e8b\u5b9e\u8868"
     },
     {
-      "name": "Fact_User_Actions",
-      "description": "用户行为事实表",
+      "name": "Fact_Accounting_Revenue",
       "columns": [
         {
-          "name": "action_id",
+          "name": "revenue_key",
           "type": "INTEGER",
           "primary_key": true,
-          "description": "行为ID"
+          "foreign_key": null,
+          "description": "\u8425\u6536\u4e3b\u952e"
         },
         {
-          "name": "user_id",
+          "name": "order_surrogate_key",
           "type": "INTEGER",
-          "foreign_key": "Dim_User.user_id",
-          "description": "用户ID"
+          "primary_key": false,
+          "foreign_key": "Fact_Order.order_surrogate_key",
+          "description": "\u5173\u8054\u8ba2\u5355KEY"
         },
         {
-          "name": "device_id",
+          "name": "user_surrogate_key",
           "type": "INTEGER",
-          "foreign_key": "Dim_Device.device_id",
-          "description": "设备ID (操作对象)"
+          "primary_key": false,
+          "foreign_key": "Dim_User.surrogate_key",
+          "description": "\u7528\u6237\u4ee3\u7406\u4e3b\u952e"
+        },
+        {
+          "name": "plan_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Dim_Plan.plan_key",
+          "description": "\u5957\u9910\u4e3b\u952e"
         },
         {
           "name": "time_key",
           "type": "TEXT",
+          "primary_key": false,
           "foreign_key": "Dim_Time.time_key",
-          "description": "时间键"
+          "description": "\u5165\u8d26\u65f6\u95f4 (\u644a\u9500\u6708\u4efd)"
         },
         {
-          "name": "app_id",
+          "name": "app_key",
           "type": "INTEGER",
-          "foreign_key": "Dim_App.app_id",
-          "description": "应用ID (操作来源)"
+          "primary_key": false,
+          "foreign_key": "Dim_App.app_key",
+          "description": "\u5e94\u7528\u4e3b\u952e"
         },
         {
-          "name": "region_id",
+          "name": "region_key",
           "type": "INTEGER",
-          "foreign_key": "Dim_Region.region_id",
-          "description": "区域ID"
+          "primary_key": false,
+          "foreign_key": "Dim_Region.region_key",
+          "description": "\u533a\u57df\u4e3b\u952e"
+        },
+        {
+          "name": "recognized_amount",
+          "type": "REAL",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u786e\u8ba4\u8425\u6536 (\u644a\u9500\u540e)"
+        },
+        {
+          "name": "period_index",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u644a\u9500\u671f\u6570 (e.g. 1/12)"
+        },
+        {
+          "name": "total_periods",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u603b\u671f\u6570"
+        }
+      ],
+      "description": "\u4f1a\u8ba1\u8425\u6536\u8868 (\u5e74\u5957\u9910\u5747\u644a)"
+    },
+    {
+      "name": "Fact_Subscription",
+      "columns": [
+        {
+          "name": "subscription_key",
+          "type": "INTEGER",
+          "primary_key": true,
+          "foreign_key": null,
+          "description": "\u8ba2\u9605\u4e3b\u952e"
+        },
+        {
+          "name": "previous_subscription_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Fact_Subscription.subscription_key",
+          "description": "\u524d\u4e00\u4e2a\u8ba2\u9605 (\u7528\u4e8e\u5347\u964d\u7ea7\u8ffd\u6eaf)"
+        },
+        {
+          "name": "next_subscription_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Fact_Subscription.subscription_key",
+          "description": "\u540e\u4e00\u4e2a\u8ba2\u9605 (\u7528\u4e8e\u5347\u964d\u7ea7\u8ffd\u6eaf)"
+        },
+        {
+          "name": "first_amount",
+          "type": "REAL",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u9996\u671f\u91d1\u989d"
+        },
+        {
+          "name": "first_start_time",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u9996\u671f\u5f00\u59cb\u65f6\u95f4"
+        },
+        {
+          "name": "first_end_time",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u9996\u671f\u7ed3\u675f\u65f6\u95f4"
+        },
+        {
+          "name": "renew_amount",
+          "type": "REAL",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u7eed\u8d39\u91d1\u989d"
+        },
+        {
+          "name": "plan_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Dim_Plan.plan_key",
+          "description": "\u5957\u9910ID"
+        },
+        {
+          "name": "license_count",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "license\u4e2a\u6570"
+        },
+        {
+          "name": "subscription_end_time",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u8ba2\u9605\u7ed3\u675f\u65f6\u95f4"
+        },
+        {
+          "name": "subscription_status",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u8ba2\u9605\u72b6\u6001 (\u751f\u6548, \u7ed3\u675f)"
+        },
+        {
+          "name": "end_reason",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u7ed3\u675f\u539f\u56e0 (\u5347\u7ea7, \u53d6\u6d88, \u652f\u4ed8\u5931\u8d25)"
+        }
+      ],
+      "description": "\u8ba2\u9605\u4fe1\u606f\u8868"
+    },
+    {
+      "name": "Fact_Device_Binding",
+      "columns": [
+        {
+          "name": "binding_key",
+          "type": "INTEGER",
+          "primary_key": true,
+          "foreign_key": null,
+          "description": "\u7ed1\u5b9a\u8bb0\u5f55\u4e3b\u952e"
+        },
+        {
+          "name": "subscription_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Fact_Subscription.subscription_key",
+          "description": "\u5173\u8054\u8ba2\u9605KEY"
+        },
+        {
+          "name": "device_surrogate_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Dim_Device.surrogate_key",
+          "description": "\u5173\u8054\u8bbe\u5907KEY"
+        },
+        {
+          "name": "time_key",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": "Dim_Time.time_key",
+          "description": "\u64cd\u4f5c\u65f6\u95f4KEY"
+        },
+        {
+          "name": "app_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Dim_App.app_key",
+          "description": "\u5e94\u7528\u4e3b\u952e"
+        },
+        {
+          "name": "region_key",
+          "type": "INTEGER",
+          "primary_key": false,
+          "foreign_key": "Dim_Region.region_key",
+          "description": "\u533a\u57df\u4e3b\u952e"
         },
         {
           "name": "action_type",
           "type": "TEXT",
-          "description": "行为类型 (开, 关, 调节)"
-        },
-        {
-          "name": "duration_ms",
-          "type": "INTEGER",
-          "description": "持续时长 (毫秒)"
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u64cd\u4f5c\u7c7b\u578b (\u7ed1\u5b9a, \u89e3\u7ed1)"
         }
-      ]
+      ],
+      "description": "\u8bbe\u5907\u7ed1\u5b9a/\u89e3\u7ed1\u8ba2\u9605\u4e8b\u5b9e\u8868"
     }
   ]
 }

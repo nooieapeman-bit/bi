@@ -1,0 +1,94 @@
+{
+    "reports": [
+        {
+            "id": "revenue_trend",
+            "category": "finance",
+            "title": "月度营收趋势 (Monthly Revenue)",
+            "description": "按月/季度统计的确认营收 (Recognized Revenue) 增长趋势",
+            "chart_type": "line",
+            "source_table": "Fact_Accounting_Revenue",
+            "group_by": "time_key",
+            "measure_formula": "SUM(recognized_amount)",
+            "measures": [
+                {
+                    "column": "recognized_amount",
+                    "aggregation": "SUM",
+                    "label": "Revenue"
+                }
+            ],
+            "x_axis": {
+                "column": "time_key",
+                "label": "Time",
+                "type": "time",
+                "granularity_options": [
+                    "year",
+                    "month"
+                ]
+            },
+            "filters": []
+        },
+        {
+            "id": "arpu",
+            "category": "finance",
+            "title": "ARPU 分析",
+            "description": "每用户平均收入趋势，以此衡量付费能力变化",
+            "chart_type": "line",
+            "source_table": "Fact_Accounting_Revenue",
+            "group_by": "time_key",
+            "measure_formula": "SUM(recognized_amount) / COUNT(DISTINCT user_surrogate_key)",
+            "measures": [],
+            "x_axis": {
+                "column": "time_key",
+                "label": "Time",
+                "type": "time",
+                "granularity_options": [
+                    "year",
+                    "month"
+                ]
+            },
+            "filters": []
+        },
+        {
+            "id": "new_users",
+            "category": "user",
+            "title": "新增用户趋势",
+            "description": "每日/每周新增注册用户数统计",
+            "chart_type": "bar",
+            "source_table": "Dim_User",
+            "group_by": "join_date",
+            "measure_formula": "COUNT(user_id)",
+            "measures": [],
+            "x_axis": {
+                "column": "join_date",
+                "label": "Date",
+                "type": "time",
+                "granularity_options": [
+                    "day",
+                    "month"
+                ]
+            },
+            "filters": []
+        },
+        {
+            "id": "device_activation",
+            "category": "device",
+            "title": "设备激活量",
+            "description": "各型号设备激活与绑定趋势",
+            "chart_type": "bar",
+            "source_table": "Dim_Device",
+            "group_by": "first_bind_time",
+            "measure_formula": "COUNT(device_id)",
+            "measures": [],
+            "x_axis": {
+                "column": "first_bind_time",
+                "label": "Time",
+                "type": "time",
+                "granularity_options": [
+                    "day",
+                    "month"
+                ]
+            },
+            "filters": []
+        }
+    ]
+}
