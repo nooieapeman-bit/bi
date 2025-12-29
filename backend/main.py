@@ -25,10 +25,12 @@ class Column(BaseModel):
     type: str # INTEGER, TEXT, REAL, etc.
     primary_key: Optional[bool] = False
     foreign_key: Optional[str] = None # e.g. "Dim_User.user_id"
+    description: Optional[str] = None # Chinese remark
 
 class Table(BaseModel):
     name: str
     columns: List[Column]
+    description: Optional[str] = None # Chinese remark
 
 class Schema(BaseModel):
     dimensions: List[Table]

@@ -2,64 +2,280 @@
   "dimensions": [
     {
       "name": "Dim_User",
+      "description": "用户维度表",
       "columns": [
-        {"name": "user_id", "type": "INTEGER", "primary_key": true},
-        {"name": "name", "type": "TEXT"},
-        {"name": "join_date", "type": "TEXT"},
-        {"name": "premium_status", "type": "TEXT"},
-        {"name": "location_id", "type": "INTEGER"}
+        {
+          "name": "user_id",
+          "type": "INTEGER",
+          "primary_key": true,
+          "description": "用户ID"
+        },
+        {
+          "name": "name",
+          "type": "TEXT",
+          "description": "用户姓名"
+        },
+        {
+          "name": "join_date",
+          "type": "TEXT",
+          "description": "注册日期"
+        },
+        {
+          "name": "premium_status",
+          "type": "TEXT",
+          "description": "会员状态"
+        },
+        {
+          "name": "location_id",
+          "type": "INTEGER",
+          "description": "位置ID (关联Dim_Location)"
+        }
       ]
     },
     {
       "name": "Dim_Device",
+      "description": "设备维度表",
       "columns": [
-        {"name": "device_id", "type": "INTEGER", "primary_key": true},
-        {"name": "device_type", "type": "TEXT"},
-        {"name": "firmware_version", "type": "TEXT"},
-        {"name": "manufacturer", "type": "TEXT"}
+        {
+          "name": "device_id",
+          "type": "INTEGER",
+          "primary_key": true,
+          "description": "设备ID"
+        },
+        {
+          "name": "device_type",
+          "type": "TEXT",
+          "description": "设备类型 (灯, 温控器等)"
+        },
+        {
+          "name": "firmware_version",
+          "type": "TEXT",
+          "description": "固件版本"
+        },
+        {
+          "name": "manufacturer",
+          "type": "TEXT",
+          "description": "生产厂商"
+        }
       ]
     },
     {
       "name": "Dim_Location",
+      "description": "地理位置维度表",
       "columns": [
-        {"name": "location_id", "type": "INTEGER", "primary_key": true},
-        {"name": "city", "type": "TEXT"},
-        {"name": "state", "type": "TEXT"},
-        {"name": "country", "type": "TEXT"},
-        {"name": "timezone", "type": "TEXT"}
+        {
+          "name": "location_id",
+          "type": "INTEGER",
+          "primary_key": true,
+          "description": "位置ID"
+        },
+        {
+          "name": "city",
+          "type": "TEXT",
+          "description": "城市"
+        },
+        {
+          "name": "state",
+          "type": "TEXT",
+          "description": "省/州"
+        },
+        {
+          "name": "country",
+          "type": "TEXT",
+          "description": "国家"
+        },
+        {
+          "name": "timezone",
+          "type": "TEXT",
+          "description": "时区"
+        }
       ]
     },
     {
       "name": "Dim_Time",
+      "description": "时间维度表",
       "columns": [
-        {"name": "time_key", "type": "TEXT", "primary_key": true},
-        {"name": "date", "type": "TEXT"},
-        {"name": "hour", "type": "INTEGER"},
-        {"name": "day_of_week", "type": "TEXT"},
-        {"name": "is_holiday", "type": "BOOLEAN"}
+        {
+          "name": "time_key",
+          "type": "TEXT",
+          "primary_key": true,
+          "description": "时间键 (YYYYMMDDHH)"
+        },
+        {
+          "name": "date",
+          "type": "TEXT",
+          "description": "日期"
+        },
+        {
+          "name": "hour",
+          "type": "INTEGER",
+          "description": "小时"
+        },
+        {
+          "name": "day_of_week",
+          "type": "TEXT",
+          "description": "星期几"
+        },
+        {
+          "name": "is_holiday",
+          "type": "BOOLEAN",
+          "description": "是否节假日"
+        }
+      ]
+    },
+    {
+      "name": "Dim_App",
+      "description": "应用维度表 (不同品牌App)",
+      "columns": [
+        {
+          "name": "app_id",
+          "type": "INTEGER",
+          "primary_key": true,
+          "description": "应用ID"
+        },
+        {
+          "name": "app_name",
+          "type": "TEXT",
+          "description": "应用名称 (品牌)"
+        },
+        {
+          "name": "platform",
+          "type": "TEXT",
+          "description": "平台 (iOS, Android)"
+        },
+        {
+          "name": "version",
+          "type": "TEXT",
+          "description": "应用版本"
+        }
+      ]
+    },
+    {
+      "name": "Dim_Region",
+      "description": "部署区域维度表",
+      "columns": [
+        {
+          "name": "region_id",
+          "type": "INTEGER",
+          "primary_key": true,
+          "description": "区域ID"
+        },
+        {
+          "name": "region_name",
+          "type": "TEXT",
+          "description": "区域名称 (如: 北美, 欧洲, 亚太)"
+        },
+        {
+          "name": "data_center",
+          "type": "TEXT",
+          "description": "数据中心代码"
+        }
       ]
     }
   ],
   "facts": [
     {
       "name": "Fact_Device_Readings",
+      "description": "设备读数事实表",
       "columns": [
-        {"name": "reading_id", "type": "INTEGER", "primary_key": true},
-        {"name": "device_id", "type": "INTEGER", "foreign_key": "Dim_Device.device_id"},
-        {"name": "time_key", "type": "TEXT", "foreign_key": "Dim_Time.time_key"},
-        {"name": "value", "type": "REAL"},
-        {"name": "unit", "type": "TEXT"}
+        {
+          "name": "reading_id",
+          "type": "INTEGER",
+          "primary_key": true,
+          "description": "读数ID"
+        },
+        {
+          "name": "device_id",
+          "type": "INTEGER",
+          "foreign_key": "Dim_Device.device_id",
+          "description": "设备ID"
+        },
+        {
+          "name": "user_id",
+          "type": "INTEGER",
+          "foreign_key": "Dim_User.user_id",
+          "description": "关联用户ID (如果是用户触发)"
+        },
+        {
+          "name": "time_key",
+          "type": "TEXT",
+          "foreign_key": "Dim_Time.time_key",
+          "description": "时间键"
+        },
+        {
+          "name": "app_id",
+          "type": "INTEGER",
+          "foreign_key": "Dim_App.app_id",
+          "description": "应用ID (来源App)"
+        },
+        {
+          "name": "region_id",
+          "type": "INTEGER",
+          "foreign_key": "Dim_Region.region_id",
+          "description": "区域ID"
+        },
+        {
+          "name": "value",
+          "type": "REAL",
+          "description": "读数值"
+        },
+        {
+          "name": "unit",
+          "type": "TEXT",
+          "description": "单位"
+        }
       ]
     },
     {
       "name": "Fact_User_Actions",
+      "description": "用户行为事实表",
       "columns": [
-        {"name": "action_id", "type": "INTEGER", "primary_key": true},
-        {"name": "user_id", "type": "INTEGER", "foreign_key": "Dim_User.user_id"},
-        {"name": "device_id", "type": "INTEGER", "foreign_key": "Dim_Device.device_id"},
-        {"name": "time_key", "type": "TEXT", "foreign_key": "Dim_Time.time_key"},
-        {"name": "action_type", "type": "TEXT"},
-        {"name": "duration_ms", "type": "INTEGER"}
+        {
+          "name": "action_id",
+          "type": "INTEGER",
+          "primary_key": true,
+          "description": "行为ID"
+        },
+        {
+          "name": "user_id",
+          "type": "INTEGER",
+          "foreign_key": "Dim_User.user_id",
+          "description": "用户ID"
+        },
+        {
+          "name": "device_id",
+          "type": "INTEGER",
+          "foreign_key": "Dim_Device.device_id",
+          "description": "设备ID (操作对象)"
+        },
+        {
+          "name": "time_key",
+          "type": "TEXT",
+          "foreign_key": "Dim_Time.time_key",
+          "description": "时间键"
+        },
+        {
+          "name": "app_id",
+          "type": "INTEGER",
+          "foreign_key": "Dim_App.app_id",
+          "description": "应用ID (操作来源)"
+        },
+        {
+          "name": "region_id",
+          "type": "INTEGER",
+          "foreign_key": "Dim_Region.region_id",
+          "description": "区域ID"
+        },
+        {
+          "name": "action_type",
+          "type": "TEXT",
+          "description": "行为类型 (开, 关, 调节)"
+        },
+        {
+          "name": "duration_ms",
+          "type": "INTEGER",
+          "description": "持续时长 (毫秒)"
+        }
       ]
     }
   ]
