@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { TrendingUp, Users, Smartphone, Plus, Edit2, Trash2, LayoutDashboard } from "lucide-react";
+import { TrendingUp, Users, Smartphone, Plus, Edit2, Trash2, LayoutDashboard, Copy } from "lucide-react";
 import ReportEditor from "./ReportEditor";
 
 // Icon mapping
@@ -23,6 +23,7 @@ export default function ReportViewer() {
     const [editingReport, setEditingReport] = useState<any | null>(null);
     const [isEditorOpen, setIsEditorOpen] = useState(false);
     const [targetCategory, setTargetCategory] = useState("finance");
+    const [deleteConfirm, setDeleteConfirm] = useState<{ isOpen: boolean, reportId: string | null }>({ isOpen: false, reportId: null });
 
     const API_BASE = "http://localhost:8000/api";
 
@@ -73,10 +74,15 @@ export default function ReportViewer() {
         });
     };
 
-    const handleDeleteReport = async (id: string) => {
-        if (!confirm("Are you sure you want to delete this report?")) return;
+    const handleDeleteClick = (id: string) => {
+        setDeleteConfirm({ isOpen: true, reportId: id });
+    };
 
-        await fetch(`${API_BASE}/reports/${id}`, { method: "DELETE" });
+    const executeDelete = async () => {
+        if (!deleteConfirm.reportId) return;
+
+        await fetch(`${API_BASE}/reports/${deleteConfirm.reportId}`, { method: "DELETE" });
+        setDeleteConfirm({ isOpen: false, reportId: null });
         refreshReports();
     };
 
@@ -84,6 +90,16 @@ export default function ReportViewer() {
 
     const openEditReport = (report: any) => {
         setEditingReport(report);
+        setIsEditorOpen(true);
+    };
+
+    const handleCopyClick = (report: any) => {
+        const newReport = {
+            ...report,
+            id: `report_${Date.now()}`,
+            title: `${report.title} (Copy)`
+        };
+        setEditingReport(newReport);
         setIsEditorOpen(true);
     };
 
@@ -128,16 +144,25 @@ export default function ReportViewer() {
                                 <div key={report.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all group flex flex-col relative">
 
                                     {/* Edit Controls */}
-                                    <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex space-x-1">
+                                    <div className="absolute top-2 right-2 z-10 flex space-x-1">
                                         <button
-                                            onClick={() => openEditReport(report)}
+                                            onClick={(e) => { e.stopPropagation(); openEditReport(report); }}
                                             className="p-1.5 bg-white/90 rounded-md shadow-sm text-gray-600 hover:text-indigo-600 border border-gray-200"
+                                            title="Edit Report"
                                         >
                                             <Edit2 size={14} />
                                         </button>
                                         <button
-                                            onClick={() => handleDeleteReport(report.id)}
+                                            onClick={(e) => { e.stopPropagation(); handleCopyClick(report); }}
+                                            className="p-1.5 bg-white/90 rounded-md shadow-sm text-gray-600 hover:text-blue-600 border border-gray-200"
+                                            title="Copy Report"
+                                        >
+                                            <Copy size={14} />
+                                        </button>
+                                        <button
+                                            onClick={(e) => { e.stopPropagation(); handleDeleteClick(report.id); }}
                                             className="p-1.5 bg-white/90 rounded-md shadow-sm text-gray-600 hover:text-red-500 border border-gray-200"
+                                            title="Delete Report"
                                         >
                                             <Trash2 size={14} />
                                         </button>
@@ -186,6 +211,32 @@ export default function ReportViewer() {
                     onSave={handleSaveReport}
                     onCancel={() => setIsEditorOpen(false)}
                 />
+            )}
+
+            {/* Custom Delete Confirmation Modal */}
+            {deleteConfirm.isOpen && (
+                <div className="fixed inset-0 bg-black/50 z-[60] flex items-center justify-center p-4">
+                    <div className="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm">
+                        <h3 className="text-lg font-bold text-gray-900 mb-2">Delete Report?</h3>
+                        <p className="text-gray-500 text-sm mb-6">
+                            Are you sure you want to delete this report? This action cannot be undone.
+                        </p>
+                        <div className="flex justify-end space-x-3">
+                            <button
+                                onClick={() => setDeleteConfirm({ isOpen: false, reportId: null })}
+                                className="px-4 py-2 text-sm text-gray-600 font-medium hover:bg-gray-100 rounded-lg"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={executeDelete}
+                                className="px-4 py-2 text-sm bg-red-600 text-white font-medium hover:bg-red-700 rounded-lg shadow-sm"
+                            >
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
             )}
         </div>
     );

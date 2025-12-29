@@ -1,54 +1,6 @@
 {
   "reports": [
     {
-      "id": "arpu",
-      "category": "finance",
-      "title": "ARPU \u5206\u6790",
-      "description": "\u6bcf\u7528\u6237\u5e73\u5747\u6536\u5165\u8d8b\u52bf\uff0c\u4ee5\u6b64\u8861\u91cf\u4ed8\u8d39\u80fd\u529b\u53d8\u5316",
-      "chart_type": "line",
-      "source_table": "Fact_Accounting_Revenue",
-      "joins": [],
-      "group_by": "time_key",
-      "measure_formula": "SUM(recognized_amount) / COUNT(DISTINCT user_surrogate_key)",
-      "measures": [],
-      "x_axis": {
-        "column": "time_key",
-        "label": "Time",
-        "type": "time",
-        "granularity_options": [
-          "year",
-          "month"
-        ]
-      },
-      "filters": [],
-      "slices": [],
-      "image": null
-    },
-    {
-      "id": "new_users",
-      "category": "user",
-      "title": "\u65b0\u589e\u7528\u6237\u8d8b\u52bf",
-      "description": "\u6bcf\u65e5/\u6bcf\u5468\u65b0\u589e\u6ce8\u518c\u7528\u6237\u6570\u7edf\u8ba1",
-      "chart_type": "bar",
-      "source_table": "Dim_User",
-      "joins": [],
-      "group_by": "join_date",
-      "measure_formula": "COUNT(user_id)",
-      "measures": [],
-      "x_axis": {
-        "column": "join_date",
-        "label": "Date",
-        "type": "time",
-        "granularity_options": [
-          "day",
-          "month"
-        ]
-      },
-      "filters": [],
-      "slices": [],
-      "image": null
-    },
-    {
       "id": "device_activation",
       "category": "device",
       "title": "\u8bbe\u5907\u6fc0\u6d3b\u91cf",
@@ -73,15 +25,47 @@
       "image": null
     },
     {
-      "id": "revenue_trend",
+      "id": "report_1767035739458",
       "category": "finance",
-      "title": "\u6708\u5ea6\u8425\u6536\u8d8b\u52bf",
-      "description": "\u6309\u6708\u7edf\u8ba1\u7684\u786e\u8ba4\u8425\u6536\u589e\u957f\u8d8b\u52bf",
+      "title": "\u65e5\u5ea6\u8425\u6536\u8d8b\u52bf",
+      "description": "\u6309\u5929\u7edf\u8ba1\u7684\u73b0\u91d1\u8425\u6536\u589e\u957f\u8d8b\u52bf",
       "chart_type": "line",
       "source_table": "Fact_Order",
       "joins": [],
       "group_by": "time_key",
-      "measure_formula": "SUM(recognized_amount)",
+      "measure_formula": "SUM(amount)",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "time_key",
+        "label": "time_key",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "time_key",
+        "app_key",
+        "plan_key",
+        "region_key",
+        "paid_sequence"
+      ],
+      "image": ""
+    },
+    {
+      "id": "revenue_trend",
+      "category": "finance",
+      "title": "\u6708\u5ea6\u8425\u6536\u8d8b\u52bf",
+      "description": "\u6309\u6708\u7edf\u8ba1\u7684\u73b0\u91d1\u8425\u6536\u589e\u957f\u8d8b\u52bf",
+      "chart_type": "line",
+      "source_table": "Fact_Order",
+      "joins": [],
+      "group_by": "time_key",
+      "measure_formula": "SUM(amount)",
       "measures": [
         {
           "column": "calculated",
@@ -101,6 +85,293 @@
         "region_key",
         "plan_key",
         "paid_sequence"
+      ],
+      "image": ""
+    },
+    {
+      "id": "report_1767035922235",
+      "category": "finance",
+      "title": "\u65e5\u5ea6\u5747\u644a\u8425\u6536\u8d8b\u52bf ",
+      "description": "\u6309\u5929\u7edf\u8ba1\u7684\u786e\u8ba4\u8425\u6536\u589e\u957f\u8d8b\u52bf\uff0c\u5e74\u5957\u9910/12\u5747\u644a\u5230\u6bcf\u4e2a\u6708\u4e2d",
+      "chart_type": "line",
+      "source_table": "Fact_Accounting_Revenue",
+      "joins": [],
+      "group_by": "time_key",
+      "measure_formula": "SUM(recognized_amount)",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "time_key",
+        "label": "time_key",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "time_key",
+        "app_key",
+        "plan_key",
+        "region_key"
+      ],
+      "image": ""
+    },
+    {
+      "id": "report_1767036146371",
+      "category": "finance",
+      "title": "\u6708\u5ea6\u5747\u644a\u8425\u6536\u8d8b\u52bf  (Copy)",
+      "description": "\u6309\u6708\u7edf\u8ba1\u7684\u786e\u8ba4\u8425\u6536\u589e\u957f\u8d8b\u52bf\uff0c\u5e74\u5957\u9910/12\u5747\u644a\u5230\u6bcf\u4e2a\u6708\u4e2d",
+      "chart_type": "line",
+      "source_table": "Fact_Accounting_Revenue",
+      "joins": [],
+      "group_by": "time_key",
+      "measure_formula": "SUM(recognized_amount)",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "time_key",
+        "label": "time_key",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "time_key",
+        "app_key",
+        "plan_key",
+        "region_key"
+      ],
+      "image": ""
+    },
+    {
+      "id": "report_1767036401311",
+      "category": "user",
+      "title": "\u6708\u5ea6\u65b0\u589e\u7528\u6237\u8d8b\u52bf ",
+      "description": "\u6bcf\u6708\u65b0\u589e\u6ce8\u518c\u7528\u6237\u6570\u7edf\u8ba1",
+      "chart_type": "bar",
+      "source_table": "Dim_User",
+      "joins": [],
+      "group_by": "join_date",
+      "measure_formula": "COUNT(user_id)",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "join_date",
+        "label": "join_date",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "join_date",
+        "app_key",
+        "region_key"
+      ],
+      "image": ""
+    },
+    {
+      "id": "new_users",
+      "category": "user",
+      "title": "\u65e5\u5ea6\u65b0\u589e\u7528\u6237\u8d8b\u52bf",
+      "description": "\u6bcf\u65e5\u65b0\u589e\u6ce8\u518c\u7528\u6237\u6570\u7edf\u8ba1",
+      "chart_type": "bar",
+      "source_table": "Dim_User",
+      "joins": [],
+      "group_by": "join_date",
+      "measure_formula": "COUNT(user_id)",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "join_date",
+        "label": "join_date",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "join_date",
+        "app_key",
+        "region_key"
+      ],
+      "image": ""
+    },
+    {
+      "id": "report_1767036509604",
+      "category": "user",
+      "title": "30\u5929\u8f6c\u5316\u7387\uff08\u6708\u5ea6\uff09",
+      "description": "\u5355\u4e2a\u7528\u6237\u6ce8\u518c\u5b8c\u6210\u540e\uff0c30\u5929\u5185\u662f\u5426\u5b8c\u6210\u4ed8\u8d39\uff08\u652f\u4ed8\u91d1\u989d\u5927\u4e8e0\uff09\u3002\n\u7edf\u8ba1\u4e00\u4e2a\u5468\u671f\u5185\u7684\u8be5\u8f6c\u5316\u7387",
+      "chart_type": "line",
+      "source_table": "Dim_User",
+      "joins": [],
+      "group_by": "join_date",
+      "measure_formula": "SUM(1) / COUNT(User)",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "join_date",
+        "label": "join_date",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "app_key",
+        "region_key"
+      ],
+      "image": ""
+    },
+    {
+      "id": "report_1767037084307",
+      "category": "user",
+      "title": "\u8ba2\u9605\u670d\u52a1\u7528\u6237\u6570\uff08\u6708\u5ea6\uff09",
+      "description": "\u8fd9\u4e2a\u6708\uff0c\u4ea7\u751f\u4ed8\u8d39 (>0) \u7684\u7528\u6237\u6570\uff0c\u5e74\u5957\u9910\u4ed8\u8d39\u5747\u644a\u523012\u4e2a\u6708\u91cc\u9762\uff0c\u5e74\u5957\u9910\u7406\u89e3\u6210\u4e3a\u9884\u4ed8\u8d39\u3002\uff08\u7b49\u540c\u4e8e\u5747\u644a\u8425\u6536\u91cc\u9762\u672c\u6708\u662f\u5426\u5b58\u5728\u4ed8\u8d39\uff09",
+      "chart_type": "line",
+      "source_table": "Fact_Accounting_Revenue",
+      "joins": [],
+      "group_by": "user_surrogate_key",
+      "measure_formula": "count (distinct (user_surrogate_key))",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "user_surrogate_key",
+        "label": "user_surrogate_key",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "app_key",
+        "region_key"
+      ],
+      "image": ""
+    },
+    {
+      "id": "report_1767038505303",
+      "category": "user",
+      "title": "\u6708\u5957\u9910\u8ba2\u9605\u9996\u6708\u7eed\u8d39\u7387\uff08\u6708\u5ea6\uff09",
+      "description": "\u4e0a\u4e00\u4e2a\u6708\u4ed8\u8d39\u8ba2\u9605\u7684\u6708\u5957\u9910\uff0c\u4e0b\u4e00\u4e2a\u6708\u7ee7\u7eed\u7eed\u8d39\u7684\u5360\u6bd4",
+      "chart_type": "line",
+      "source_table": "Fact_Subscription",
+      "joins": [],
+      "group_by": "",
+      "measure_formula": "",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "",
+        "label": "",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [],
+      "image": ""
+    },
+    {
+      "id": "report_1767038657350",
+      "category": "user",
+      "title": "\u5e74\u5957\u9910\u8ba2\u9605\u9996\u5e74\u7eed\u8d39\u7387\uff08\u6708\u5ea6\uff09",
+      "description": "\u8fd9\u4e2a\u6708\u4e2d\uff0c\u4ed8\u8d39\u65b0\u8ba2\u9605\u7684\u5e74\u5957\u9910\uff0c\u4e0b\u4e00\u5e74\u7ee7\u7eed\u7eed\u8d39\u7684\u5360\u6bd4",
+      "chart_type": "line",
+      "source_table": "Fact_Subscription",
+      "joins": [],
+      "group_by": "",
+      "measure_formula": "",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "",
+        "label": "",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [],
+      "image": ""
+    },
+    {
+      "id": "report_1767038125422",
+      "category": "user",
+      "title": "\u8ba2\u9605\u670d\u52a1\u7528\u6237\u9996\u6708\u5728\u671f\u7387\uff08\u6708\u5ea6\uff09",
+      "description": "\u89c2\u5bdf\u65b0\u4ed8\u8d39/\u56de\u8d2d\u7528\u6237\u7684\u5728\u6709\u6548\u671f\u7684\u60c5\u51b5\u3002\n\u4e0a\u4e00\u4e2a\u6708\u65b0\u4ed8\u8d39/\u56de\u8d2d\u7528\u6237\u4e2d\uff0c\u4e0b\u4e00\u4e2a\u7ee7\u7eed\u5728\u6709\u6548\u671f\u7684\u5360\u6bd4\u3002\uff08\u5e74\u5957\u9910\u7406\u89e3\u6210\u4e3a12\u4e2a\u6708\u9884\u4ed8\u8d39\uff09",
+      "chart_type": "line",
+      "source_table": "Fact_Accounting_Revenue",
+      "joins": [],
+      "group_by": "",
+      "measure_formula": "",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "",
+        "label": "",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [],
+      "image": ""
+    },
+    {
+      "id": "report_1767039576696",
+      "category": "user",
+      "title": "\u5e74\u5957\u9910\u5360\u6bd4\uff08\u6708\u5ea6\uff09",
+      "description": "\u6bcf\u6708\u65b0\u4ed8\u8d39\u8ba2\u9605\u7684\u5957\u9910\u4e2d\uff0c\u5e74\u5957\u9910\u7684\u5360\u6bd4",
+      "chart_type": "line",
+      "source_table": "Fact_Order",
+      "joins": [],
+      "group_by": "time_key",
+      "measure_formula": "",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "time_key",
+        "label": "time_key",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "app_key",
+        "region_key"
       ],
       "image": ""
     }
