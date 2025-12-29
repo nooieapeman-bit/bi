@@ -17,13 +17,40 @@ export default function ReportEditor({ report, onSave, onCancel, tables }: Repor
         title: report?.title || "",
         description: report?.description || "",
         source_table: report?.source_table || "",
+        joins: report?.joins || [],
         group_by: report?.group_by || "",
         measure_formula: report?.measure_formula || "",
         chart_type: report?.chart_type || "line",
+        slices: report?.slices || [],
         image: report?.image || ""
     });
 
     const [columns, setColumns] = useState<any[]>([]);
+
+    const handleAddJoin = () => {
+        setFormData({
+            ...formData,
+            joins: [...formData.joins, { table: "", join_type: "LEFT", on_expression: "" }]
+        });
+    };
+
+    const handleRemoveJoin = (idx: number) => {
+        const newJoins = [...formData.joins];
+        newJoins.splice(idx, 1);
+        setFormData({ ...formData, joins: newJoins });
+    };
+
+    const handleJoinChange = (idx: number, field: string, val: string) => {
+        const newJoins = [...formData.joins];
+        newJoins[idx] = { ...newJoins[idx], [field]: val };
+        setFormData({ ...formData, joins: newJoins });
+    };
+
+    const handleSlicesChange = (val: string) => {
+        setFormData({ ...formData, slices: val.split(",").map(s => s.trim()) });
+    };
+
+
 
     useEffect(() => {
         if (formData.source_table) {
@@ -146,6 +173,112 @@ export default function ReportEditor({ report, onSave, onCancel, tables }: Repor
                                 placeholder="e.g. SUM(amount) or COUNT(distinct user_id)"
                             />
                             <p className="text-[10px] text-gray-400 mt-1">SQL Aggregation syntax allowed.</p>
+                        </div>
+
+                        <div className="h-px bg-gray-100 my-2"></div>
+
+                        {/* Joins Configuration */}
+                        <div className="space-y-3">
+                            <div className="flex justify-between items-center">
+                                <h4 className="font-bold text-gray-800 text-sm">关联表 (Joins)</h4>
+                                <button onClick={handleAddJoin} className="text-xs text-indigo-600 hover:text-indigo-800 font-medium">+ Add Join</button>
+                            </div>
+
+                            {formData.joins.map((join, idx) => (
+                                <div key={idx} className="bg-gray-50 p-3 rounded border border-gray-100 relative group">
+                                    <button
+                                        onClick={() => handleRemoveJoin(idx)}
+                                        className="absolute top-2 right-2 text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100"
+                                    >
+                                        <X size={14} />
+                                    </button>
+                                    <div className="grid grid-cols-3 gap-2 mb-2">
+                                        <select
+                                            className="text-xs border rounded p-1"
+                                            value={join.join_type}
+                                            onChange={e => handleJoinChange(idx, 'join_type', e.target.value)}
+                                        >
+                                            <option value="LEFT">LEFT JOIN</option>
+                                            <option value="INNER">INNER JOIN</option>
+                                        </select>
+                                        <select
+                                            className="text-xs border rounded p-1 col-span-2"
+                                            value={join.table}
+                                            onChange={e => handleJoinChange(idx, 'table', e.target.value)}
+                                        >
+                                            <option value="">-- Table --</option>
+                                            {tables.map(t => <option key={t.name} value={t.name}>{t.name}</option>)}
+                                        </select>
+                                    </div>
+                                    <input
+                                        className="w-full text-xs border rounded p-1 font-mono"
+                                        placeholder="ON condition (e.g. T1.id = T2.id)"
+                                        value={join.on_expression}
+                                        onChange={e => handleJoinChange(idx, 'on_expression', e.target.value)}
+                                    />
+                                </div>
+                            ))}
+                            {formData.joins.length === 0 && <p className="text-xs text-gray-400 italic">No joins configured.</p>}
+                        </div>
+
+                        <div className="h-px bg-gray-100 my-2"></div>
+
+                        {/* Slices (Filters) */}
+                        <div>
+                            <h4 className="font-bold text-gray-800 text-sm mb-2">筛选切片 (Slices)</h4>
+
+                            {/* Selected Slices Tags */}
+                            <div className="flex flex-wrap gap-2 mb-2">
+                                {formData.slices.map((slice, idx) => (
+                                    <span key={idx} className="inline-flex items-center px-2 py-1 rounded bg-indigo-50 text-indigo-700 text-xs border border-indigo-100">
+                                        {slice}
+                                        <button
+                                            onClick={() => {
+                                                const newSlices = [...formData.slices];
+                                                newSlices.splice(idx, 1);
+                                                setFormData({ ...formData, slices: newSlices });
+                                            }}
+                                            className="ml-1 text-indigo-400 hover:text-indigo-600"
+                                        >
+                                            <X size={12} />
+                                        </button>
+                                    </span>
+                                ))}
+                            </div>
+
+                            {/* Add Slice Dropdown */}
+                            <div className="flex gap-2">
+                                <select
+                                    className="flex-1 border border-gray-200 rounded p-2 text-sm outline-none"
+                                    onChange={e => {
+                                        if (e.target.value && !formData.slices.includes(e.target.value)) {
+                                            setFormData({ ...formData, slices: [...formData.slices, e.target.value] });
+                                        }
+                                        e.target.value = ""; // Reset
+                                    }}
+                                >
+                                    <option value="">+ Add Slice Filter...</option>
+                                    {/* Main Table Columns */}
+                                    <optgroup label={`Main: ${formData.source_table}`}>
+                                        {columns.map(c => (
+                                            <option key={c.name} value={c.name}>{c.name}</option>
+                                        ))}
+                                    </optgroup>
+                                    {/* Joined Tables Columns */}
+                                    {formData.joins.map((j, jIdx) => {
+                                        const jTable = tables.find(t => t.name === j.table);
+                                        if (!jTable) return null;
+                                        return (
+                                            <optgroup key={jIdx} label={`Joined: ${j.table}`}>
+                                                {jTable.columns.map((c: any) => (
+                                                    <option key={`${j.table}.${c.name}`} value={c.name}>{c.name} ({j.table})</option>
+                                                ))}
+                                            </optgroup>
+                                        );
+                                    })}
+                                </select>
+                            </div>
+                            <p className="text-[10px] text-gray-400 mt-1">Select fields from main or joined tables to allow filtering.</p>
                         </div>
                     </div>
                 </div>

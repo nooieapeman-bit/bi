@@ -405,11 +405,25 @@
           "description": "\u8d27\u5e01"
         },
         {
-          "name": "status",
+          "name": "type",
           "type": "TEXT",
           "primary_key": false,
           "foreign_key": null,
-          "description": "\u8ba2\u5355\u72b6\u6001 (\u9996\u8d39, \u7eed\u8d39)"
+          "description": "\u8ba2\u5355\u7c7b\u578b\uff08\u8bd5\u7528\uff0c\u76f4\u8d2d\uff0c\u7eed\u8d39\uff09"
+        },
+        {
+          "name": "sequence",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u76f8\u5173\u8ba2\u5355\u6d41\u6c34\u53f7\uff0c\u4ece 1 \u5f00\u59cb"
+        },
+        {
+          "name": "paid_sequence",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u76f8\u5173\u8ba2\u5355\u4ed8\u8d39\u6d41\u6c34\u53f7\uff0c\u4ece 1 \u5f00\u59cb\uff0c\u4e0d\u542b0\u5143\u8bd5\u7528"
         }
       ],
       "description": "\u8ba2\u5355\u4e8b\u5b9e\u8868"

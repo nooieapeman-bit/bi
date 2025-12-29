@@ -140,15 +140,17 @@ export default function Home() {
                   <button
                     key={t.name}
                     onClick={() => handleTableClick(t, "dimension")}
-                    className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors flex items-center justify-between group
+                    className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors block group
                         ${selectedTable?.name === t.name ? 'bg-blue-50 text-blue-700 font-medium ring-1 ring-blue-200' : 'hover:bg-gray-100 text-gray-600'}
                     `}
                   >
-                    <div className="flex items-center space-x-2 truncate">
-                      <LayoutDashboard size={14} className={selectedTable?.name === t.name ? 'text-blue-500' : 'text-gray-400'} />
-                      <span className="truncate">{t.name}</span>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2 truncate">
+                        <LayoutDashboard size={14} className={selectedTable?.name === t.name ? 'text-blue-500' : 'text-gray-400'} />
+                        <span className="truncate">{t.name}</span>
+                      </div>
                     </div>
-                    {t.description && <span className="text-[10px] text-gray-400 truncate max-w-[80px] group-hover:block hidden">{t.description}</span>}
+                    {t.description && <div className="text-[10px] text-gray-400 mt-1 pl-6 whitespace-normal leading-tight">{t.description}</div>}
                   </button>
                 ))}
               </div>
@@ -165,15 +167,17 @@ export default function Home() {
                   <button
                     key={t.name}
                     onClick={() => handleTableClick(t, "fact")}
-                    className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors flex items-center justify-between group
+                    className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors block group
                         ${selectedTable?.name === t.name ? 'bg-indigo-50 text-indigo-700 font-medium ring-1 ring-indigo-200' : 'hover:bg-gray-100 text-gray-600'}
                     `}
                   >
-                    <div className="flex items-center space-x-2 truncate">
-                      <TableIcon size={14} className={selectedTable?.name === t.name ? 'text-indigo-500' : 'text-gray-400'} />
-                      <span className="truncate">{t.name}</span>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2 truncate">
+                        <TableIcon size={14} className={selectedTable?.name === t.name ? 'text-indigo-500' : 'text-gray-400'} />
+                        <span className="truncate">{t.name}</span>
+                      </div>
                     </div>
-                    {t.description && <span className="text-[10px] text-gray-400 truncate max-w-[80px] group-hover:block hidden">{t.description}</span>}
+                    {t.description && <div className="text-[10px] text-gray-400 mt-1 pl-6 whitespace-normal leading-tight">{t.description}</div>}
                   </button>
                 ))}
               </div>
@@ -282,14 +286,15 @@ export default function Home() {
                                 />
                               </td>
                               <td className="px-4 py-2">
-                                <input
+                                <textarea
                                   value={col.description || ""}
                                   onChange={e => {
                                     const newCols = [...selectedTable.columns];
                                     newCols[idx].description = e.target.value;
                                     updateSelectedTable({ ...selectedTable, columns: newCols });
                                   }}
-                                  className="w-full bg-transparent focus:outline-none text-gray-500 text-xs italic placeholder-gray-300"
+                                  rows={2}
+                                  className="w-full bg-transparent focus:outline-none text-gray-500 text-xs italic placeholder-gray-300 resize-y min-h-[32px]"
                                   placeholder="备注..."
                                 />
                               </td>
