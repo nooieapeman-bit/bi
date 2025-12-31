@@ -11,6 +11,14 @@ interface ReportEditorProps {
 }
 
 export default function ReportEditor({ report, onSave, onCancel, tables }: ReportEditorProps) {
+    // Dynamic API Base
+    const [apiBase, setApiBase] = useState("http://localhost:8000/api");
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setApiBase(`http://${window.location.hostname}:8000/api`);
+        }
+    }, []);
+
     const [formData, setFormData] = useState({
         id: report?.id || `report_${Date.now()}`,
         category: report?.category || "finance",

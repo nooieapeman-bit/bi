@@ -25,70 +25,6 @@
       "image": null
     },
     {
-      "id": "report_1767035739458",
-      "category": "finance",
-      "title": "\u65e5\u5ea6\u8425\u6536\u8d8b\u52bf",
-      "description": "\u6309\u5929\u7edf\u8ba1\u7684\u73b0\u91d1\u8425\u6536\u589e\u957f\u8d8b\u52bf",
-      "chart_type": "line",
-      "source_table": "Fact_Order",
-      "joins": [],
-      "group_by": "time_key",
-      "measure_formula": "SUM(amount)",
-      "measures": [
-        {
-          "column": "calculated",
-          "label": "Value"
-        }
-      ],
-      "x_axis": {
-        "column": "time_key",
-        "label": "time_key",
-        "type": "category",
-        "granularity_options": []
-      },
-      "filters": [],
-      "slices": [
-        "time_key",
-        "app_key",
-        "plan_key",
-        "region_key",
-        "paid_sequence"
-      ],
-      "image": ""
-    },
-    {
-      "id": "revenue_trend",
-      "category": "finance",
-      "title": "\u6708\u5ea6\u8425\u6536\u8d8b\u52bf",
-      "description": "\u6309\u6708\u7edf\u8ba1\u7684\u73b0\u91d1\u8425\u6536\u589e\u957f\u8d8b\u52bf",
-      "chart_type": "line",
-      "source_table": "Fact_Order",
-      "joins": [],
-      "group_by": "time_key",
-      "measure_formula": "SUM(amount)",
-      "measures": [
-        {
-          "column": "calculated",
-          "label": "Value"
-        }
-      ],
-      "x_axis": {
-        "column": "time_key",
-        "label": "time_key",
-        "type": "category",
-        "granularity_options": []
-      },
-      "filters": [],
-      "slices": [
-        "time_key",
-        "app_key",
-        "region_key",
-        "plan_key",
-        "paid_sequence"
-      ],
-      "image": ""
-    },
-    {
       "id": "report_1767035922235",
       "category": "finance",
       "title": "\u65e5\u5ea6\u5747\u644a\u8425\u6536\u8d8b\u52bf ",
@@ -269,58 +205,6 @@
       "image": ""
     },
     {
-      "id": "report_1767038505303",
-      "category": "user",
-      "title": "\u6708\u5957\u9910\u8ba2\u9605\u9996\u6708\u7eed\u8d39\u7387\uff08\u6708\u5ea6\uff09",
-      "description": "\u4e0a\u4e00\u4e2a\u6708\u4ed8\u8d39\u8ba2\u9605\u7684\u6708\u5957\u9910\uff0c\u4e0b\u4e00\u4e2a\u6708\u7ee7\u7eed\u7eed\u8d39\u7684\u5360\u6bd4",
-      "chart_type": "line",
-      "source_table": "Fact_Subscription",
-      "joins": [],
-      "group_by": "",
-      "measure_formula": "",
-      "measures": [
-        {
-          "column": "calculated",
-          "label": "Value"
-        }
-      ],
-      "x_axis": {
-        "column": "",
-        "label": "",
-        "type": "category",
-        "granularity_options": []
-      },
-      "filters": [],
-      "slices": [],
-      "image": ""
-    },
-    {
-      "id": "report_1767038657350",
-      "category": "user",
-      "title": "\u5e74\u5957\u9910\u8ba2\u9605\u9996\u5e74\u7eed\u8d39\u7387\uff08\u6708\u5ea6\uff09",
-      "description": "\u8fd9\u4e2a\u6708\u4e2d\uff0c\u4ed8\u8d39\u65b0\u8ba2\u9605\u7684\u5e74\u5957\u9910\uff0c\u4e0b\u4e00\u5e74\u7ee7\u7eed\u7eed\u8d39\u7684\u5360\u6bd4",
-      "chart_type": "line",
-      "source_table": "Fact_Subscription",
-      "joins": [],
-      "group_by": "",
-      "measure_formula": "",
-      "measures": [
-        {
-          "column": "calculated",
-          "label": "Value"
-        }
-      ],
-      "x_axis": {
-        "column": "",
-        "label": "",
-        "type": "category",
-        "granularity_options": []
-      },
-      "filters": [],
-      "slices": [],
-      "image": ""
-    },
-    {
       "id": "report_1767038125422",
       "category": "user",
       "title": "\u8ba2\u9605\u670d\u52a1\u7528\u6237\u9996\u6708\u5728\u671f\u7387\uff08\u6708\u5ea6\uff09",
@@ -347,6 +231,70 @@
       "image": ""
     },
     {
+      "id": "revenue_trend",
+      "category": "finance",
+      "title": "\u6708\u5ea6\u8425\u6536\u8d8b\u52bf",
+      "description": "\u6309\u6708\u7edf\u8ba1\u7684\u73b0\u91d1\u8425\u6536\u589e\u957f\u8d8b\u52bf",
+      "chart_type": "line",
+      "source_table": "Fact_Order",
+      "joins": [],
+      "group_by": "pay_time",
+      "measure_formula": "SUM(amount)",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "pay_time",
+        "label": "pay_time",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "time_key",
+        "app_key",
+        "region_key",
+        "plan_key",
+        "paid_sequence"
+      ],
+      "image": ""
+    },
+    {
+      "id": "report_1767035739458",
+      "category": "finance",
+      "title": "\u65e5\u5ea6\u8425\u6536\u8d8b\u52bf",
+      "description": "\u6309\u5929\u7edf\u8ba1\u7684\u73b0\u91d1\u8425\u6536\u589e\u957f\u8d8b\u52bf",
+      "chart_type": "line",
+      "source_table": "Fact_Order",
+      "joins": [],
+      "group_by": "pay_time",
+      "measure_formula": "SUM(amount)",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "pay_time",
+        "label": "pay_time",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "time_key",
+        "app_key",
+        "plan_key",
+        "region_key",
+        "paid_sequence"
+      ],
+      "image": ""
+    },
+    {
       "id": "report_1767039576696",
       "category": "user",
       "title": "\u5e74\u5957\u9910\u5360\u6bd4\uff08\u6708\u5ea6\uff09",
@@ -354,7 +302,7 @@
       "chart_type": "line",
       "source_table": "Fact_Order",
       "joins": [],
-      "group_by": "time_key",
+      "group_by": "pay_time",
       "measure_formula": "",
       "measures": [
         {
@@ -363,8 +311,63 @@
         }
       ],
       "x_axis": {
-        "column": "time_key",
-        "label": "time_key",
+        "column": "pay_time",
+        "label": "pay_time",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "app_key",
+        "region_key"
+      ],
+      "image": ""
+    },
+    {
+      "id": "report_1767038505303",
+      "category": "user",
+      "title": "\u6708\u5957\u9910\u8ba2\u9605\u9996\u6708\u7eed\u8d39\u7387\uff08\u6708\u5ea6\uff09",
+      "description": "\u4e0a\u4e00\u4e2a\u6708\u4ed8\u8d39\u8ba2\u9605\u7684\u6708\u5957\u9910\uff0c\u4e0b\u4e00\u4e2a\u6708\u7ee7\u7eed\u7eed\u8d39\u7684\u5360\u6bd4",
+      "chart_type": "line",
+      "source_table": "Fact_Subscription",
+      "joins": [],
+      "group_by": "first_paid_time",
+      "measure_formula": "",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "first_paid_time",
+        "label": "first_paid_time",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [],
+      "image": ""
+    },
+    {
+      "id": "report_1767038657350",
+      "category": "user",
+      "title": "\u5e74\u5957\u9910\u8ba2\u9605\u9996\u5e74\u7eed\u8d39\u7387\uff08\u6708\u5ea6\uff09",
+      "description": "\u8fd9\u4e2a\u6708\u4e2d\uff0c\u4ed8\u8d39\u65b0\u8ba2\u9605\u7684\u5e74\u5957\u9910\uff0c\u4e0b\u4e00\u5e74\u7ee7\u7eed\u7eed\u8d39\u7684\u5360\u6bd4",
+      "chart_type": "line",
+      "source_table": "Fact_Subscription",
+      "joins": [],
+      "group_by": "first_paid_time",
+      "measure_formula": "",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Value"
+        }
+      ],
+      "x_axis": {
+        "column": "first_paid_time",
+        "label": "first_paid_time",
         "type": "category",
         "granularity_options": []
       },

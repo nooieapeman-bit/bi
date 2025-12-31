@@ -25,12 +25,22 @@ export default function ReportViewer() {
     const [targetCategory, setTargetCategory] = useState("finance");
     const [deleteConfirm, setDeleteConfirm] = useState<{ isOpen: boolean, reportId: string | null }>({ isOpen: false, reportId: null });
 
-    const API_BASE = "http://localhost:8000/api";
+    // Dynamic API Base for LAN access
+    const [apiBase, setApiBase] = useState("http://localhost:8000/api");
+
+    useEffect(() => {
+        // Run only on client side
+        if (typeof window !== "undefined") {
+            setApiBase(`http://${window.location.hostname}:8000/api`);
+        }
+    }, []);
+
+    const API_BASE = apiBase;
 
     useEffect(() => {
         refreshReports();
         fetchSchema();
-    }, []);
+    }, [apiBase]);
 
     const refreshReports = () => {
         fetch(`${API_BASE}/reports`)

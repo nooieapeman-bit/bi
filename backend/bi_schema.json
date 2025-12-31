@@ -4,38 +4,31 @@
       "name": "Dim_User",
       "columns": [
         {
-          "name": "surrogate_key",
+          "name": "user_id",
           "type": "INTEGER",
           "primary_key": true,
           "foreign_key": null,
-          "description": "\u4ee3\u7406\u4e3b\u952e (App/Region\u72ec\u7acb)"
-        },
-        {
-          "name": "user_id",
-          "type": "INTEGER",
-          "primary_key": false,
-          "foreign_key": null,
-          "description": "\u4e1a\u52a1\u7528\u6237ID (Source ID)"
+          "description": "\u4e1a\u52a1\u7528\u6237ID (uid)"
         },
         {
           "name": "app_key",
-          "type": "INTEGER",
+          "type": "TEXT",
           "primary_key": false,
-          "foreign_key": "Dim_App.app_key",
-          "description": "\u6240\u5c5e\u5e94\u7528ID"
+          "foreign_key": "",
+          "description": "\u6240\u5c5e\u5e94\u7528"
         },
         {
           "name": "region_key",
-          "type": "INTEGER",
+          "type": "TEXT",
           "primary_key": false,
-          "foreign_key": "Dim_Region.region_key",
-          "description": "\u6240\u5c5e\u533a\u57dfID"
+          "foreign_key": "",
+          "description": "\u6240\u5c5e\u533a\u57df"
         },
         {
           "name": "join_date",
           "type": "TEXT",
           "primary_key": false,
-          "foreign_key": null,
+          "foreign_key": "Dim_Time.time_key",
           "description": "\u6ce8\u518c\u65e5\u671f"
         },
         {
@@ -43,69 +36,62 @@
           "type": "TEXT",
           "primary_key": false,
           "foreign_key": null,
-          "description": "\u4f1a\u5458\u72b6\u6001"
+          "description": "\u4f1a\u5458\u72b6\u6001-\u5df2\u5220\u9664"
         },
         {
           "name": "first_bind_time",
           "type": "TEXT",
           "primary_key": false,
-          "foreign_key": null,
-          "description": "\u9996\u6b21\u7ed1\u5b9a\u8bbe\u5907\u65f6\u95f4"
+          "foreign_key": "Dim_Time.time_key",
+          "description": "\u9996\u6b21\u7ed1\u5b9a\u8bbe\u5907\u65f6\u95f4-\u540e\u671f\u6e05\u6d17"
         },
         {
           "name": "first_trial_time",
           "type": "TEXT",
           "primary_key": false,
-          "foreign_key": null,
-          "description": "\u9996\u6b21\u8bd5\u7528\u65f6\u95f4"
+          "foreign_key": "Dim_Time.time_key",
+          "description": "\u9996\u6b21\u8bd5\u7528\u65f6\u95f4-\u540e\u671f\u6e05\u6d17"
         },
         {
           "name": "first_payment_time",
           "type": "TEXT",
           "primary_key": false,
-          "foreign_key": null,
-          "description": "\u9996\u6b21\u652f\u4ed8\u65f6\u95f4"
+          "foreign_key": "Dim_Time.time_key",
+          "description": "\u9996\u6b21\u652f\u4ed8\u65f6\u95f4-\u540e\u671f\u6e05\u6d17"
         },
         {
-          "name": "plan_key",
-          "type": "INTEGER",
+          "name": "country",
+          "type": "TEXT",
           "primary_key": false,
-          "foreign_key": "Dim_Plan.plan_key",
-          "description": "\u5957\u9910\u4e3b\u952e"
+          "foreign_key": null,
+          "description": "\u56fd\u5bb6"
         }
       ],
-      "description": "\u7528\u6237\u7ef4\u5ea6\u8868"
+      "description": "\u7528\u6237\u7ef4\u5ea6\u8868 - "
     },
     {
       "name": "Dim_Device",
       "columns": [
         {
-          "name": "surrogate_key",
+          "name": "device_id",
           "type": "INTEGER",
           "primary_key": true,
           "foreign_key": null,
-          "description": "\u4ee3\u7406\u4e3b\u952e"
-        },
-        {
-          "name": "device_id",
-          "type": "INTEGER",
-          "primary_key": false,
-          "foreign_key": null,
-          "description": "\u4e1a\u52a1\u8bbe\u5907ID"
+          "description": "\u4e1a\u52a1\u8bbe\u5907ID uuid"
         },
         {
           "name": "app_key",
           "type": "INTEGER",
           "primary_key": false,
-          "foreign_key": "Dim_App.app_key",
-          "description": "\u6240\u5c5e\u5e94\u7528ID"
+          "foreign_key": "",
+          "description": "\u6240\u5c5e\u5e94\u7528"
         },
         {
           "name": "region_key",
           "type": "INTEGER",
           "primary_key": false,
-          "foreign_key": "Dim_Region.region_key",
-          "description": "\u6240\u5c5e\u533a\u57dfID"
+          "foreign_key": "",
+          "description": "\u6240\u5c5e\u533a\u57df"
         },
         {
           "name": "device_type",
@@ -230,7 +216,7 @@
       "name": "Dim_Model",
       "columns": [
         {
-          "name": "model_key",
+          "name": "model_id",
           "type": "INTEGER",
           "primary_key": true,
           "foreign_key": null,
@@ -257,7 +243,7 @@
       "name": "Dim_Plan",
       "columns": [
         {
-          "name": "plan_key",
+          "name": "plan_id",
           "type": "INTEGER",
           "primary_key": true,
           "foreign_key": null,
@@ -289,20 +275,20 @@
           "type": "TEXT",
           "primary_key": false,
           "foreign_key": null,
-          "description": "license\u4e2a\u6570"
+          "description": "license\u4e2a\u6570-\u8001\u5957\u9910\u90fd\u4e3a1"
         },
         {
           "name": "app_key",
           "type": "TEXT",
           "primary_key": false,
-          "foreign_key": "Dim_App.app_key",
+          "foreign_key": "",
           "description": "\u6240\u5c5e\u5e94\u7528key"
         },
         {
           "name": "region_key",
           "type": "TEXT",
           "primary_key": false,
-          "foreign_key": "Dim_Region.region_key",
+          "foreign_key": "",
           "description": "\u6240\u5c5e\u533a\u57dfkey"
         }
       ],
@@ -314,7 +300,7 @@
       "name": "Fact_Order",
       "columns": [
         {
-          "name": "order_surrogate_key",
+          "name": "order_uuid",
           "type": "INTEGER",
           "primary_key": true,
           "foreign_key": null,
@@ -356,11 +342,11 @@
           "description": "\u8d2d\u4e70\u6570\u91cf"
         },
         {
-          "name": "time_key",
+          "name": "pay_time",
           "type": "TEXT",
           "primary_key": false,
-          "foreign_key": "Dim_Time.time_key",
-          "description": "\u65f6\u95f4\u952e"
+          "foreign_key": "",
+          "description": "\u652f\u4ed8\u65f6\u95f4"
         },
         {
           "name": "app_key",
@@ -381,28 +367,21 @@
           "type": "REAL",
           "primary_key": false,
           "foreign_key": null,
-          "description": "\u91d1\u989d"
-        },
-        {
-          "name": "discount_amount",
-          "type": "REAL",
-          "primary_key": false,
-          "foreign_key": null,
-          "description": "\u6298\u6263\u91d1\u989d"
+          "description": "\u91d1\u989d-\u6700\u7ec8\u652f\u4ed8\u91d1\u989d"
         },
         {
           "name": "credit_amount",
           "type": "REAL",
           "primary_key": false,
           "foreign_key": null,
-          "description": "\u4fe1\u7528\u91d1\u989d"
+          "description": "\u4fe1\u7528\u91d1\u989d-\u5c06\u6765\u4f1a\u5b58\u5728"
         },
         {
           "name": "currency",
           "type": "TEXT",
           "primary_key": false,
           "foreign_key": null,
-          "description": "\u8d27\u5e01"
+          "description": "\u8d27\u5e01-\u9ed8\u8ba4CNY"
         },
         {
           "name": "type",
@@ -424,6 +403,13 @@
           "primary_key": false,
           "foreign_key": null,
           "description": "\u76f8\u5173\u8ba2\u5355\u4ed8\u8d39\u6d41\u6c34\u53f7\uff0c\u4ece 1 \u5f00\u59cb\uff0c\u4e0d\u542b0\u5143\u8bd5\u7528"
+        },
+        {
+          "name": "plan_p_type",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u5957\u9910\u5468\u671f\u7c7b\u578b-\u6708\uff0c\u5e74"
         }
       ],
       "description": "\u8ba2\u5355\u4e8b\u5b9e\u8868"
@@ -460,10 +446,10 @@
           "description": "\u5957\u9910\u4e3b\u952e"
         },
         {
-          "name": "time_key",
+          "name": "pay_time",
           "type": "TEXT",
           "primary_key": false,
-          "foreign_key": "Dim_Time.time_key",
+          "foreign_key": "",
           "description": "\u5165\u8d26\u65f6\u95f4 (\u644a\u9500\u6708\u4efd)"
         },
         {
@@ -495,11 +481,18 @@
           "description": "\u644a\u9500\u671f\u6570 (e.g. 1/12)"
         },
         {
-          "name": "total_periods",
+          "name": "sequence",
           "type": "INTEGER",
           "primary_key": false,
           "foreign_key": null,
-          "description": "\u603b\u671f\u6570"
+          "description": "\u5f53\u524d\u671f\u6570"
+        },
+        {
+          "name": "plan_p_type",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u5957\u9910\u5468\u671f\u7c7b\u578b-\u6708/\u5e74"
         }
       ],
       "description": "\u4f1a\u8ba1\u8425\u6536\u8868 (\u5e74\u5957\u9910\u5747\u644a)"
@@ -533,7 +526,7 @@
           "type": "REAL",
           "primary_key": false,
           "foreign_key": null,
-          "description": "\u9996\u671f\u91d1\u989d"
+          "description": "\u9996\u671f\u91d1\u989d-\u8bd5\u7528\u7684\u8bdd\u4e3a0"
         },
         {
           "name": "first_start_time",
@@ -590,6 +583,27 @@
           "primary_key": false,
           "foreign_key": null,
           "description": "\u7ed3\u675f\u539f\u56e0 (\u5347\u7ea7, \u53d6\u6d88, \u652f\u4ed8\u5931\u8d25)"
+        },
+        {
+          "name": "sequence",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u5f53\u524d\u671f\u6570"
+        },
+        {
+          "name": "first_paid_time",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u7b2c\u4e00\u6b21\u4ed8\u6b3e\u65f6\u95f4\uff08>0\u7684\u4ed8\u6b3e\uff09"
+        },
+        {
+          "name": "plan_p_type",
+          "type": "TEXT",
+          "primary_key": false,
+          "foreign_key": null,
+          "description": "\u5957\u9910\u5468\u671f\u7c7b\u578b-\u6708/\u5e74"
         }
       ],
       "description": "\u8ba2\u9605\u4fe1\u606f\u8868"

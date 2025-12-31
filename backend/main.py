@@ -50,14 +50,57 @@ def get_db_connection():
 
 # ... (Imports remain, remove init_meta_tables, migrate_json_to_db)
 
+# ... existing code ...
+
+def init_meta_db():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS system_metadata (
+            key TEXT PRIMARY KEY,
+            value TEXT
+        );
+    """)
+    conn.commit()
+    conn.close()
+
+# Initialize on module load
+try:
+    init_meta_db()
+except Exception as e:
+    print(f"Warning: Failed to init meta db: {e}")
+
+def get_metadata(key: str) -> Optional[Dict]:
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT value FROM system_metadata WHERE key = ?", (key,))
+    row = cursor.fetchone()
+    conn.close()
+    if row:
+        return json.loads(row[0])
+    return None
+
+def set_metadata(key: str, data: Any):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("INSERT OR REPLACE INTO system_metadata (key, value) VALUES (?, ?)", (key, json.dumps(data)))
+    conn.commit()
+    conn.close()
+
 @app.get("/")
 def read_root():
     return {"message": "Smart Home BI Backend API"}
 
 @app.get("/api/schema", response_model=Dict) 
 def get_schema():
+    # Try DB first
+    data = get_metadata("bi_schema")
+    if data:
+        return data
+        
+    # Fallback to file and sync to DB
     if not os.path.exists(SCHEMA_FILE):
-        return {"dimensions": [], "facts": [], "debug_error": f"File not found at {SCHEMA_FILE}", "cwd": os.getcwd()}
+        return {"dimensions": [], "facts": [], "debug_error": f"File not found at {SCHEMA_FILE}"}
     
     with open(SCHEMA_FILE, "r") as f:
         try:
@@ -65,19 +108,26 @@ def get_schema():
             if not content.strip():
                  return {"dimensions": [], "facts": [], "debug_error": "File empty"}
             data = json.loads(content)
+            # Sync to DB
+            set_metadata("bi_schema", data)
             return data
         except json.JSONDecodeError as e:
             return {"dimensions": [], "facts": [], "debug_error": str(e)}
 
 @app.post("/api/schema")
 def update_schema(schema: Schema):
+    data = schema.dict()
+    # Save to File (Keep as backup)
     with open(SCHEMA_FILE, "w") as f:
-        json.dump(schema.dict(), f, indent=2)
-    return {"status": "success", "message": "Schema updated successfully"}
+        json.dump(data, f, indent=2)
+    # Save to DB
+    set_metadata("bi_schema", data)
+    return {"status": "success", "message": "Schema updated successfully (DB + File)"}
 
 @app.get("/api/export")
 def export_schema():
-    # Just serve the file directly
+    data = get_reports() # Logic should be similar to ensure consistency
+    # ... (existing export logic logic might need review but keeping simple)
     if not os.path.exists(SCHEMA_FILE):
          return {"dimensions": [], "facts": []}
     with open(SCHEMA_FILE, "r") as f:
@@ -161,27 +211,37 @@ class QueryRequest(BaseModel):
     filters: Dict[str, Any] = {}
     granularity: str = "day"
 
-REPORTS_FILE = os.path.join(BASE_DIR, "bi_reports.json")
-
 @app.get("/api/reports")
 def get_reports():
+    # Try DB first
+    data = get_metadata("bi_reports")
+    if data:
+        return data
+
     if not os.path.exists(REPORTS_FILE):
         return {"reports": []}
     with open(REPORTS_FILE, "r") as f:
         try:
-            return json.load(f)
+            data = json.load(f)
+            # Sync to DB
+            set_metadata("bi_reports", data)
+            return data
         except json.JSONDecodeError:
             return {"reports": []}
 
 @app.post("/api/reports")
 def save_reports(payload: ReportsPayload):
+    data = payload.dict()
+    # Save to File
     with open(REPORTS_FILE, "w") as f:
-        json.dump(payload.dict(), f, indent=2)
+        json.dump(data, f, indent=2)
+    # Save to DB
+    set_metadata("bi_reports", data)
     return {"status": "success"}
 
 @app.delete("/api/reports/{report_id}")
 def delete_report(report_id: str):
-    data = get_reports() # Re-use get_reports safely
+    data = get_reports() # Will fetch from DB if present
     if isinstance(data, dict):
          reports = data.get("reports", [])
     else:
@@ -189,8 +249,14 @@ def delete_report(report_id: str):
          
     reports = [r for r in reports if r["id"] != report_id]
     
+    new_data = {"reports": reports}
+    
+    # Save to File
     with open(REPORTS_FILE, "w") as f:
-        json.dump({"reports": reports}, f, indent=2)
+        json.dump(new_data, f, indent=2)
+    # Save to DB
+    set_metadata("bi_reports", new_data)
+        
     return {"status": "success"}
 
 @app.post("/api/query")
