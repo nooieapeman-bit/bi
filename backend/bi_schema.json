@@ -173,46 +173,6 @@
       "description": "\u65f6\u95f4\u7ef4\u5ea6\u8868"
     },
     {
-      "name": "Dim_App",
-      "columns": [
-        {
-          "name": "app_key",
-          "type": "INTEGER",
-          "primary_key": true,
-          "foreign_key": null,
-          "description": "\u5e94\u7528ID"
-        },
-        {
-          "name": "app_name",
-          "type": "TEXT",
-          "primary_key": false,
-          "foreign_key": null,
-          "description": "\u5e94\u7528\u540d\u79f0 (\u54c1\u724c)"
-        }
-      ],
-      "description": "\u5e94\u7528\u7ef4\u5ea6\u8868 (\u4e0d\u540c\u54c1\u724cApp)"
-    },
-    {
-      "name": "Dim_Region",
-      "columns": [
-        {
-          "name": "region_key",
-          "type": "INTEGER",
-          "primary_key": true,
-          "foreign_key": null,
-          "description": "\u533a\u57dfID"
-        },
-        {
-          "name": "region_name",
-          "type": "TEXT",
-          "primary_key": false,
-          "foreign_key": null,
-          "description": "\u533a\u57df\u540d\u79f0 (\u5982: \u5317\u7f8e, \u6b27\u6d32, \u4e9a\u592a)"
-        }
-      ],
-      "description": "\u90e8\u7f72\u533a\u57df\u7ef4\u5ea6\u8868"
-    },
-    {
       "name": "Dim_Model",
       "columns": [
         {
@@ -321,10 +281,10 @@
           "description": "\u4e1a\u52a1\u8ba2\u5355ID"
         },
         {
-          "name": "user_surrogate_key",
+          "name": "user_uid",
           "type": "INTEGER",
           "primary_key": false,
-          "foreign_key": "Dim_User.surrogate_key",
+          "foreign_key": "Dim_User.uid",
           "description": "\u7528\u6237\u4ee3\u7406\u4e3b\u952e"
         },
         {
@@ -352,14 +312,14 @@
           "name": "app_key",
           "type": "INTEGER",
           "primary_key": false,
-          "foreign_key": "Dim_App.app_key",
+          "foreign_key": null,
           "description": "\u5e94\u7528\u4e3b\u952e"
         },
         {
           "name": "region_key",
           "type": "INTEGER",
           "primary_key": false,
-          "foreign_key": "Dim_Region.region_key",
+          "foreign_key": null,
           "description": "\u533a\u57df\u4e3b\u952e"
         },
         {
@@ -456,14 +416,14 @@
           "name": "app_key",
           "type": "INTEGER",
           "primary_key": false,
-          "foreign_key": "Dim_App.app_key",
+          "foreign_key": null,
           "description": "\u5e94\u7528\u4e3b\u952e"
         },
         {
           "name": "region_key",
           "type": "INTEGER",
           "primary_key": false,
-          "foreign_key": "Dim_Region.region_key",
+          "foreign_key": null,
           "description": "\u533a\u57df\u4e3b\u952e"
         },
         {

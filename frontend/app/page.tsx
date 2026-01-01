@@ -2,13 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import { Schema, Table, Column } from "./types";
-import { Save, Database, Plus, Trash2, ArrowRight, LayoutDashboard, Table as TableIcon, BarChart3, Settings } from "lucide-react";
+import { Save, Database, Plus, Trash2, ArrowRight, LayoutDashboard, Table as TableIcon, BarChart3, Settings, ArrowDownToLine } from "lucide-react";
 import ReportViewer from "./ReportViewer";
+import ImportData from "./ImportData";
 
 const API_BASE = "http://localhost:8000/api";
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<"schema" | "analytics">("analytics");
+  const [activeTab, setActiveTab] = useState<"schema" | "analytics" | "import">("analytics");
   const [schema, setSchema] = useState<Schema>({ dimensions: [], facts: [] });
   const [selectedTable, setSelectedTable] = useState<Table | null>(null);
   const [selectedTableType, setSelectedTableType] = useState<"dimension" | "fact" | null>(null);
@@ -125,6 +126,13 @@ export default function Home() {
             <Settings size={18} className="mr-3" />
             Schema Design
           </button>
+          <button
+            onClick={() => setActiveTab("import")}
+            className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors ${activeTab === 'import' ? 'bg-indigo-50 text-indigo-700' : 'text-gray-600 hover:bg-gray-100'}`}
+          >
+            <ArrowDownToLine size={18} className="mr-3" />
+            Data Import
+          </button>
         </div>
 
         {activeTab === 'schema' && (
@@ -188,9 +196,9 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col h-full overflow-hidden">
-        {activeTab === 'analytics' ? (
-          <ReportViewer />
-        ) : (
+        {activeTab === 'analytics' && <ReportViewer />}
+
+        {activeTab === 'schema' && (
           <>
             {/* Header */}
             <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8">
@@ -358,6 +366,12 @@ export default function Home() {
               )}
             </main>
           </>
+        )}
+
+        {activeTab === 'import' && (
+          <div className="flex-1 overflow-y-auto">
+            <ImportData />
+          </div>
         )}
       </div>
 

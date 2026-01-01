@@ -1,6 +1,6 @@
 import json
 import os
-import sqlite3
+import mysql.connector
 from typing import Dict, List, Optional, Any
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
@@ -21,44 +21,236 @@ app.add_middleware(
 # Resolve absolute path to avoid CWD issues
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SCHEMA_FILE = os.path.join(BASE_DIR, "bi_schema.json")
-DB_FILE = os.path.join(BASE_DIR, "bi_data.db")
 REPORTS_FILE = os.path.join(BASE_DIR, "bi_reports.json")
 
 print(f"Backend initialized. Schema file: {SCHEMA_FILE}")
 print(f"Reports file: {REPORTS_FILE}")
 
+# MySQL Configuration
+DB_CONFIG = {
+    'user': 'root',
+    'password': 'ne@202509',
+    'host': 'localhost',
+    'port': 3306,
+    'database': 'bi_data', # Will ensure this exists
+    'auth_plugin': 'mysql_native_password' # Often needed for 8.0 compatibility
+}
+
+# Ensure Database Exists
+def init_mysql_db():
+    # Connect to MySQL server to create DB if needed
+    try:
+        conn = mysql.connector.connect(
+            user=DB_CONFIG['user'],
+            password=DB_CONFIG['password'],
+            host=DB_CONFIG['host'],
+            port=DB_CONFIG['port'],
+            auth_plugin=DB_CONFIG['auth_plugin']
+        )
+        cursor = conn.cursor()
+        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {DB_CONFIG['database']}")
+        conn.close()
+    except Exception as e:
+        print(f"Critical Error: Failed to connect/create MySQL Database: {e}")
+
+try:
+    init_mysql_db()
+except:
+    pass # Will fail later if critical
+
+def get_db_connection():
+    return mysql.connector.connect(**DB_CONFIG)
+
 class Column(BaseModel):
     name: str
-    type: str # INTEGER, TEXT, REAL, etc.
+    type: str 
     primary_key: Optional[bool] = False
-    foreign_key: Optional[str] = None # e.g. "Dim_User.user_id"
-    description: Optional[str] = None # Chinese remark
+    foreign_key: Optional[str] = None
+    description: Optional[str] = None
 
 class Table(BaseModel):
     name: str
     columns: List[Column]
-    description: Optional[str] = None # Chinese remark
+    description: Optional[str] = None
 
 class Schema(BaseModel):
     dimensions: List[Table]
     facts: List[Table]
 
-def get_db_connection():
-    conn = sqlite3.connect(DB_FILE)
-    conn.row_factory = sqlite3.Row
-    return conn
+class JoinConfig(BaseModel):
+    table: str
+    join_type: str = "LEFT" 
+    on_expression: str 
 
-# ... (Imports remain, remove init_meta_tables, migrate_json_to_db)
+class ReportConfig(BaseModel):
+    id: str
+    category: str
+    title: str
+    description: Optional[str] = ""
+    chart_type: str = "line"
+    source_table: str
+    joins: List[JoinConfig] = []
+    group_by: str
+    measure_formula: str
+    measures: List[Dict] = []
+    x_axis: Dict = {}
+    filters: List[Dict] = [] 
+    slices: List[str] = [] 
+    image: Optional[str] = None
 
-# ... existing code ...
+class ReportsPayload(BaseModel):
+    reports: List[ReportConfig]
+
+class EtlMapping(BaseModel):
+    target_column: str
+    source_expression: str # Column name or SQL expression
+
+class EtlRequest(BaseModel):
+    source_table: str
+    target_table: str
+    mappings: List[EtlMapping]
+    truncate_target: bool = False
+
+@app.get("/api/osaio/tables")
+def get_osaio_tables():
+    # Connect to osaio DB
+    try:
+        conn = mysql.connector.connect(
+            user=DB_CONFIG['user'],
+            password=DB_CONFIG['password'],
+            host=DB_CONFIG['host'],
+            port=DB_CONFIG['port'],
+            database='osaio'  # Explicitly connect to osaio
+        )
+        cursor = conn.cursor()
+        cursor.execute("SHOW TABLES")
+        tables = [row[0] for row in cursor.fetchall()]
+        conn.close()
+        return {"tables": tables}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Failed to fetch osaio tables: {str(e)}")
+
+@app.get("/api/osaio/columns/{table_name}")
+def get_osaio_columns(table_name: str):
+    # Security check
+    allowed_chars = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_")
+    if not set(table_name).issubset(allowed_chars):
+         raise HTTPException(status_code=400, detail="Invalid table name")
+         
+    try:
+        conn = mysql.connector.connect(
+            user=DB_CONFIG['user'],
+            password=DB_CONFIG['password'],
+            host=DB_CONFIG['host'],
+            port=DB_CONFIG['port'],
+            database='osaio'
+        )
+        cursor = conn.cursor()
+        cursor.execute(f"DESCRIBE `{table_name}`")
+        columns = [row[0] for row in cursor.fetchall()]
+        conn.close()
+        return {"columns": columns}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Failed to fetch columns: {str(e)}")
+
+@app.post("/api/etl/execute")
+def execute_etl(request: EtlRequest):
+    conn = get_db_connection() # Connects to bi_data
+    cursor = conn.cursor()
+    
+    try:
+        # 1. Truncate if requested
+        if request.truncate_target:
+            cursor.execute(f"TRUNCATE TABLE `{request.target_table}`")
+            
+        # 2. Build Insert Select Query
+        # INSERT INTO bi_data.Target (c1, c2) SELECT expr1, expr2 FROM osaio.Source
+        
+        target_cols = [f"`{m.target_column}`" for m in request.mappings]
+        source_exprs = [m.source_expression for m in request.mappings] # expressions are raw SQL
+        
+        sql = f"""
+            INSERT INTO `{request.target_table}` ({', '.join(target_cols)})
+            SELECT {', '.join(source_exprs)}
+            FROM osaio.`{request.source_table}`
+        """
+        
+        print(f"Executing ETL: {sql}")
+        cursor.execute(sql)
+        conn.commit()
+        return {"status": "success", "message": f"Data imported from {request.source_table} to {request.target_table}"}
+        
+    except Exception as e:
+        conn.rollback()
+        print(f"ETL Error: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+    finally:
+        conn.close()
+
+@app.post("/api/etl/preview")
+def preview_etl(request: EtlRequest):
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary=True)
+    
+    try:
+        # 1. Fetch Raw Sample (Limit 1)
+        cursor.execute(f"SELECT * FROM osaio.`{request.source_table}` LIMIT 1")
+        raw_row = cursor.fetchone()
+        
+        if not raw_row:
+             return {"raw": None, "transformed": None, "message": "Source table is empty"}
+
+        # 2. Fetch Transformed Sample
+        # Filter valid mappings
+        valid_mappings = [m for m in request.mappings if m.source_expression and m.source_expression.strip()]
+        
+        transformed_row = {}
+        if valid_mappings:
+            # Construct SELECT expr AS target_col
+            select_exprs = [f"{m.source_expression} AS `{m.target_column}`" for m in valid_mappings]
+            sql = f"SELECT {', '.join(select_exprs)} FROM osaio.`{request.source_table}` LIMIT 1"
+            
+            try:
+                cursor.execute(sql)
+                transformed_row = cursor.fetchone()
+                # Handle non-serializable types (like datetime)
+                for k, v in transformed_row.items():
+                    if hasattr(v, 'isoformat'):
+                        transformed_row[k] = v.isoformat()
+            except Exception as sql_err:
+                print(f"Preview SQL Error: {sql_err}")
+                # We return partial error context if possible, or just fail
+                raise HTTPException(status_code=400, detail=f"SQL Expression Error: {str(sql_err)}")
+
+        # Handle raw row serialization too
+        if raw_row:
+             for k, v in raw_row.items():
+                 if hasattr(v, 'isoformat'):
+                     raw_row[k] = v.isoformat()
+
+        return {"raw": raw_row, "transformed": transformed_row}
+        
+    except Exception as e:
+        if isinstance(e, HTTPException): raise e
+        print(f"Preview Error: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+    finally:
+        conn.close()
+
+class QueryRequest(BaseModel):
+    report_id: str
+    filters: Dict[str, Any] = {}
+    granularity: str = "day"
+
 
 def init_meta_db():
     conn = get_db_connection()
     cursor = conn.cursor()
+    # MySQL syntax for Text Primary Key length requirement
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS system_metadata (
-            key TEXT PRIMARY KEY,
-            value TEXT
+            `key` VARCHAR(255) PRIMARY KEY,
+            value LONGTEXT
         );
     """)
     conn.commit()
@@ -73,7 +265,7 @@ except Exception as e:
 def get_metadata(key: str) -> Optional[Dict]:
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT value FROM system_metadata WHERE key = ?", (key,))
+    cursor.execute("SELECT value FROM system_metadata WHERE `key` = %s", (key,))
     row = cursor.fetchone()
     conn.close()
     if row:
@@ -83,22 +275,21 @@ def get_metadata(key: str) -> Optional[Dict]:
 def set_metadata(key: str, data: Any):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute("INSERT OR REPLACE INTO system_metadata (key, value) VALUES (?, ?)", (key, json.dumps(data)))
+    # MySQL Replace Into or Insert On Duplicate
+    cursor.execute("REPLACE INTO system_metadata (`key`, value) VALUES (%s, %s)", (key, json.dumps(data)))
     conn.commit()
     conn.close()
 
 @app.get("/")
 def read_root():
-    return {"message": "Smart Home BI Backend API"}
+    return {"message": "Smart Home BI Backend API (MySQL)"}
 
 @app.get("/api/schema", response_model=Dict) 
 def get_schema():
-    # Try DB first
     data = get_metadata("bi_schema")
     if data:
         return data
         
-    # Fallback to file and sync to DB
     if not os.path.exists(SCHEMA_FILE):
         return {"dimensions": [], "facts": [], "debug_error": f"File not found at {SCHEMA_FILE}"}
     
@@ -108,7 +299,6 @@ def get_schema():
             if not content.strip():
                  return {"dimensions": [], "facts": [], "debug_error": "File empty"}
             data = json.loads(content)
-            # Sync to DB
             set_metadata("bi_schema", data)
             return data
         except json.JSONDecodeError as e:
@@ -117,17 +307,13 @@ def get_schema():
 @app.post("/api/schema")
 def update_schema(schema: Schema):
     data = schema.dict()
-    # Save to File (Keep as backup)
     with open(SCHEMA_FILE, "w") as f:
         json.dump(data, f, indent=2)
-    # Save to DB
     set_metadata("bi_schema", data)
-    return {"status": "success", "message": "Schema updated successfully (DB + File)"}
+    return {"status": "success", "message": "Schema updated successfully"}
 
 @app.get("/api/export")
 def export_schema():
-    data = get_reports() # Logic should be similar to ensure consistency
-    # ... (existing export logic logic might need review but keeping simple)
     if not os.path.exists(SCHEMA_FILE):
          return {"dimensions": [], "facts": []}
     with open(SCHEMA_FILE, "r") as f:
@@ -139,17 +325,60 @@ def export_schema():
 
 def generate_create_table_sql(table: Table) -> str:
     cols = []
-    for col in table.columns:
-        c_def = f"{col.name} {col.type}"
-        if col.primary_key:
-            c_def += " PRIMARY KEY"
-        cols.append(c_def)
+    primary_keys = []
     
-    return f"CREATE TABLE IF NOT EXISTS {table.name} ({', '.join(cols)});"
+    for col in table.columns:
+        # Type Mapping SQLite/Generic -> MySQL
+        mysql_type = "VARCHAR(255)"
+        if col.type == "INTEGER":
+            mysql_type = "INT"
+        elif col.type == "REAL":
+            mysql_type = "DOUBLE"
+        elif col.type == "TEXT":
+             mysql_type = "VARCHAR(255)"
+        elif col.type == "BOOLEAN":
+             mysql_type = "TINYINT(1)"
+        
+        c_def = f"`{col.name}` {mysql_type}"
+        cols.append(c_def)
+        
+        if col.primary_key:
+            primary_keys.append(f"`{col.name}`")
+            
+    sql = f"CREATE TABLE IF NOT EXISTS `{table.name}` ({', '.join(cols)}"
+    if primary_keys:
+        sql += f", PRIMARY KEY ({', '.join(primary_keys)})"
+    sql += ");"
+    
+    return sql
+
+def get_mysql_type(col_type: str) -> str:
+    if col_type == "INTEGER": return "INT"
+    if col_type == "REAL": return "DOUBLE"
+    if col_type == "BOOLEAN": return "TINYINT(1)"
+    return "VARCHAR(255)"
+
+def sync_table_columns(cursor, table: Table):
+    # Get existing columns
+    cursor.execute(f"DESCRIBE `{table.name}`")
+    existing_cols = {row[0]: row[1] for row in cursor.fetchall()} # name -> type(str)
+    
+    for col in table.columns:
+        target_type = get_mysql_type(col.type)
+        
+        if col.name not in existing_cols:
+            # ADD COLUMN
+            print(f"Adding column {col.name} to {table.name}")
+            sql = f"ALTER TABLE `{table.name}` ADD COLUMN `{col.name}` {target_type}"
+            cursor.execute(sql)
+        else:
+            # Check type mismatch (Basic check, avoiding complex parsing of 'int(11)' vs 'INT')
+            # For now, we trust the DB unless it's a major mismatch or user requests force update
+            # We implemented ADD only for safety in this iteration as requested
+            pass
 
 @app.post("/api/apply-schema")
 def apply_schema():
-    # 1. Load Schema from JSON
     if not os.path.exists(SCHEMA_FILE):
         raise HTTPException(status_code=404, detail="Schema file not found")
         
@@ -162,58 +391,34 @@ def apply_schema():
     cursor = conn.cursor()
     
     try:
-        # Create Dimensions
+        # Create/Sync Dimensions
         for table in schema.dimensions:
+            # 1. Create if not exists
             sql = generate_create_table_sql(table)
             cursor.execute(sql)
+            # 2. Sync Columns
+            sync_table_columns(cursor, table)
             
-        # Create Facts
+        # Create/Sync Facts
         for table in schema.facts:
+            # 1. Create if not exists
             sql = generate_create_table_sql(table)
             cursor.execute(sql)
+            # 2. Sync Columns
+            sync_table_columns(cursor, table)
             
         conn.commit()
     except Exception as e:
         conn.rollback()
+        print(f"Schema Apply Error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
     finally:
         conn.close()
 
-    return {"status": "success", "message": "Schema applied to SQLite database"}
-
-
-class JoinConfig(BaseModel):
-    table: str
-    join_type: str = "LEFT" # LEFT, INNER
-    on_expression: str # e.g. "Fact_Order.user_surrogate_key = Dim_User.surrogate_key"
-
-class ReportConfig(BaseModel):
-    id: str
-    category: str
-    title: str
-    description: Optional[str] = ""
-    chart_type: str = "line"
-    source_table: str
-    joins: List[JoinConfig] = []
-    group_by: str
-    measure_formula: str
-    measures: List[Dict] = []
-    x_axis: Dict = {}
-    filters: List[Dict] = [] # Pre-defined filters
-    slices: List[str] = [] # Columns available for user filtering
-    image: Optional[str] = None
-
-class ReportsPayload(BaseModel):
-    reports: List[ReportConfig]
-
-class QueryRequest(BaseModel):
-    report_id: str
-    filters: Dict[str, Any] = {}
-    granularity: str = "day"
+    return {"status": "success", "message": "Schema synced to MySQL database (Created missing tables & Added missing columns)"}
 
 @app.get("/api/reports")
 def get_reports():
-    # Try DB first
     data = get_metadata("bi_reports")
     if data:
         return data
@@ -223,7 +428,6 @@ def get_reports():
     with open(REPORTS_FILE, "r") as f:
         try:
             data = json.load(f)
-            # Sync to DB
             set_metadata("bi_reports", data)
             return data
         except json.JSONDecodeError:
@@ -232,16 +436,14 @@ def get_reports():
 @app.post("/api/reports")
 def save_reports(payload: ReportsPayload):
     data = payload.dict()
-    # Save to File
     with open(REPORTS_FILE, "w") as f:
         json.dump(data, f, indent=2)
-    # Save to DB
     set_metadata("bi_reports", data)
     return {"status": "success"}
 
 @app.delete("/api/reports/{report_id}")
 def delete_report(report_id: str):
-    data = get_reports() # Will fetch from DB if present
+    data = get_reports() 
     if isinstance(data, dict):
          reports = data.get("reports", [])
     else:
@@ -261,60 +463,47 @@ def delete_report(report_id: str):
 
 @app.post("/api/query")
 def execute_query(query: QueryRequest):
-    # Load report definition
     reports_data = get_reports()
     report_dict = next((r for r in reports_data.get("reports", []) if r["id"] == query.report_id), None)
     
     if not report_dict:
         raise HTTPException(status_code=404, detail="Report not found")
     
-    # Convert dict back to model for easier handling (optional, but good for type safety)
-    # handling optional fields carefully if loading from loose JSON
     report = ReportConfig(**report_dict)
 
     source_table = report.source_table
     measure_formula = report.measure_formula
     
-    # 1. Build Base SQL
-    # "SELECT {group_by} as x_result, {measure} as y_result FROM {table} {joins}"
-    
-    # Granularity Logic
-    # Check if group_by column looks like a time column (very basic heuristic or config based)
-    # For MVP, we stick to the provided group_by, but if it is 'time_key' we apply granularity
     group_col = report.group_by
     group_expression = group_col
     
-    # If using 'time_key' and granularity is requested (and it's a date string YYYYMMDD or similar)
+    # Granularity Logic (MySQL specific substr works similarly, 1-indexed)
     if "time" in group_col.lower() or "date" in group_col.lower():
         if query.granularity == "year":
             group_expression = f"substr({group_col}, 1, 4)"
         elif query.granularity == "month":
             group_expression = f"substr({group_col}, 1, 6)"
-        # else day -> no change
     
-    # 2. Build Joins
     join_clause = ""
     for j in report.joins:
-        join_clause += f" {j.join_type} JOIN {j.table} ON {j.on_expression}"
+        # Ensure proper backtick escaping could be added, but assuming clean input for now
+        join_clause += f" {j.join_type} JOIN `{j.table}` ON {j.on_expression}"
         
     sql = f"""
         SELECT 
             {group_expression} as x_result, 
             {measure_formula} as y_result 
-        FROM {source_table}
+        FROM `{source_table}`
         {join_clause}
     """
     
-    # 3. Build Where Clause
     params = []
     where_clauses = []
     
-    # User selected filters (slices)
     for col, val in query.filters.items():
         if val:
-            # Basic validation: ensure col is in slices or pre-defined filters
-            # For flexibility, we allow it if it looks safe (alphanumeric_dot) for now
-            where_clauses.append(f"{col} = ?")
+            # MySQL uses %s for params
+            where_clauses.append(f"{col} = %s")
             params.append(val)
             
     if where_clauses:
@@ -322,13 +511,14 @@ def execute_query(query: QueryRequest):
         
     sql += f" GROUP BY {group_expression} ORDER BY {group_expression}"
     
-    print(f"Executing SQL: {sql} | Params: {params}") # Debug logging
+    print(f"Executing SQL: {sql} | Params: {params}") 
 
     conn = get_db_connection()
     cursor = conn.cursor()
     try:
-        cursor.execute(sql, params)
+        cursor.execute(sql, tuple(params))
         rows = cursor.fetchall()
+        # row is tuple in mysql-connector
         return {
             "x_axis": [row[0] for row in rows],
             "series": [
@@ -346,22 +536,20 @@ def execute_query(query: QueryRequest):
 
 @app.get("/api/data/{table_name}")
 def get_table_data(table_name: str):
-    # Security check (simple)
     allowed_chars = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_")
     if not set(table_name).issubset(allowed_chars):
          raise HTTPException(status_code=400, detail="Invalid table name")
 
     conn = get_db_connection()
-    cursor = conn.cursor()
+    cursor = conn.cursor(dictionary=True) # Return dicts
     try:
-        # Check if table exists
-        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name=?", (table_name,))
+        cursor.execute("SHOW TABLES LIKE %s", (table_name,))
         if not cursor.fetchone():
              raise HTTPException(status_code=404, detail="Table not found")
 
-        cursor.execute(f"SELECT * FROM {table_name} LIMIT 100")
+        cursor.execute(f"SELECT * FROM `{table_name}` LIMIT 100")
         rows = cursor.fetchall()
-        return {"data": [dict(row) for row in rows]}
+        return {"data": rows}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
     finally:
