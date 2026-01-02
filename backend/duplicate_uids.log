@@ -1,0 +1,15 @@
+Type,UID,SourceTable,App,Region,Country,RegisterTime
+ORIGINAL,8540c1c62cb511ef,osaio.`users-nooie-us`,nooie,us,852,1562248675
+DUPLICATE,8540c1c62cb511ef,osaio.`users-nooie-eu`,nooie,eu,86,1562248675
+ORIGINAL,e79fb974a4da6949,osaio.`users-nooie-us`,nooie,us,1,1594551047
+DUPLICATE,e79fb974a4da6949,osaio.`users-nooie-eu`,nooie,eu,1,1594551047
+ORIGINAL,8ad0d9fa31691722,osaio.`users-osaio-us`,osaio,us,1,1606182049
+DUPLICATE,8ad0d9fa31691722,osaio.`users-osaio-eu`,osaio,eu,1,1606182049
+ORIGINAL,8df4e90b6ac1d409,osaio.`users-osaio-us`,osaio,us,995,1613948213
+DUPLICATE,8df4e90b6ac1d409,osaio.`users-osaio-eu`,osaio,eu,995,1613948213
+ORIGINAL,9bcbd1af7ae853da,osaio.`users-osaio-us`,osaio,us,1,1613250687
+DUPLICATE,9bcbd1af7ae853da,osaio.`users-osaio-eu`,osaio,eu,1,1613250687
+ORIGINAL,delete,osaio.`users-osaio-us`,osaio,us,1,1611628916
+DUPLICATE,delete,osaio.`users-osaio-eu`,osaio,eu,32,1599119969
+ORIGINAL,e12766f6171aae22,osaio.`users-osaio-us`,osaio,us,33,1618134553
+DUPLICATE,e12766f6171aae22,osaio.`users-osaio-eu`,osaio,eu,33,1618134553

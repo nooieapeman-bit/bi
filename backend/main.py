@@ -284,33 +284,78 @@ def set_metadata(key: str, data: Any):
 def read_root():
     return {"message": "Smart Home BI Backend API (MySQL)"}
 
+def inspect_db_schema() -> Dict:
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    schema_data = {"dimensions": [], "facts": []}
+    
+    try:
+        cursor.execute("SHOW TABLES")
+        tables = [row[0] for row in cursor.fetchall()]
+        
+        for table_name in tables:
+            if table_name == "system_metadata":
+                continue
+                
+            # Classify
+            category = "facts" # Default
+            if table_name.startswith("Dim_"):
+                category = "dimensions"
+            elif table_name.startswith("Fact_"):
+                category = "facts"
+            else:
+                continue # Ignore non-conforming tables for now
+            
+            # Describe
+            cursor.execute(f"DESCRIBE {table_name}")
+            columns = []
+            for col in cursor.fetchall():
+                # col: Field, Type, Null, Key, Default, Extra
+                c_name = col[0]
+                c_type_raw = col[1].lower()
+                c_key = col[3]
+                
+                # Simplified Mapping
+                c_type = "TEXT"
+                if "int" in c_type_raw: c_type = "INTEGER"
+                elif "decimal" in c_type_raw: c_type = "DECIMAL"
+                elif "datetime" in c_type_raw: c_type = "DATETIME"
+                elif "char" in c_type_raw: c_type = "TEXT"
+                
+                columns.append({
+                    "name": c_name,
+                    "type": c_type,
+                    "primary_key": c_key == 'PRI',
+                    "description": "" 
+                })
+            
+            table_obj = {
+                "name": table_name,
+                "columns": columns,
+                "description": f"Table {table_name}"
+            }
+            
+            schema_data[category].append(table_obj)
+            
+    except Exception as e:
+        print(f"Error inspecting DB schema: {e}")
+        return {"dimensions": [], "facts": [], "debug_error": str(e)}
+    finally:
+        conn.close()
+        
+    return schema_data
+
 @app.get("/api/schema", response_model=Dict) 
 def get_schema():
-    data = get_metadata("bi_schema")
-    if data:
-        return data
-        
-    if not os.path.exists(SCHEMA_FILE):
-        return {"dimensions": [], "facts": [], "debug_error": f"File not found at {SCHEMA_FILE}"}
-    
-    with open(SCHEMA_FILE, "r") as f:
-        try:
-            content = f.read()
-            if not content.strip():
-                 return {"dimensions": [], "facts": [], "debug_error": "File empty"}
-            data = json.loads(content)
-            set_metadata("bi_schema", data)
-            return data
-        except json.JSONDecodeError as e:
-            return {"dimensions": [], "facts": [], "debug_error": str(e)}
+    # Direct DB Inspection
+    return inspect_db_schema()
 
 @app.post("/api/schema")
 def update_schema(schema: Schema):
-    data = schema.dict()
-    with open(SCHEMA_FILE, "w") as f:
-        json.dump(data, f, indent=2)
-    set_metadata("bi_schema", data)
-    return {"status": "success", "message": "Schema updated successfully"}
+    # Since we are using Direct DB Inspection, we do not support updating schema via JSON file anymore.
+    # Users should modify the DB schema directly (ALTER TABLE).
+    return {"status": "info", "message": "Schema is read directly from MySQL. Please use database tools to modify schema."}
 
 @app.get("/api/export")
 def export_schema():
@@ -419,27 +464,58 @@ def apply_schema():
 
 @app.get("/api/reports")
 def get_reports():
-    data = get_metadata("bi_reports")
-    if data:
-        return data
-
-    if not os.path.exists(REPORTS_FILE):
-        return {"reports": []}
-    with open(REPORTS_FILE, "r") as f:
-        try:
-            data = json.load(f)
-            set_metadata("bi_reports", data)
-            return data
-        except json.JSONDecodeError:
-            return {"reports": []}
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    try:
+        cursor.execute("SELECT config FROM bi_reports")
+        reports = [json.loads(row[0]) for row in cursor.fetchall()]
+        return {"reports": reports}
+    except Exception as e:
+        print(f"Error fetching reports: {e}")
+        return {"reports": [], "error": str(e)}
+    finally:
+        conn.close()
 
 @app.post("/api/reports")
-def save_reports(payload: ReportsPayload):
-    data = payload.dict()
-    with open(REPORTS_FILE, "w") as f:
-        json.dump(data, f, indent=2)
-    set_metadata("bi_reports", data)
-    return {"status": "success"}
+def save_report(report: ReportConfig):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    try:
+        r_data = report.dict()
+        config_json = json.dumps(r_data)
+        
+        # Upsert
+        sql = """
+        INSERT INTO bi_reports (id, category, title, description, config)
+        VALUES (%s, %s, %s, %s, %s)
+        ON DUPLICATE KEY UPDATE
+            category = VALUES(category),
+            title = VALUES(title),
+            description = VALUES(description),
+            config = VALUES(config)
+        """
+        cursor.execute(sql, (report.id, report.category, report.title, report.description, config_json))
+        conn.commit()
+        return {"status": "success", "message": "Report saved"}
+    except Exception as e:
+        print(f"Error saving report: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        conn.close()
+
+@app.delete("/api/reports/{report_id}")
+def delete_report(report_id: str):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    try:
+        cursor.execute("DELETE FROM bi_reports WHERE id = %s", (report_id,))
+        conn.commit()
+        return {"status": "success", "message": "Report deleted"}
+    except Exception as e:
+        print(f"Error deleting report: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        conn.close()
 
 @app.delete("/api/reports/{report_id}")
 def delete_report(report_id: str):
@@ -474,19 +550,24 @@ def execute_query(query: QueryRequest):
     source_table = report.source_table
     measure_formula = report.measure_formula
     
-    group_col = report.group_by
-    group_expression = group_col
+    config_group_by = report.group_by
     
-    # Granularity Logic (MySQL specific substr works similarly, 1-indexed)
-    if "time" in group_col.lower() or "date" in group_col.lower():
-        if query.granularity == "year":
-            group_expression = f"substr({group_col}, 1, 4)"
-        elif query.granularity == "month":
-            group_expression = f"substr({group_col}, 1, 6)"
+    # Granularity Logic
+    # If the report config already defines a complex group_by (like DATE_FORMAT), use it.
+    # Otherwise, apply default string slicing if granularity is requested.
+    group_expression = config_group_by
+    
+    if query.granularity and "(" not in config_group_by:
+         if "time" in config_group_by.lower() or "date" in config_group_by.lower():
+            if query.granularity == "year":
+                group_expression = f"DATE_FORMAT({config_group_by}, '%Y')"
+            elif query.granularity == "month":
+                group_expression = f"DATE_FORMAT({config_group_by}, '%Y-%m')"
+            elif query.granularity == "day":
+                group_expression = f"DATE_FORMAT({config_group_by}, '%Y-%m-%d')"
     
     join_clause = ""
     for j in report.joins:
-        # Ensure proper backtick escaping could be added, but assuming clean input for now
         join_clause += f" {j.join_type} JOIN `{j.table}` ON {j.on_expression}"
         
     sql = f"""
@@ -502,14 +583,20 @@ def execute_query(query: QueryRequest):
     
     for col, val in query.filters.items():
         if val:
-            # MySQL uses %s for params
-            where_clauses.append(f"{col} = %s")
-            params.append(val)
+            # Handle list for IN clause
+            if isinstance(val, list):
+                if not val: continue
+                placeholders = ', '.join(['%s'] * len(val))
+                where_clauses.append(f"{col} IN ({placeholders})")
+                params.extend(val)
+            else:
+                where_clauses.append(f"{col} = %s")
+                params.append(val)
             
     if where_clauses:
         sql += " WHERE " + " AND ".join(where_clauses)
         
-    sql += f" GROUP BY {group_expression} ORDER BY {group_expression}"
+    sql += f" GROUP BY x_result ORDER BY x_result"
     
     print(f"Executing SQL: {sql} | Params: {params}") 
 
@@ -518,13 +605,24 @@ def execute_query(query: QueryRequest):
     try:
         cursor.execute(sql, tuple(params))
         rows = cursor.fetchall()
-        # row is tuple in mysql-connector
+        
+        # Format X-Axis for better readability/compatibility
+        x_data = []
+        y_data = []
+        for row in rows:
+            x_val = row[0]
+            y_val = row[1]
+            if y_val is None: y_val = 0
+            
+            x_data.append(x_val)
+            y_data.append(float(y_val)) # Ensure number for JSON
+            
         return {
-            "x_axis": [row[0] for row in rows],
+            "x_axis": x_data,
             "series": [
                 {
                     "name": "Value",
-                    "data": [row[1] for row in rows]
+                    "data": y_data
                 }
             ]
         }
@@ -551,6 +649,22 @@ def get_table_data(table_name: str):
         rows = cursor.fetchall()
         return {"data": rows}
     except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    finally:
+        conn.close()
+
+@app.get("/api/filter-values/{table_name}/{column_name}")
+def get_filter_values(table_name: str, column_name: str):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    try:
+        # Basic validation on identifiers
+        sql = f"SELECT DISTINCT `{column_name}` FROM `{table_name}` WHERE `{column_name}` IS NOT NULL AND `{column_name}` != '' ORDER BY `{column_name}`"
+        cursor.execute(sql)
+        values = [row[0] for row in cursor.fetchall()]
+        return {"values": values}
+    except Exception as e:
+        print(f"Error fetching filter values: {e}")
         raise HTTPException(status_code=400, detail=str(e))
     finally:
         conn.close()

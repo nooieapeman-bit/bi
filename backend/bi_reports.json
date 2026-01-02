@@ -1,6 +1,35 @@
 {
   "reports": [
     {
+      "id": "monthly_revenue_report",
+      "category": "finance",
+      "title": "Monthly Revenue (CNY)",
+      "description": "Monthly revenue trend based on pay_time and cny_amount.",
+      "chart_type": "line",
+      "source_table": "Fact_Order",
+      "joins": [],
+      "group_by": "DATE_FORMAT(pay_time, '%Y-%m')",
+      "measure_formula": "SUM(cny_amount)",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "Revenue (CNY)"
+        }
+      ],
+      "x_axis": {
+        "column": "pay_time",
+        "label": "Month",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "app_key",
+        "region_key"
+      ],
+      "image": ""
+    },
+    {
       "id": "device_activation",
       "category": "device",
       "title": "\u8bbe\u5907\u6fc0\u6d3b\u91cf",
