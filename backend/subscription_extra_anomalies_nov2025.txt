@@ -1,0 +1,112 @@
+Subscription Extra Anomalies Audit Report - November 2025
+CATEGORIES INCLUDED:
+  [CAT-1] Fast Renewal: Same product, interval < 15 days (but > 10m)
+  [CAT-3] Intense Concurrency: Multiple charges within 10 minutes
+EXCLUDED: [CAT-2] Upgrades/Plan Changes (Different product names)
+================================================================================
+
+Record #1 | Subscription ID: 5uR6hsVQjif
+----------------------------------------
+  2025-07-07 04:48:54 | ID: [B@1cf341fd  | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-08-07 04:48:54 | ID: [B@710522fb  | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-09-07 04:48:54 | ID: [B@73cba943  | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-11-03 11:21:12 | ID: [B@73efe69c  | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-11-07 03:48:55 | ID: [B@b3b34a7   | Amt:   9.00 | 30-day video history event recording AI monthly
+  CAT-1 (Fast Renewal): Interval 3.6859 days (318463s) between [B@73efe69c and [B@b3b34a7
+
+================================================================================
+
+Record #2 | Subscription ID: 5xzJ6oWUZuC
+----------------------------------------
+  2025-08-19 06:14:26 | ID: [B@346509ee  | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-27 06:14:27 | ID: [B@480358bf  | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-05 06:48:36 | ID: [B@1c84b535  | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-17 05:14:27 | ID: [B@249a0dd2  | Amt:   3.00 | 14-day history event recording monthly
+  CAT-1 (Fast Renewal): Interval 11.9346 days (1031151s) between [B@1c84b535 and [B@249a0dd2
+
+================================================================================
+
+Record #3 | Subscription ID: 5yrm39he3VN
+----------------------------------------
+  2025-09-19 19:04:45 | ID: [B@1d11f8eb  | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-11-06 11:12:42 | ID: [B@edd9e1c   | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-11-19 18:04:46 | ID: [B@9f23d8d   | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-12-19 18:04:45 | ID: [B@2c61dd47  | Amt:   8.00 | 30-day video history event recording AI monthly
+  CAT-1 (Fast Renewal): Interval 13.2862 days (1147924s) between [B@edd9e1c and [B@9f23d8d
+
+================================================================================
+
+Record #4 | Subscription ID: 5xd2ZprTdh9
+----------------------------------------
+  2025-08-11 14:16:09 | ID: [B@4e109b11  | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-10 14:16:10 | ID: [B@675b5aa1  | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-07 11:09:51 | ID: [B@7c02008a  | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-09 13:16:10 | ID: [B@47261d8a  | Amt:   3.00 | 14-day history event recording monthly
+  CAT-1 (Fast Renewal): Interval 2.0877 days (180379s) between [B@7c02008a and [B@47261d8a
+
+================================================================================
+
+Record #5 | Subscription ID: 5vHtGmNVq35
+----------------------------------------
+  2025-07-12 00:09:23 | ID: [B@2cb06823  | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-11 00:09:25 | ID: [B@3bf4de5c  | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-10 00:09:24 | ID: [B@482add6b  | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-29 12:13:18 | ID: [B@7ba5949a  | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-08 23:09:24 | ID: [B@5d20a0c4  | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-08 23:09:25 | ID: [B@4f25812f  | Amt:   3.00 | 14-day history event recording monthly
+  CAT-1 (Fast Renewal): Interval 10.4973 days (906966s) between [B@7ba5949a and [B@5d20a0c4
+
+================================================================================
+
+Record #6 | Subscription ID: 5B6WQDArT8o
+----------------------------------------
+  2025-11-13 10:14:01 | ID: [B@7891a187  | Amt:  29.00 | 30-day video history event recording pro annually
+  2025-11-13 10:14:04 | ID: [B@dad495f   | Amt:  69.00 | 30-day video history event recording pro annually
+  CAT-3 (Intense Concurrency): Interval 0.0000 days (3s) between [B@7891a187 and [B@dad495f
+
+================================================================================
+
+Record #7 | Subscription ID: 5xJzNAUAwUQ
+----------------------------------------
+  2025-08-22 09:21:36 | ID: [B@7d89aa2   | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-21 09:21:37 | ID: [B@56810e90  | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-13 11:58:57 | ID: [B@48e55ff5  | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-20 08:21:38 | ID: [B@76b5d34   | Amt:   3.00 | 14-day history event recording monthly
+  CAT-1 (Fast Renewal): Interval 6.8491 days (591761s) between [B@48e55ff5 and [B@76b5d34
+
+================================================================================
+
+Record #8 | Subscription ID: 5uNQW8AZtyd
+----------------------------------------
+  2025-06-23 09:45:14 | ID: [B@494530ed  | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-24 09:45:16 | ID: [B@3181e0f9  | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-22 09:45:16 | ID: [B@39ab3f7   | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-21 09:45:15 | ID: [B@5dfa4ad   | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-14 08:21:23 | ID: [B@40ff1dff  | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-20 08:45:15 | ID: [B@34c56e92  | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-20 08:45:16 | ID: [B@526f680d  | Amt:   3.00 | 14-day history event recording monthly
+  CAT-1 (Fast Renewal): Interval 6.0166 days (519832s) between [B@40ff1dff and [B@34c56e92
+
+================================================================================
+
+Record #9 | Subscription ID: 5vWrDUrXgSG
+----------------------------------------
+  2025-11-16 13:55:37 | ID: [B@635c065e  | Amt:   6.00 | 30-day video history event recording monthly
+  2025-11-29 13:06:52 | ID: [B@4236f726  | Amt:   6.00 | 30-day video history event recording monthly
+  2025-12-29 13:06:53 | ID: [B@5c2e7951  | Amt:   6.00 | 30-day video history event recording monthly
+  CAT-1 (Fast Renewal): Interval 12.9661 days (1120275s) between [B@635c065e and [B@4236f726
+
+================================================================================
+
+Record #10 | Subscription ID: 5wKt5LSy98J
+----------------------------------------
+  2025-08-02 04:56:39 | ID: [B@54461bfe  | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-01 04:56:41 | ID: [B@20ad99c7  | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-01 04:56:40 | ID: [B@422557a5  | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-28 13:07:00 | ID: [B@7561e54a  | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-30 03:56:41 | ID: [B@2fa0790d  | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-30 03:56:40 | ID: [B@9ae544a   | Amt:   3.00 | 14-day history event recording monthly
+  CAT-1 (Fast Renewal): Interval 1.6178 days (139781s) between [B@7561e54a and [B@2fa0790d
+
+================================================================================
+

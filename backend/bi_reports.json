@@ -121,7 +121,7 @@
       "title": "\u6708\u5ea6\u65b0\u589e\u7528\u6237\u8d8b\u52bf ",
       "description": "\u6bcf\u6708\u65b0\u589e\u6ce8\u518c\u7528\u6237\u6570\u7edf\u8ba1",
       "chart_type": "bar",
-      "source_table": "Dim_User",
+      "source_table": "Dim_User_all",
       "joins": [],
       "group_by": "join_date",
       "measure_formula": "COUNT(user_id)",
@@ -151,7 +151,7 @@
       "title": "\u65e5\u5ea6\u65b0\u589e\u7528\u6237\u8d8b\u52bf",
       "description": "\u6bcf\u65e5\u65b0\u589e\u6ce8\u518c\u7528\u6237\u6570\u7edf\u8ba1",
       "chart_type": "bar",
-      "source_table": "Dim_User",
+      "source_table": "Dim_User_all",
       "joins": [],
       "group_by": "join_date",
       "measure_formula": "COUNT(user_id)",
@@ -181,7 +181,7 @@
       "title": "30\u5929\u8f6c\u5316\u7387\uff08\u6708\u5ea6\uff09",
       "description": "\u5355\u4e2a\u7528\u6237\u6ce8\u518c\u5b8c\u6210\u540e\uff0c30\u5929\u5185\u662f\u5426\u5b8c\u6210\u4ed8\u8d39\uff08\u652f\u4ed8\u91d1\u989d\u5927\u4e8e0\uff09\u3002\n\u7edf\u8ba1\u4e00\u4e2a\u5468\u671f\u5185\u7684\u8be5\u8f6c\u5316\u7387",
       "chart_type": "line",
-      "source_table": "Dim_User",
+      "source_table": "Dim_User_all",
       "joins": [],
       "group_by": "join_date",
       "measure_formula": "SUM(1) / COUNT(User)",
@@ -405,6 +405,99 @@
         "app_key",
         "region_key"
       ],
+      "image": ""
+    },
+    {
+      "id": "monthly_paid_orders",
+      "category": "finance",
+      "title": "Monthly Orders: New vs Renewal",
+      "description": "Breakdown of monthly paying orders into New (First Order) and Renewal (Subsequent).",
+      "chart_type": "bar",
+      "source_table": "Fact_Order",
+      "group_by": "DATE_FORMAT(pay_time, '%Y-%m')",
+      "measure_formula": "COUNT(DISTINCT CASE WHEN paid_sequence = 1 THEN order_uuid END) as New, COUNT(DISTINCT CASE WHEN paid_sequence > 1 THEN order_uuid END) as Renewal",
+      "measures": [
+        {
+          "column": "calculated",
+          "label": "New"
+        },
+        {
+          "column": "calculated",
+          "label": "Renewal"
+        }
+      ],
+      "x_axis": {
+        "column": "pay_time",
+        "label": "Month",
+        "type": "category",
+        "granularity_options": []
+      },
+      "filters": [],
+      "slices": [
+        "app_key",
+        "region_key"
+      ],
+      "base_where": "cny_amount > 0 AND pay_time >= '2024-01-01 00:00:00'",
+      "image": ""
+    },
+    {
+      "id": "monthly_retention_cohort",
+      "category": "user",
+      "title": "Monthly Subscription Retention Cohort",
+      "description": "Retention rates for monthly subscriptions starting from 2024-02-01. M2: Renewed after 30 days, M3: 60 days, etc.",
+      "chart_type": "matrix",
+      "source_table": "Fact_Order",
+      "joins": [
+        {
+          "table": "Fact_Subscription",
+          "join_type": "LEFT",
+          "on_expression": "Fact_Order.subscription_key = Fact_Subscription.subscription_key"
+        }
+      ],
+      "group_by": "DATE_FORMAT(Fact_Order.pay_time, '%Y-%m')",
+      "measure_formula": "AVG(CASE WHEN DATEDIFF(Fact_Subscription.last_paytime, Fact_Order.pay_time) >= 29 THEN 100 ELSE 0 END) as 'Month 2', AVG(CASE WHEN DATEDIFF(Fact_Subscription.last_paytime, Fact_Order.pay_time) >= 59 THEN 100 ELSE 0 END) as 'Month 3', AVG(CASE WHEN DATEDIFF(Fact_Subscription.last_paytime, Fact_Order.pay_time) >= 89 THEN 100 ELSE 0 END) as 'Month 4', AVG(CASE WHEN DATEDIFF(Fact_Subscription.last_paytime, Fact_Order.pay_time) >= 119 THEN 100 ELSE 0 END) as 'Month 5', AVG(CASE WHEN DATEDIFF(Fact_Subscription.last_paytime, Fact_Order.pay_time) >= 149 THEN 100 ELSE 0 END) as 'Month 6', AVG(CASE WHEN DATEDIFF(Fact_Subscription.last_paytime, Fact_Order.pay_time) >= 179 THEN 100 ELSE 0 END) as 'Month 7', AVG(CASE WHEN DATEDIFF(Fact_Subscription.last_paytime, Fact_Order.pay_time) >= 209 THEN 100 ELSE 0 END) as 'Month 8', AVG(CASE WHEN DATEDIFF(Fact_Subscription.last_paytime, Fact_Order.pay_time) >= 239 THEN 100 ELSE 0 END) as 'Month 9', AVG(CASE WHEN DATEDIFF(Fact_Subscription.last_paytime, Fact_Order.pay_time) >= 269 THEN 100 ELSE 0 END) as 'Month 10', AVG(CASE WHEN DATEDIFF(Fact_Subscription.last_paytime, Fact_Order.pay_time) >= 299 THEN 100 ELSE 0 END) as 'Month 11', AVG(CASE WHEN DATEDIFF(Fact_Subscription.last_paytime, Fact_Order.pay_time) >= 329 THEN 100 ELSE 0 END) as 'Month 12'",
+      "measures": [],
+      "x_axis": {
+        "column": "pay_time",
+        "label": "Cohort Month",
+        "type": "category"
+      },
+      "filters": [],
+      "slices": [
+        "app_key",
+        "region_key"
+      ],
+      "base_where": "Fact_Order.paid_sequence = 1 AND Fact_Order.plan_p_type = 'month' AND Fact_Order.pay_time >= '2024-07-01 00:00:00' AND Fact_Order.pay_time <= '2025-11-30 23:59:59'",
+      "image": ""
+    },
+    {
+      "id": "user_registration_lag_analysis",
+      "category": "user",
+      "title": "User Registration to First Payment Lag",
+      "description": "Distribution of time elapsed from registration to first payment. M0: Same Month, M1: 1 Month before, etc.",
+      "chart_type": "matrix",
+      "source_table": "Fact_Order",
+      "joins": [
+        {
+          "table": "Dim_User_all",
+          "join_type": "INNER",
+          "on_expression": "Fact_Order.user_uid = Dim_User_all.uid"
+        }
+      ],
+      "group_by": "DATE_FORMAT(Fact_Order.pay_time, '%Y-%m')",
+      "measure_formula": "100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 0 THEN 1 ELSE 0 END) / COUNT(*) as 'M0', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 1 THEN 1 ELSE 0 END) / COUNT(*) as 'M1', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 2 THEN 1 ELSE 0 END) / COUNT(*) as 'M2', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 3 THEN 1 ELSE 0 END) / COUNT(*) as 'M3', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 4 THEN 1 ELSE 0 END) / COUNT(*) as 'M4', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 5 THEN 1 ELSE 0 END) / COUNT(*) as 'M5', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 6 THEN 1 ELSE 0 END) / COUNT(*) as 'M6', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 7 THEN 1 ELSE 0 END) / COUNT(*) as 'M7', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 8 THEN 1 ELSE 0 END) / COUNT(*) as 'M8', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 9 THEN 1 ELSE 0 END) / COUNT(*) as 'M9', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 10 THEN 1 ELSE 0 END) / COUNT(*) as 'M10', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 11 THEN 1 ELSE 0 END) / COUNT(*) as 'M11', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) = 12 THEN 1 ELSE 0 END) / COUNT(*) as 'M12', 100 * SUM(CASE WHEN TIMESTAMPDIFF(MONTH, Dim_User_all.join_date, Fact_Order.pay_time) >= 13 THEN 1 ELSE 0 END) / COUNT(*) as 'M13+'",
+      "measures": [],
+      "x_axis": {
+        "column": "pay_time",
+        "label": "Payment Month",
+        "type": "category"
+      },
+      "filters": [],
+      "slices": [
+        "app_key",
+        "region_key"
+      ],
+      "base_where": "Fact_Order.cny_amount > 0 AND Fact_Order.paid_sequence = 1 AND Fact_Order.pay_time >= '2024-01-01 00:00:00' AND Fact_Order.pay_time <= '2025-12-31 23:59:59'",
       "image": ""
     }
   ]

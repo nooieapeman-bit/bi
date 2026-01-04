@@ -83,7 +83,7 @@ export default function DashboardViewer() {
             .then(data => {
                 const allReports = data.reports || [];
                 // Filter for Revenue and New Users reports
-                const targetIds = ['monthly_revenue_report', 'monthly_new_users'];
+                const targetIds = ['monthly_revenue_report', 'monthly_new_users', 'monthly_paid_orders', 'monthly_retention_cohort', 'user_registration_lag_analysis'];
                 const target = allReports.filter((r: any) => targetIds.includes(r.id));
                 setReports(target);
             });
@@ -207,7 +207,7 @@ export default function DashboardViewer() {
                         </div>
 
                         {/* Chart Rendering - Full Width & Height */}
-                        <div className="w-full h-[500px]">
+                        <div className={`w-full ${report.chart_type === 'matrix' ? 'h-[900px]' : 'h-[500px]'}`}>
                             <ChartRenderer report={report} apiBase={API_BASE} filters={filters} />
                         </div>
                     </div>

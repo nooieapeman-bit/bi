@@ -15,7 +15,7 @@ DB_CONFIG = {
 def get_db_connection():
     return mysql.connector.connect(**DB_CONFIG)
 
-def run_users_etl():
+def run_users_etl(target_table="Dim_User"):
     read_conn = get_db_connection()
     write_conn = get_db_connection()
     
@@ -24,16 +24,16 @@ def run_users_etl():
 
     try:
         # 1. Truncate Target Table
-        print("Truncating Dim_User...")
-        write_cursor.execute("TRUNCATE TABLE Dim_User")
+        print(f"Truncating {target_table}...")
+        write_cursor.execute(f"TRUNCATE TABLE {target_table}")
         write_conn.commit()
 
         # Source Configuration
         tasks = [
-            {'table': 'osaio.`users-nooie-us`', 'app': 'nooie', 'region': 'us', 'app_id': 'nooie_us'},
-            {'table': 'osaio.`users-nooie-eu`', 'app': 'nooie', 'region': 'eu', 'app_id': 'nooie_eu'},
-            {'table': 'osaio.`users-osaio-us`', 'app': 'osaio', 'region': 'us', 'app_id': 'osaio_us'},
-            {'table': 'osaio.`users-osaio-eu`', 'app': 'osaio', 'region': 'eu', 'app_id': 'osaio_eu'}
+            {'table': 'osaio.user_nooie_us', 'app_id': 'nooie', 'region': 'us'},
+            {'table': 'osaio.user_nooie_eu', 'app_id': 'nooie', 'region': 'eu'},
+            {'table': 'osaio.user_osaio_us', 'app_id': 'osaio', 'region': 'us'},
+            {'table': 'osaio.user_osaio_eu', 'app_id': 'osaio', 'region': 'eu'}
         ]
 
         total_inserted = 0
@@ -44,24 +44,24 @@ def run_users_etl():
         duplicates_found = []
         
         # Open log file for duplicates
-        with open("duplicate_uids.log", "w") as dup_log:
+        log_file = f"duplicate_uids_{target_table}.log"
+        with open(log_file, "w") as dup_log:
             dup_log.write("Type,UID,SourceTable,App,Region,Country,RegisterTime\n")
 
             for task in tasks:
                 table_name = task['table']
-                app_key = task['app']
-                region_key = task['region']
                 app_id = task['app_id']
+                region_key = task['region']
                 
-                print(f"Processing {table_name}...")
+                print(f"Processing {table_name} for {target_table}...")
                 
                 # Query Source
                 query = f"SELECT uid, register_time, register_country FROM {table_name}"
                 read_cursor.execute(query)
                 
                 batch_size = 2000
-                insert_sql = """
-                    INSERT INTO Dim_User (uid, app_key, region_key, country, join_date)
+                insert_sql = f"""
+                    INSERT INTO {target_table} (uid, app_key, region_key, country, join_date)
                     VALUES (%s, %s, %s, %s, %s)
                 """
                 
@@ -82,17 +82,15 @@ def run_users_etl():
                             orig = seen_uids[uid]
                             
                             # Log both original and current for comparison
-                            # ORIGINAL
-                            dup_log.write(f"ORIGINAL,{uid},{orig['table']},{orig['app']},{orig['region']},{orig['country']},{orig['time']}\n")
-                            # DUPLICATE (Current)
-                            dup_log.write(f"DUPLICATE,{uid},{table_name},{app_key},{region_key},{country},{reg_time}\n")
+                            dup_log.write(f"ORIGINAL,{uid},{orig['table']},{orig['app_id']},{orig['region']},{orig['country']},{orig['time']}\n")
+                            dup_log.write(f"DUPLICATE,{uid},{table_name},{app_id},{region_key},{country},{reg_time}\n")
                             
                             duplicates_found.append({
                                 'uid': uid,
                                 'original': orig,
                                 'duplicate': {
                                     'table': table_name,
-                                    'app': app_key,
+                                    'app_id': app_id,
                                     'region': region_key,
                                     'country': country,
                                     'time': reg_time
@@ -103,7 +101,7 @@ def run_users_etl():
                         # Store info for future duplicate checking
                         seen_uids[uid] = {
                             'table': table_name,
-                            'app': app_key,
+                            'app_id': app_id,
                             'region': region_key,
                             'country': country,
                             'time': reg_time
@@ -132,21 +130,8 @@ def run_users_etl():
                         total_inserted += len(batch_data)
                         print(f"  Inserted {len(batch_data)} rows. Total: {total_inserted}")
 
-        print(f"\nETL Complete. Total rows inserted into Dim_User: {total_inserted}")
+        print(f"\nETL Complete. Total rows inserted into {target_table}: {total_inserted}")
         
-        if duplicates_found:
-            print("\nDuplicate UIDs and Conflicts:")
-            for item in duplicates_found:
-                print("-" * 60)
-                print(f"UID: {item['uid']}")
-                orig = item['original']
-                dup = item['duplicate']
-                print(f"  EXISTING: Table={orig['table']}, App={orig['app']}, Region={orig['region']}, Country={orig['country']}, Time={orig['time']}")
-                print(f"  SKIPPED:  Table={dup['table']}, App={dup['app']}, Region={dup['region']}, Country={dup['country']}, Time={dup['time']}")
-            print("-" * 60)
-        else:
-            print("\nNo duplicates found.")
-
     except Exception as e:
         print(f"ETL Error: {e}")
         write_conn.rollback()
@@ -158,5 +143,9 @@ def run_users_etl():
 
 if __name__ == "__main__":
     start_time = time.time()
-    run_users_etl()
+    # Run for both as requested or just the new one if implied
+    print("Running ETL for Dim_User...")
+    run_users_etl("Dim_User")
+    print("\nRunning ETL for Dim_User_all...")
+    run_users_etl("Dim_User_all")
     print(f"Execution time: {time.time() - start_time:.2f} seconds")

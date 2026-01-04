@@ -97,6 +97,7 @@ class ReportConfig(BaseModel):
     filters: List[Dict] = [] 
     slices: List[str] = [] 
     image: Optional[str] = None
+    base_where: Optional[str] = None
 
 class ReportsPayload(BaseModel):
     reports: List[ReportConfig]
@@ -573,7 +574,7 @@ def execute_query(query: QueryRequest):
     sql = f"""
         SELECT 
             {group_expression} as x_result, 
-            {measure_formula} as y_result 
+            {measure_formula} 
         FROM `{source_table}`
         {join_clause}
     """
@@ -584,17 +585,25 @@ def execute_query(query: QueryRequest):
     for col, val in query.filters.items():
         if val:
             # Handle list for IN clause
+            # Prefix with source_table to avoid ambiguity in JOINs
+            prefixed_col = f"`{source_table}`.`{col}`"
             if isinstance(val, list):
                 if not val: continue
                 placeholders = ', '.join(['%s'] * len(val))
-                where_clauses.append(f"{col} IN ({placeholders})")
+                where_clauses.append(f"{prefixed_col} IN ({placeholders})")
                 params.extend(val)
             else:
-                where_clauses.append(f"{col} = %s")
+                where_clauses.append(f"{prefixed_col} = %s")
                 params.append(val)
             
     if where_clauses:
         sql += " WHERE " + " AND ".join(where_clauses)
+        
+    if report.base_where:
+        if "WHERE" in sql:
+            sql += f" AND ({report.base_where})"
+        else:
+            sql += f" WHERE ({report.base_where})"
         
     sql += f" GROUP BY x_result ORDER BY x_result"
     
@@ -604,26 +613,31 @@ def execute_query(query: QueryRequest):
     cursor = conn.cursor()
     try:
         cursor.execute(sql, tuple(params))
+        
+        # Get column names to identify series (anything besides x_result)
+        columns = [col[0] for col in cursor.description]
+        y_column_indices = [i for i, name in enumerate(columns) if name != 'x_result']
+        series_names = [columns[i] for i in y_column_indices]
+        
         rows = cursor.fetchall()
         
-        # Format X-Axis for better readability/compatibility
+        # Format X-Axis and Series
         x_data = []
-        y_data = []
+        series_data = {name: [] for name in series_names}
+        
         for row in rows:
-            x_val = row[0]
-            y_val = row[1]
-            if y_val is None: y_val = 0
-            
-            x_data.append(x_val)
-            y_data.append(float(y_val)) # Ensure number for JSON
+            x_data.append(row[0]) # x_result is first
+            for i, idx in enumerate(y_column_indices):
+                val = row[idx]
+                series_data[series_names[i]].append(float(val) if val is not None else 0)
             
         return {
             "x_axis": x_data,
             "series": [
                 {
-                    "name": "Value",
-                    "data": y_data
-                }
+                    "name": name,
+                    "data": series_data[name]
+                } for name in series_names
             ]
         }
     except Exception as e:

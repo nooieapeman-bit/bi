@@ -11,6 +11,7 @@ const API_BASE = "http://localhost:8000/api";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<"schema" | "analytics" | "dashboard" | "import">("analytics");
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [schema, setSchema] = useState<Schema>({ dimensions: [], facts: [] });
   const [selectedTable, setSelectedTable] = useState<Table | null>(null);
   const [selectedTableType, setSelectedTableType] = useState<"dimension" | "fact" | null>(null);
@@ -103,47 +104,59 @@ export default function Home() {
   return (
     <div className="flex h-screen bg-gray-50 text-gray-900 font-sans">
       {/* Sidebar */}
-      <div className="w-64 bg-white border-r border-gray-200 flex flex-col">
-        <div className="p-4 border-b border-gray-100 mb-2">
-          <div className="flex-1">
-            <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">BI Platform</h1>
-            <p className="text-xs text-gray-500 mt-1">Smart Home Data Warehouse</p>
-          </div>
+      <div className={`${isSidebarCollapsed ? 'w-16' : 'w-64'} bg-white border-r border-gray-200 flex flex-col transition-all duration-300 relative`}>
+        <div className="p-4 border-b border-gray-100 mb-2 flex items-center justify-between overflow-hidden">
+          {!isSidebarCollapsed && (
+            <div className="flex-1 truncate">
+              <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">BI Platform</h1>
+              <p className="text-xs text-gray-500 mt-1">Smart Home Data Warehouse</p>
+            </div>
+          )}
+          <button
+            onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+            className={`p-1.5 rounded-lg hover:bg-gray-100 text-gray-400 transition-colors ${isSidebarCollapsed ? 'mx-auto' : ''}`}
+          >
+            {isSidebarCollapsed ? <Plus size={18} className="rotate-45" /> : <Settings size={18} />}
+          </button>
         </div>
 
         {/* Navigation Tabs */}
         <div className="px-3 mb-6 space-y-1">
           <button
             onClick={() => setActiveTab("dashboard")}
-            className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors ${activeTab === 'dashboard' ? 'bg-indigo-50 text-indigo-700' : 'text-gray-600 hover:bg-gray-100'}`}
+            title="Dashboard"
+            className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors ${activeTab === 'dashboard' ? 'bg-indigo-50 text-indigo-700' : 'text-gray-600 hover:bg-gray-100'} ${isSidebarCollapsed ? 'justify-center' : ''}`}
           >
-            <BarChart3 size={18} className="mr-3" />
-            Dashboard
+            <BarChart3 size={18} className={isSidebarCollapsed ? '' : 'mr-3'} />
+            {!isSidebarCollapsed && "Dashboard"}
           </button>
           <button
             onClick={() => setActiveTab("analytics")}
-            className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors ${activeTab === 'analytics' ? 'bg-indigo-50 text-indigo-700' : 'text-gray-600 hover:bg-gray-100'}`}
+            title="Analytics Config"
+            className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors ${activeTab === 'analytics' ? 'bg-indigo-50 text-indigo-700' : 'text-gray-600 hover:bg-gray-100'} ${isSidebarCollapsed ? 'justify-center' : ''}`}
           >
-            <LayoutDashboard size={18} className="mr-3" />
-            Analytics Config
+            <LayoutDashboard size={18} className={isSidebarCollapsed ? '' : 'mr-3'} />
+            {!isSidebarCollapsed && "Analytics Config"}
           </button>
           <button
             onClick={() => setActiveTab("schema")}
-            className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors ${activeTab === 'schema' ? 'bg-indigo-50 text-indigo-700' : 'text-gray-600 hover:bg-gray-100'}`}
+            title="Schema Design"
+            className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors ${activeTab === 'schema' ? 'bg-indigo-50 text-indigo-700' : 'text-gray-600 hover:bg-gray-100'} ${isSidebarCollapsed ? 'justify-center' : ''}`}
           >
-            <Settings size={18} className="mr-3" />
-            Schema Design
+            <Settings size={18} className={isSidebarCollapsed ? '' : 'mr-3'} />
+            {!isSidebarCollapsed && "Schema Design"}
           </button>
           <button
             onClick={() => setActiveTab("import")}
-            className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors ${activeTab === 'import' ? 'bg-indigo-50 text-indigo-700' : 'text-gray-600 hover:bg-gray-100'}`}
+            title="Data Import"
+            className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors ${activeTab === 'import' ? 'bg-indigo-50 text-indigo-700' : 'text-gray-600 hover:bg-gray-100'} ${isSidebarCollapsed ? 'justify-center' : ''}`}
           >
-            <ArrowDownToLine size={18} className="mr-3" />
-            Data Import
+            <ArrowDownToLine size={18} className={isSidebarCollapsed ? '' : 'mr-3'} />
+            {!isSidebarCollapsed && "Data Import"}
           </button>
         </div>
 
-        {activeTab === 'schema' && (
+        {activeTab === 'schema' && !isSidebarCollapsed && (
           <div className="flex-1 overflow-y-auto px-4 space-y-8 pb-4">
             {/* Dimensions */}
             <div>

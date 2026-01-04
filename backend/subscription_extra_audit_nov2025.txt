@@ -1,0 +1,573 @@
+Subscription Extra Payment Audit Report - November 2025 Activity
+Criteria: Gap < 0.5x expected cycle between payments.
+================================================================================
+
+Record #1 | Subscription ID: 5xxsTdm4b3L
+----------------------------------------
+  2025-08-18 11:03:14 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-09-18 11:03:16 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-10-18 11:03:15 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-01 07:32:39 | Amt:   7.81 | 14-day video history CVR recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 13.85 days (Expected ~30) between 1760810595 and 1762007559
+
+================================================================================
+
+Record #2 | Subscription ID: 5AGowYFvWZ7
+----------------------------------------
+  2025-10-22 02:29:32 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  2025-11-01 12:52:39 | Amt:   4.40 | 14-day video history CVR recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 10.43 days (Expected ~30) between 1761125372 and 1762026759
+
+================================================================================
+
+Record #3 | Subscription ID: 5ANknEvrhcb
+----------------------------------------
+  2025-10-24 04:55:05 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  2025-11-01 12:53:51 | Amt:   3.85 | 14-day video history CVR recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 8.33 days (Expected ~30) between 1761306905 and 1762026831
+
+================================================================================
+
+Record #4 | Subscription ID: 5B86LnoypPw
+----------------------------------------
+  2025-10-30 20:04:20 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-02 19:43:47 | Amt:   6.21 | 30-day video history event recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 3.03 days (Expected ~30) between 1761879860 and 1762141427
+
+================================================================================
+
+Record #5 | Subscription ID: 5Bb7yEpz5QY
+----------------------------------------
+  2025-10-31 21:37:59 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-02 20:23:01 | Amt:   1.02 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 1.99 days (Expected ~30) between 1761971879 and 1762143781
+
+================================================================================
+
+Record #6 | Subscription ID: 5uR6hsVQjif
+----------------------------------------
+  2025-07-07 04:48:54 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-08-07 04:48:54 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-09-07 04:48:54 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-11-03 11:21:12 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-11-07 03:48:55 | Amt:   9.00 | 30-day video history event recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 3.69 days (Expected ~30) between 1762197672 and 1762516135
+
+================================================================================
+
+Record #7 | Subscription ID: 5BiGY6Z1fbm
+----------------------------------------
+  2025-11-03 13:01:57 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-04 06:42:49 | Amt:   6.03 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 0.74 days (Expected ~30) between 1762203717 and 1762267369
+
+================================================================================
+
+Record #8 | Subscription ID: 5zv4sr9qEPA
+----------------------------------------
+  2025-10-10 14:29:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-03 14:21:05 | Amt:   7.20 | 30-day video history event recording pro monthly 
+  2025-11-18 00:04:16 | Amt:   4.86 | 30-day video history event recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 14.40 days (Expected ~30) between 1762208465 and 1763453056
+
+================================================================================
+
+Record #9 | Subscription ID: 5Bjdn7ut1Zw
+----------------------------------------
+  2025-11-03 17:19:54 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-11-15 07:26:39 | Amt:   5.67 | 14-day video history CVR recording pro monthly
+  2025-12-15 07:26:40 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 11.59 days (Expected ~30) between 1762219194 and 1763220399
+
+================================================================================
+
+Record #10 | Subscription ID: 5zBVDvfW5W5
+----------------------------------------
+  2025-09-30 00:43:17 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-10-30 00:43:18 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-11-03 23:05:03 | Amt:   5.39 | 14-day video history CVR recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 4.97 days (Expected ~30) between 1761810198 and 1762239903
+
+================================================================================
+
+Record #11 | Subscription ID: 5ANZkMSeYcs
+----------------------------------------
+  2025-10-24 10:28:11 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-04 02:12:17 | Amt:   7.90 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 10.70 days (Expected ~30) between 1761326891 and 1762251137
+
+================================================================================
+
+Record #12 | Subscription ID: 5BkuggfPfPb
+----------------------------------------
+  2025-11-04 04:08:15 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-11-15 14:19:33 | Amt:   4.72 | 30-day video history event recording AI monthly
+  2025-12-15 14:19:33 | Amt:   8.00 | 30-day video history event recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 11.42 days (Expected ~30) between 1762258095 and 1763245173
+
+================================================================================
+
+Record #13 | Subscription ID: 5B6fDajoSm1
+----------------------------------------
+  2025-10-30 04:24:27 | Amt:  22.00 | 14-day video history event recording annually  
+  2025-11-04 04:13:13 | Amt:  37.17 | 30-day video history event recording pro annually
+  EXTRA PAYMENT DETECTED: Interval 5.03 days (Expected ~365) between 1761823467 and 1762258393
+
+================================================================================
+
+Record #14 | Subscription ID: 5xzJ6oWUZuC
+----------------------------------------
+  2025-08-19 06:14:26 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-27 06:14:27 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-05 06:48:36 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-17 05:14:27 | Amt:   3.00 | 14-day history event recording monthly
+  EXTRA PAYMENT DETECTED: Interval 11.93 days (Expected ~30) between 1762354116 and 1763385267
+
+================================================================================
+
+Record #15 | Subscription ID: 5B15RGRQVmU
+----------------------------------------
+  2025-10-28 08:34:16 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-11-05 15:21:13 | Amt:   1.98 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 8.32 days (Expected ~30) between 1761665656 and 1762384873
+
+================================================================================
+
+Record #16 | Subscription ID: 5BrQSm95a3G
+----------------------------------------
+  2025-11-06 10:02:18 | Amt:  29.00 | 14-day video history event recording annually  
+  2025-11-07 04:47:30 | Amt:  40.02 | 30-day video history event recording pro annually
+  EXTRA PAYMENT DETECTED: Interval 0.78 days (Expected ~365) between 1762452138 and 1762519650
+
+================================================================================
+
+Record #17 | Subscription ID: 5yrm39he3VN
+----------------------------------------
+  2025-09-19 19:04:45 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-11-06 11:12:42 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-11-19 18:04:46 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-12-19 18:04:45 | Amt:   8.00 | 30-day video history event recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 13.29 days (Expected ~30) between 1762456362 and 1763604286
+
+================================================================================
+
+Record #18 | Subscription ID: 5BsoxPKeWT3
+----------------------------------------
+  2025-11-06 14:40:15 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-20 11:33:23 | Amt:   8.20 | 14-day video history CVR recording pro monthly
+  2025-12-20 11:33:23 | Amt:  10.00 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 13.87 days (Expected ~30) between 1762468815 and 1763667203
+
+================================================================================
+
+Record #19 | Subscription ID: 5wxGhG696A9
+----------------------------------------
+  2025-07-29 01:05:58 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-08-29 01:05:59 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-09-29 01:05:59 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-10-29 01:06:00 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-11-07 04:18:34 | Amt:   5.40 | 14-day video history CVR recording pro monthly
+  2025-11-25 13:53:00 | Amt:   9.72 | 14-day video history CVR recording AI monthly
+  2025-12-25 13:53:00 | Amt:  12.00 | 14-day video history CVR recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 9.18 days (Expected ~30) between 1761725160 and 1762517914
+
+================================================================================
+
+Record #20 | Subscription ID: 5xd2ZprTdh9
+----------------------------------------
+  2025-08-11 14:16:09 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-10 14:16:10 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-07 11:09:51 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-09 13:16:10 | Amt:   3.00 | 14-day history event recording monthly
+  EXTRA PAYMENT DETECTED: Interval 2.09 days (Expected ~30) between 1762542591 and 1762722970
+
+================================================================================
+
+Record #21 | Subscription ID: 5y5hypbRHT7
+----------------------------------------
+  2025-08-29 08:27:50 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-29 08:27:52 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-28 08:27:52 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-07 12:30:42 | Amt:   3.90 | 30-day video history event recording pro monthly 
+  2025-12-07 12:30:41 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 10.21 days (Expected ~30) between 1761665272 and 1762547442
+
+================================================================================
+
+Record #22 | Subscription ID: 5zkPjcsfTxw
+----------------------------------------
+  2025-09-24 08:05:42 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-24 08:05:44 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-07 13:23:35 | Amt:   4.32 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 14.26 days (Expected ~30) between 1761318344 and 1762550615
+
+================================================================================
+
+Record #23 | Subscription ID: 5By6fHw5A1q
+----------------------------------------
+  2025-11-08 15:01:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-09 01:11:03 | Amt:   6.03 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 0.42 days (Expected ~30) between 1762642906 and 1762679463
+
+================================================================================
+
+Record #24 | Subscription ID: 5By7g23WsSm
+----------------------------------------
+  2025-11-08 15:10:36 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-11-15 19:01:01 | Amt:   6.16 | 14-day video history CVR recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 7.16 days (Expected ~30) between 1762643436 and 1763262061
+
+================================================================================
+
+Record #25 | Subscription ID: 5vHtGmNVq35
+----------------------------------------
+  2025-07-12 00:09:23 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-11 00:09:25 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-10 00:09:24 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-29 12:13:18 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-08 23:09:24 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-08 23:09:25 | Amt:   3.00 | 14-day history event recording monthly
+  EXTRA PAYMENT DETECTED: Interval 10.50 days (Expected ~30) between 1761765198 and 1762672164
+
+================================================================================
+
+Record #26 | Subscription ID: 5vPMX3e3pxw
+----------------------------------------
+  2025-07-27 05:42:49 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-08-27 05:42:48 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-09-27 05:42:48 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-10-27 05:42:49 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-11-10 02:56:57 | Amt:   3.69 | 30-day video history event recording AI monthly
+  2025-12-10 02:56:55 | Amt:   9.00 | 30-day video history event recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 13.93 days (Expected ~30) between 1761568969 and 1762772217
+
+================================================================================
+
+Record #27 | Subscription ID: 5wSYELxtsju
+----------------------------------------
+  2025-08-17 20:38:21 | Amt:  29.00 | 14-day video history event recording annually  
+  2025-11-10 08:04:34 | Amt:  46.23 | 30-day video history event recording pro annually
+  EXTRA PAYMENT DETECTED: Interval 84.52 days (Expected ~365) between 1755488301 and 1762790674
+
+================================================================================
+
+Record #28 | Subscription ID: 5BDMvD3eTdm
+----------------------------------------
+  2025-11-10 15:19:22 | Amt:   8.00 | 14-day video history CVR recording monthly  
+  2025-11-10 15:27:47 | Amt:   0.99 | 14-day video history CVR recording pro monthly
+  2025-12-10 15:27:46 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 0.01 days (Expected ~30) between 1762816762 and 1762817267
+
+================================================================================
+
+Record #29 | Subscription ID: 5BJokcNPEdq
+----------------------------------------
+  2025-11-12 06:20:23 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-20 09:11:05 | Amt:   5.22 | 14-day video history CVR recording pro monthly
+  2025-12-20 09:11:05 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 8.12 days (Expected ~30) between 1762957223 and 1763658665
+
+================================================================================
+
+Record #30 | Subscription ID: 5yRfKShg4p7
+----------------------------------------
+  2025-09-14 05:51:30 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-14 05:51:32 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-13 04:51:32 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-21 22:51:58 | Amt:   3.72 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 8.75 days (Expected ~30) between 1763038292 and 1763794318
+
+================================================================================
+
+Record #31 | Subscription ID: 5zxVdYrZyuQ
+----------------------------------------
+  2025-10-15 14:44:03 | Amt:  22.00 | 14-day video history event recording annually  
+  2025-11-13 10:46:21 | Amt:  68.53 | 14-day video history CVR recording pro annually   
+  EXTRA PAYMENT DETECTED: Interval 28.88 days (Expected ~365) between 1760564643 and 1763059581
+
+================================================================================
+
+Record #32 | Subscription ID: 5xJzNAUAwUQ
+----------------------------------------
+  2025-08-22 09:21:36 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-21 09:21:37 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-13 11:58:57 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-20 08:21:38 | Amt:   3.00 | 14-day history event recording monthly
+  EXTRA PAYMENT DETECTED: Interval 6.85 days (Expected ~30) between 1763063937 and 1763655698
+
+================================================================================
+
+Record #33 | Subscription ID: 5AhC4cPWqTj
+----------------------------------------
+  2025-10-13 16:55:10 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  2025-11-13 15:55:12 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  2025-11-18 20:41:09 | Amt:   3.19 | 14-day video history CVR recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 5.20 days (Expected ~30) between 1763078112 and 1763527269
+
+================================================================================
+
+Record #34 | Subscription ID: 5uuvqLBWi5m
+----------------------------------------
+  2025-06-16 22:14:20 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-16 22:14:21 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-15 22:14:22 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-14 22:14:21 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-14 22:14:22 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-13 21:14:21 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-19 12:39:11 | Amt:   3.42 | 30-day video history event recording pro monthly 
+  2025-12-19 12:39:10 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 5.64 days (Expected ~30) between 1763097261 and 1763584751
+
+================================================================================
+
+Record #35 | Subscription ID: 5uNQW8AZtyd
+----------------------------------------
+  2025-06-23 09:45:14 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-24 09:45:16 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-22 09:45:16 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-21 09:45:15 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-14 08:21:23 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-20 08:45:15 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-20 08:45:16 | Amt:   3.00 | 14-day history event recording monthly
+  EXTRA PAYMENT DETECTED: Interval 6.02 days (Expected ~30) between 1763137283 and 1763657115
+
+================================================================================
+
+Record #36 | Subscription ID: 5xmyFN5saZ3
+----------------------------------------
+  2025-08-14 14:36:30 | Amt:   3.75 | 7-day video history CVR recording monthly 
+  2025-09-14 14:36:32 | Amt:   3.75 | 7-day video history CVR recording monthly 
+  2025-10-14 14:36:31 | Amt:   3.75 | 7-day video history CVR recording monthly 
+  2025-11-14 13:36:31 | Amt:   3.75 | 7-day video history CVR recording monthly 
+  2025-11-28 14:14:15 | Amt:   5.92 | 30-day video history event recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 14.03 days (Expected ~30) between 1763156191 and 1764368055
+
+================================================================================
+
+Record #37 | Subscription ID: 5uLqo73tx5C
+----------------------------------------
+  2025-07-05 13:12:05 | Amt:  29.00 | 14-day video history event recording annually  
+  2025-11-15 05:35:12 | Amt:  70.31 | 30-day video history event recording AI annually
+  EXTRA PAYMENT DETECTED: Interval 132.72 days (Expected ~365) between 1751746325 and 1763213712
+
+================================================================================
+
+Record #38 | Subscription ID: 5xrg5RXibCY
+----------------------------------------
+  2025-08-16 06:26:26 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-09-16 06:26:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-10-16 06:26:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-16 05:26:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-27 11:53:34 | Amt:   5.67 | 14-day video history CVR recording pro monthly
+  2025-12-27 11:53:35 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 11.27 days (Expected ~30) between 1763299587 and 1764273214
+
+================================================================================
+
+Record #39 | Subscription ID: 5vWrDUrXgSG
+----------------------------------------
+  2025-11-16 13:55:37 | Amt:   6.00 | 30-day video history event recording monthly
+  2025-11-29 13:06:52 | Amt:   6.00 | 30-day video history event recording monthly
+  2025-12-29 13:06:53 | Amt:   6.00 | 30-day video history event recording monthly
+  EXTRA PAYMENT DETECTED: Interval 12.97 days (Expected ~30) between 1763330137 and 1764450412
+
+================================================================================
+
+Record #40 | Subscription ID: 5BWGYk6Bfbu
+----------------------------------------
+  2025-11-16 14:50:27 | Amt:   6.00 | 30-day video history event recording monthly
+  2025-11-18 14:37:53 | Amt:   6.00 | 14-day video history CVR recording AI monthly
+  2025-12-18 14:37:51 | Amt:  12.00 | 14-day video history CVR recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 1.99 days (Expected ~30) between 1763333427 and 1763505473
+
+================================================================================
+
+Record #41 | Subscription ID: 5BYF1K8mzum
+----------------------------------------
+  2025-11-17 07:31:04 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-30 21:35:45 | Amt:   7.20 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 13.59 days (Expected ~30) between 1763393464 and 1764567345
+
+================================================================================
+
+Record #42 | Subscription ID: 5uDEUy4HBz3
+----------------------------------------
+  2025-07-03 03:57:23 | Amt:  22.00 | 14-day video history event recording annually  
+  2025-11-17 09:24:01 | Amt:  74.76 | 14-day video history CVR recording pro annually   
+  EXTRA PAYMENT DETECTED: Interval 137.27 days (Expected ~365) between 1751540243 and 1763400241
+
+================================================================================
+
+Record #43 | Subscription ID: 5BZJof1vBpo
+----------------------------------------
+  2025-11-17 16:29:29 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-21 13:36:27 | Amt:   6.21 | 30-day video history event recording AI monthly
+  2025-12-21 13:36:27 | Amt:   9.00 | 30-day video history event recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 3.88 days (Expected ~30) between 1763425769 and 1763760987
+
+================================================================================
+
+Record #44 | Subscription ID: 5C1XKUqSeoy
+----------------------------------------
+  2025-11-18 02:55:40 | Amt:  22.00 | 14-day video history event recording annually  
+  2025-11-18 07:44:33 | Amt:  37.17 | 30-day video history event recording pro annually
+  EXTRA PAYMENT DETECTED: Interval 0.20 days (Expected ~365) between 1763463340 and 1763480673
+
+================================================================================
+
+Record #45 | Subscription ID: 5z74mbCnT7Q
+----------------------------------------
+  2025-09-19 11:24:32 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-19 11:24:34 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-18 10:24:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-29 06:32:39 | Amt:   6.93 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 10.84 days (Expected ~30) between 1763490273 and 1764426759
+
+================================================================================
+
+Record #46 | Subscription ID: 5C4AJqN9m7U
+----------------------------------------
+  2025-11-19 01:17:51 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-19 01:32:48 | Amt:   6.03 | 14-day video history CVR recording pro monthly
+  2025-12-19 01:32:48 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 0.01 days (Expected ~30) between 1763543871 and 1763544768
+
+================================================================================
+
+Record #47 | Subscription ID: 5C59Dp12wef
+----------------------------------------
+  2025-11-19 05:57:50 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-11-20 06:32:29 | Amt:   1.02 | 30-day video history event recording pro monthly 
+  2025-12-20 06:32:28 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 1.02 days (Expected ~30) between 1763560670 and 1763649149
+
+================================================================================
+
+Record #48 | Subscription ID: 5C5CkhYKnoq
+----------------------------------------
+  2025-11-19 10:00:47 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  2025-11-20 16:08:14 | Amt:   1.98 | 14-day video history CVR recording AI monthly
+  2025-12-20 16:08:14 | Amt:  11.00 | 14-day video history CVR recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 1.26 days (Expected ~30) between 1763575247 and 1763683694
+
+================================================================================
+
+Record #49 | Subscription ID: 5C7R5XAE1ew
+----------------------------------------
+  2025-11-20 04:50:26 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-20 06:31:17 | Amt:   6.03 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 0.07 days (Expected ~30) between 1763643026 and 1763649077
+
+================================================================================
+
+Record #50 | Subscription ID: 5CcVbG6HKMb
+----------------------------------------
+  2025-11-21 23:50:45 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-22 00:08:14 | Amt:   1.02 | 30-day video history event recording pro monthly 
+  2025-12-22 00:08:14 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 0.01 days (Expected ~30) between 1763797845 and 1763798894
+
+================================================================================
+
+Record #51 | Subscription ID: 5wqGRMdcxnb
+----------------------------------------
+  2025-07-26 13:48:51 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-25 13:48:52 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-24 13:48:52 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-24 13:48:53 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-23 12:48:52 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-25 07:21:41 | Amt:   4.96 | 30-day video history event recording pro monthly 
+  2025-12-25 07:21:41 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 1.77 days (Expected ~30) between 1763930932 and 1764084101
+
+================================================================================
+
+Record #52 | Subscription ID: 5CjfdaBr8b9
+----------------------------------------
+  2025-11-24 05:30:58 | Amt:  45.00 | 7-day video history CVR recording annually
+  2025-11-26 15:08:05 | Amt:  14.16 | 30-day video history event recording pro annually
+  EXTRA PAYMENT DETECTED: Interval 2.40 days (Expected ~365) between 1763991058 and 1764198485
+
+================================================================================
+
+Record #53 | Subscription ID: 5Ckm88s4Qx3
+----------------------------------------
+  2025-11-24 14:51:42 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  2025-11-24 15:11:55 | Amt:   1.98 | 14-day video history CVR recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 0.01 days (Expected ~30) between 1764024702 and 1764025915
+
+================================================================================
+
+Record #54 | Subscription ID: 5Cotp6x2apf
+----------------------------------------
+  2025-11-25 17:22:11 | Amt:   6.00 | 30-day video history event recording monthly
+  2025-11-25 17:50:30 | Amt:   2.00 | 30-day video history event recording pro monthly 
+  2025-12-25 17:50:30 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 0.02 days (Expected ~30) between 1764120131 and 1764121830
+
+================================================================================
+
+Record #55 | Subscription ID: 5Cq9psi3ZNQ
+----------------------------------------
+  2025-11-26 07:33:16 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-26 07:46:45 | Amt:   3.00 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 0.01 days (Expected ~30) between 1764171196 and 1764172005
+
+================================================================================
+
+Record #56 | Subscription ID: 5CqhczeSh8J
+----------------------------------------
+  2025-11-26 08:41:40 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-26 09:00:48 | Amt:   1.02 | 30-day video history event recording pro monthly 
+  2025-12-26 09:00:47 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 0.01 days (Expected ~30) between 1764175300 and 1764176448
+
+================================================================================
+
+Record #57 | Subscription ID: 5BK8MQSDBpW
+----------------------------------------
+  2025-11-26 12:41:42 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-27 20:04:52 | Amt:   6.03 | 14-day video history CVR recording pro monthly
+  2025-12-27 20:04:52 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 1.31 days (Expected ~30) between 1764189702 and 1764302692
+
+================================================================================
+
+Record #58 | Subscription ID: 5CuTxsDDheW
+----------------------------------------
+  2025-11-27 23:47:16 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-11-28 01:33:53 | Amt:   2.97 | 14-day video history CVR recording AI monthly
+  2025-12-28 01:33:53 | Amt:  11.00 | 14-day video history CVR recording AI monthly
+  EXTRA PAYMENT DETECTED: Interval 0.07 days (Expected ~30) between 1764316036 and 1764322433
+
+================================================================================
+
+Record #59 | Subscription ID: 5wKt5LSy98J
+----------------------------------------
+  2025-08-02 04:56:39 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-01 04:56:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-01 04:56:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-28 13:07:00 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-30 03:56:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-30 03:56:40 | Amt:   3.00 | 14-day history event recording monthly
+  EXTRA PAYMENT DETECTED: Interval 1.62 days (Expected ~30) between 1764364020 and 1764503801
+
+================================================================================
+
+Record #60 | Subscription ID: 5Cy9uEmmmBA
+----------------------------------------
+  2025-11-29 03:25:05 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-29 03:33:58 | Amt:   7.00 | 14-day video history CVR recording pro monthly
+  EXTRA PAYMENT DETECTED: Interval 0.01 days (Expected ~30) between 1764415505 and 1764416038
+
+================================================================================
+
+Record #61 | Subscription ID: 5CyYhSJeLif
+----------------------------------------
+  2025-11-29 10:24:26 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-29 10:30:53 | Amt:   3.00 | 30-day video history event recording pro monthly 
+  2025-12-29 10:30:52 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  EXTRA PAYMENT DETECTED: Interval 0.00 days (Expected ~30) between 1764440666 and 1764441053
+
+================================================================================
+

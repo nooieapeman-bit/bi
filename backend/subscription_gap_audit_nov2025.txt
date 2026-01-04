@@ -1,0 +1,2170 @@
+Subscription Gap Audit Report - November 2025 Activity
+Criteria: Gap > 1.5x expected cycle between payments.
+================================================================================
+
+Record #1 | Subscription ID: 4ZweGX4eyks
+----------------------------------------
+  2023-11-01 03:23:04 | Amt:  47.00 | 
+  2025-11-01 03:23:05 | Amt:  47.00 | 30-day video history event recording annually
+  GAP DETECTED: 731.0 days (Expected ~30) between 1698834184 and 1761992585
+
+================================================================================
+
+Record #2 | Subscription ID: 5cLxiGj5ZkN
+----------------------------------------
+  2024-07-09 03:40:07 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-08 03:40:08 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-07 03:40:09 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-07 03:40:08 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-06 03:40:08 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-09 03:40:08 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-08 03:40:08 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-07 03:40:08 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-09 03:40:08 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-06 03:40:09 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-05 03:40:08 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-04 03:40:09 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-04 03:40:08 | Amt:   2.00 | 14-day history event recording monthly
+  2025-09-03 03:40:08 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-01 03:40:08 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-02 03:40:08 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 59.0 days (Expected ~30) between 1756896008 and 1761993608
+
+================================================================================
+
+Record #3 | Subscription ID: 5xV5PfF95fm
+----------------------------------------
+  2025-08-26 02:24:54 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-01 07:19:23 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  GAP DETECTED: 67.2 days (Expected ~30) between 1756200294 and 1762006763
+
+================================================================================
+
+Record #4 | Subscription ID: 5spYiirH5gS
+----------------------------------------
+  2025-05-05 07:55:57 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-08 07:55:59 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-04 07:55:59 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-01 07:55:58 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 120.0 days (Expected ~30) between 1751640959 and 1762008958
+
+================================================================================
+
+Record #5 | Subscription ID: 5jdK3ZVscbQ
+----------------------------------------
+  2024-12-01 08:23:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-01-01 08:23:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-02-01 08:23:12 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-03-01 08:23:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-04-01 08:23:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-06-01 08:23:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-07-01 08:23:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-08-01 08:23:12 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-09-10 08:23:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-11-01 08:23:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 52.0 days (Expected ~30) between 1757517791 and 1762010591
+
+================================================================================
+
+Record #6 | Subscription ID: 59aQz9aaS8J
+----------------------------------------
+  2024-05-10 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2024-06-09 10:36:21 | Amt:   2.00 | 14-day history event recording monthly
+  2024-07-09 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-08 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-07 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-07 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-06 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-05 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-04 10:36:21 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-06 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-05 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-05 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-04 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-04 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-03 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2025-09-02 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-01 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-01 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-31 10:36:20 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1756834580 and 1762018580
+
+================================================================================
+
+Record #7 | Subscription ID: 5arz1UAPFiS
+----------------------------------------
+  2024-06-05 11:56:45 | Amt:   2.00 | 14-day history event recording monthly
+  2024-07-05 11:56:45 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-04 11:56:45 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-03 11:56:45 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-03 11:56:45 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-02 11:56:45 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-02 11:56:46 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-01 11:56:45 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-31 11:56:45 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-11 11:56:46 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-01 11:56:45 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-03 11:56:46 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-01 11:56:45 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-27 11:56:45 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-27 11:56:45 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 90.0 days (Expected ~30) between 1754247406 and 1762023405
+
+================================================================================
+
+Record #8 | Subscription ID: 5bjUZmJZuU1
+----------------------------------------
+  2024-06-09 14:24:42 | Amt:   2.00 | 14-day history event recording monthly
+  2024-07-10 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-09 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-07 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-07 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-06 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-06 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-05 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-04 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-06 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-06 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-09 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-08 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-04 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-03 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-01 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-01 14:24:43 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 90.0 days (Expected ~30) between 1754256283 and 1762032283
+
+================================================================================
+
+Record #9 | Subscription ID: 5qzEy3dFAoC
+----------------------------------------
+  2025-03-28 18:19:18 | Amt:  10.00 | 14-day video history CVR recording pro monthly
+  2025-04-29 18:19:19 | Amt:  10.00 | 14-day video history CVR recording pro monthly
+  2025-05-29 18:19:19 | Amt:  10.00 | 14-day video history CVR recording pro monthly
+  2025-06-28 18:19:20 | Amt:  10.00 | 14-day video history CVR recording pro monthly
+  2025-07-28 18:19:19 | Amt:  10.00 | 14-day video history CVR recording pro monthly
+  2025-08-28 18:19:19 | Amt:  10.00 | 14-day video history CVR recording pro monthly
+  2025-11-01 18:19:19 | Amt:  10.00 | 14-day video history CVR recording pro monthly
+  GAP DETECTED: 65.0 days (Expected ~30) between 1756430359 and 1762046359
+
+================================================================================
+
+Record #10 | Subscription ID: 5qYm6tYN9xb
+----------------------------------------
+  2025-04-05 18:41:31 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-05 18:41:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-11 18:41:32 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-01 18:41:32 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-10 18:41:32 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 51.0 days (Expected ~30) between 1757641292 and 1762047692
+
+================================================================================
+
+Record #11 | Subscription ID: 5qMADJty527
+----------------------------------------
+  2025-04-01 23:31:36 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-05-01 23:31:37 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-06-01 23:31:37 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-07-01 23:31:37 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-08-01 23:31:37 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-09-01 23:31:37 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-11-01 23:31:37 | Amt:   8.00 | 30-day video history event recording AI monthly
+  GAP DETECTED: 61.0 days (Expected ~30) between 1756794697 and 1762065097
+
+================================================================================
+
+Record #12 | Subscription ID: 5uy97WrsmH7
+----------------------------------------
+  2025-07-01 05:02:52 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-08-02 05:02:52 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-09-10 05:02:52 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-11-02 04:02:52 | Amt:   5.00 | 30-day video history event recording monthly
+  GAP DETECTED: 53.0 days (Expected ~30) between 1757505772 and 1762084972
+
+================================================================================
+
+Record #13 | Subscription ID: 5ykcRpfQBT7
+----------------------------------------
+  2025-09-03 14:59:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-02 13:59:43 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1756936781 and 1762120783
+
+================================================================================
+
+Record #14 | Subscription ID: 5z1WEhXhcsy
+----------------------------------------
+  2025-09-17 16:01:29 | Amt:   2.25 | 14-day history event recording monthly
+  2025-11-02 16:03:54 | Amt:   2.25 | 14-day history event recording monthly
+  2025-12-05 19:07:44 | Amt:   2.25 | 14-day history event recording monthly
+  GAP DETECTED: 46.0 days (Expected ~30) between 1758150089 and 1762128234
+
+================================================================================
+
+Record #15 | Subscription ID: 5qMZ9tv8deo
+----------------------------------------
+  2025-04-02 02:48:57 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-05-02 02:48:59 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-06-02 02:48:58 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-07-02 02:48:58 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-08-02 02:48:59 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-11-03 02:48:58 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-12-02 02:48:58 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 93.0 days (Expected ~30) between 1754128139 and 1762166938
+
+================================================================================
+
+Record #16 | Subscription ID: 5pkj1Rxqd11
+----------------------------------------
+  2025-03-03 03:39:58 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-04-10 18:48:53 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-05-03 03:39:59 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-06-12 03:39:59 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-07-12 03:40:00 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-09-04 03:39:59 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-03 03:39:59 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  GAP DETECTED: 60.0 days (Expected ~30) between 1756982399 and 1762169999
+
+================================================================================
+
+Record #17 | Subscription ID: 5yncZYyvCvo
+----------------------------------------
+  2025-09-04 07:58:44 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-03 06:58:45 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1756997924 and 1762181925
+
+================================================================================
+
+Record #18 | Subscription ID: 5yjut3n5GSu
+----------------------------------------
+  2025-09-03 08:56:36 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-11-03 07:56:37 | Amt:   5.00 | 30-day video history event recording monthly
+  GAP DETECTED: 61.0 days (Expected ~30) between 1756914996 and 1762185397
+
+================================================================================
+
+Record #19 | Subscription ID: 4YX6KiZbv55
+----------------------------------------
+  2023-11-03 11:20:18 | Amt:  23.00 | 
+  2025-11-03 11:20:18 | Amt:  23.00 | 14-day video history event recording annually  
+  GAP DETECTED: 731.0 days (Expected ~30) between 1699035618 and 1762197618
+
+================================================================================
+
+Record #20 | Subscription ID: 5uR6hsVQjif
+----------------------------------------
+  2025-07-07 04:48:54 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-08-07 04:48:54 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-09-07 04:48:54 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-11-03 11:21:12 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-11-07 03:48:55 | Amt:   9.00 | 30-day video history event recording AI monthly
+  GAP DETECTED: 57.3 days (Expected ~30) between 1757245734 and 1762197672
+
+================================================================================
+
+Record #21 | Subscription ID: 5wQr1sztsk3
+----------------------------------------
+  2025-08-03 23:02:50 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  2025-09-03 23:02:51 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  2025-11-03 22:02:51 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  GAP DETECTED: 61.0 days (Expected ~30) between 1756965771 and 1762236171
+
+================================================================================
+
+Record #22 | Subscription ID: 5ymQZ6GoKmu
+----------------------------------------
+  2025-09-04 04:54:20 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-04 03:54:22 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-12-04 03:54:21 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  GAP DETECTED: 61.0 days (Expected ~30) between 1756986860 and 1762257262
+
+================================================================================
+
+Record #23 | Subscription ID: 5fDHGStqALh
+----------------------------------------
+  2024-09-06 05:33:49 | Amt:   3.00 | 14-day history event recording monthly
+  2024-10-06 05:33:51 | Amt:   3.00 | 14-day history event recording monthly
+  2024-11-05 05:33:50 | Amt:   3.00 | 14-day history event recording monthly
+  2024-12-05 05:33:51 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-04 05:33:51 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-03 05:33:51 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-05 05:33:50 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-04 05:33:50 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-04 05:33:50 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-03 05:33:50 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-03 05:33:50 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-02 05:34:01 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-01 05:33:50 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-04 05:33:50 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-30 05:33:50 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-30 05:33:51 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 64.0 days (Expected ~30) between 1756730030 and 1762263230
+
+================================================================================
+
+Record #24 | Subscription ID: 5wSCy36df83
+----------------------------------------
+  2025-08-04 17:41:51 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-11-04 16:41:53 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 92.0 days (Expected ~30) between 1754354511 and 1762303313
+
+================================================================================
+
+Record #25 | Subscription ID: 5w4XrvdmZRA
+----------------------------------------
+  2025-07-19 05:50:21 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-18 05:50:22 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-17 05:50:23 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-05 00:56:27 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 48.8 days (Expected ~30) between 1758113423 and 1762332987
+
+================================================================================
+
+Record #26 | Subscription ID: 5uUGR69Hts9
+----------------------------------------
+  2025-06-25 11:27:35 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-07-25 11:27:37 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-08-25 11:27:36 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-11-05 07:34:30 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-11-25 10:27:36 | Amt:   5.00 | 30-day video history event recording monthly
+  GAP DETECTED: 71.9 days (Expected ~30) between 1756146456 and 1762356870
+
+================================================================================
+
+Record #27 | Subscription ID: 5fh5YhaaUrf
+----------------------------------------
+  2024-09-11 14:05:07 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-11 14:05:07 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-11 14:05:07 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-10 14:05:08 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-09 14:05:07 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-08 14:05:08 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-10 14:05:07 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-07 14:05:07 | Amt:   2.00 | 14-day history event recording monthly
+  2025-09-06 14:05:07 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-05 14:05:07 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1757192707 and 1762380307
+
+================================================================================
+
+Record #28 | Subscription ID: 5tgvvG3WedC
+----------------------------------------
+  2025-06-04 20:04:47 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-08 20:07:13 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-03 20:04:48 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-06 20:04:47 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-05 20:04:47 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1757214287 and 1762401887
+
+================================================================================
+
+Record #29 | Subscription ID: 57WsPajL1NU
+----------------------------------------
+  2024-04-15 06:15:10 | Amt:   3.00 | 14-day history event recording monthly
+  2024-05-15 06:15:10 | Amt:   3.00 | 14-day history event recording monthly
+  2024-06-14 06:15:10 | Amt:   3.00 | 14-day history event recording monthly
+  2024-07-14 06:15:11 | Amt:   3.00 | 14-day history event recording monthly
+  2024-08-13 06:15:10 | Amt:   3.00 | 14-day history event recording monthly
+  2024-09-12 06:15:10 | Amt:   3.00 | 14-day history event recording monthly
+  2024-10-12 06:15:10 | Amt:   3.00 | 14-day history event recording monthly
+  2024-11-11 06:15:10 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-10 06:15:10 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-09 06:15:11 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-08 06:15:10 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-06 06:15:10 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-06 06:15:10 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 90.0 days (Expected ~30) between 1754658910 and 1762438510
+
+================================================================================
+
+Record #30 | Subscription ID: 5ar6o7vwY9h
+----------------------------------------
+  2024-06-05 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2024-07-05 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2024-08-04 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2024-09-03 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2024-10-03 08:54:19 | Amt:   3.00 | 14-day history event recording monthly
+  2024-11-02 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2024-12-02 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-01 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-31 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-02 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-01 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-01 08:54:19 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-31 08:54:19 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-30 08:54:26 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-30 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-06 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-27 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-27 08:54:18 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 99.0 days (Expected ~30) between 1753890858 and 1762448058
+
+================================================================================
+
+Record #31 | Subscription ID: 5yrm39he3VN
+----------------------------------------
+  2025-09-19 19:04:45 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-11-06 11:12:42 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-11-19 18:04:46 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-12-19 18:04:45 | Amt:   8.00 | 30-day video history event recording AI monthly
+  GAP DETECTED: 47.7 days (Expected ~30) between 1758333885 and 1762456362
+
+================================================================================
+
+Record #32 | Subscription ID: 4WHfiruvgTN
+----------------------------------------
+  2023-09-18 13:01:21 | Amt:   2.00 | 
+  2023-10-18 13:01:21 | Amt:   2.00 | 
+  2023-11-17 13:01:21 | Amt:   2.00 | 
+  2023-12-17 13:01:21 | Amt:   2.00 | 
+  2024-01-16 13:01:21 | Amt:   2.00 | 
+  2024-02-15 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2024-03-16 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2024-04-15 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2024-05-15 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2024-06-14 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2024-07-14 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-13 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-12 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-12 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-11 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-11 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-10 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-09 13:01:22 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-11 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-10 13:01:22 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-10 13:01:22 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-09 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-09 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-08 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2025-09-07 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-06 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-06 13:01:21 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1757275281 and 1762462881
+
+================================================================================
+
+Record #33 | Subscription ID: 5bbj3XxHJrW
+----------------------------------------
+  2024-06-06 13:27:09 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-07-06 13:27:10 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-08-06 13:27:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-09-06 13:27:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-10-16 03:04:35 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-11-06 13:27:10 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-12-06 13:27:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-01-06 13:27:10 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-02-06 13:27:10 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-03-06 13:27:10 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-04-06 13:27:10 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-05-06 13:27:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-06-15 13:27:10 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-09-06 13:27:11 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-11-06 13:27:10 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 61.0 days (Expected ~30) between 1757190431 and 1762464430
+
+================================================================================
+
+Record #34 | Subscription ID: 5e796wqJ8UL
+----------------------------------------
+  2024-08-05 13:48:53 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-09-05 13:48:54 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-10-07 13:48:54 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-11-05 13:48:54 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-12-05 13:48:54 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-01-05 13:48:54 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-05-05 13:48:54 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-06-05 13:48:55 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-08-05 13:48:54 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-09-05 13:48:54 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-11-06 13:48:54 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-12-06 13:48:54 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 62.0 days (Expected ~30) between 1757105334 and 1762465734
+
+================================================================================
+
+Record #35 | Subscription ID: 5pkfnzPAgdd
+----------------------------------------
+  2025-03-03 03:08:01 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-11 03:08:02 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-01 03:08:02 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-01 03:08:02 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-31 03:08:02 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-30 03:08:02 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-07 03:08:02 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-29 03:08:04 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-29 03:08:02 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 69.0 days (Expected ~30) between 1756548482 and 1762513682
+
+================================================================================
+
+Record #36 | Subscription ID: 5yvuu2ixemu
+----------------------------------------
+  2025-09-07 06:14:21 | Amt:   7.50 | 14-day video history CVR recording pro monthly
+  2025-11-07 05:14:22 | Amt:   7.50 | 14-day video history CVR recording pro monthly
+  2025-12-11 05:14:22 | Amt:   7.50 | 14-day video history CVR recording pro monthly
+  GAP DETECTED: 61.0 days (Expected ~30) between 1757250861 and 1762521262
+
+================================================================================
+
+Record #37 | Subscription ID: 5hsrpYfAkQ5
+----------------------------------------
+  2024-10-13 05:42:58 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-14 05:42:59 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-15 05:42:59 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-11 05:42:59 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-10 05:42:59 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-14 05:43:00 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-09 05:42:59 | Amt:   2.00 | 14-day history event recording monthly
+  2025-09-08 05:42:59 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-07 05:42:59 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-07 05:42:59 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1757335379 and 1762522979
+
+================================================================================
+
+Record #38 | Subscription ID: 5xd2ZprTdh9
+----------------------------------------
+  2025-08-11 14:16:09 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-10 14:16:10 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-07 11:09:51 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-09 13:16:10 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 57.9 days (Expected ~30) between 1757538970 and 1762542591
+
+================================================================================
+
+Record #39 | Subscription ID: 5hU7SfoJ37L
+----------------------------------------
+  2024-11-04 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2024-12-04 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-07 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-02 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-04 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-03 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-03 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-02 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-02 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-02 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-04 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-08 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-29 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-29 06:31:03 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 65.0 days (Expected ~30) between 1756992663 and 1762612263
+
+================================================================================
+
+Record #40 | Subscription ID: 5swgcNVar4o
+----------------------------------------
+  2025-05-07 13:17:32 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-06-07 13:17:33 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-08-07 13:17:33 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-09-07 13:17:33 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-11-08 13:17:33 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-12-11 13:17:33 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 62.0 days (Expected ~30) between 1757276253 and 1762636653
+
+================================================================================
+
+Record #41 | Subscription ID: 5uSu7DfBKQu
+----------------------------------------
+  2025-09-09 16:38:06 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-11-08 15:38:07 | Amt:   8.00 | 30-day video history event recording AI monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1757461086 and 1762645087
+
+================================================================================
+
+Record #42 | Subscription ID: 5pr19YMjvjY
+----------------------------------------
+  2025-03-05 03:56:32 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-04 03:56:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-03 03:56:34 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-12 03:56:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-06 03:56:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-09 03:56:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-09 03:56:34 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 95.0 days (Expected ~30) between 1754477793 and 1762689393
+
+================================================================================
+
+Record #43 | Subscription ID: 5vJvTSGoyZE
+----------------------------------------
+  2025-07-12 08:57:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-11 08:57:34 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-10 08:57:34 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-09 05:46:49 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 59.9 days (Expected ~30) between 1757519854 and 1762696009
+
+================================================================================
+
+Record #44 | Subscription ID: 59ynJp76XA9
+----------------------------------------
+  2024-05-18 08:45:01 | Amt:   2.00 | 14-day history event recording monthly
+  2024-06-17 08:45:01 | Amt:   2.00 | 14-day history event recording monthly
+  2024-07-17 08:45:02 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-16 08:45:01 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-15 08:45:01 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-15 08:45:01 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-14 08:45:01 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-14 08:45:01 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-13 08:45:01 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-13 08:45:02 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-13 08:45:02 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-12 08:45:01 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-09 08:45:01 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 89.0 days (Expected ~30) between 1755013501 and 1762706701
+
+================================================================================
+
+Record #45 | Subscription ID: 5yts2BNqsv7
+----------------------------------------
+  2025-09-19 12:55:05 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  2025-11-09 10:00:55 | Amt:   9.00 | 14-day video history CVR recording pro monthly
+  GAP DETECTED: 50.9 days (Expected ~30) between 1758311705 and 1762711255
+
+================================================================================
+
+Record #46 | Subscription ID: 5dqqhPBFHzs
+----------------------------------------
+  2024-08-05 12:55:56 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-09-05 12:55:55 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-10-07 12:55:55 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-11-06 12:55:55 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-12-05 12:55:56 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-02-14 12:55:55 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-03-05 12:55:55 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-04-09 12:55:55 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-05-06 12:55:56 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-06-05 12:55:55 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-07-09 12:55:55 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-08-05 12:55:55 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-09-09 12:55:55 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-11-09 12:55:55 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 61.0 days (Expected ~30) between 1757447755 and 1762721755
+
+================================================================================
+
+Record #47 | Subscription ID: 5dyWzhKDT5U
+----------------------------------------
+  2024-08-07 13:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-06 13:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-06 13:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-05 13:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-05 13:12:39 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-04 13:12:39 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-03 13:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-05 13:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-04 13:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-04 13:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-02 13:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-09-01 13:12:41 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-09 13:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-30 13:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-30 13:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 69.0 days (Expected ~30) between 1756757561 and 1762722758
+
+================================================================================
+
+Record #48 | Subscription ID: 5y8D8jB1Xzs
+----------------------------------------
+  2025-08-30 12:54:55 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-10 01:18:19 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-11 22:53:20 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 71.6 days (Expected ~30) between 1756583695 and 1762766299
+
+================================================================================
+
+Record #49 | Subscription ID: 5hpmB6wXjZW
+----------------------------------------
+  2024-10-12 03:34:09 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-11 03:34:10 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-11 03:34:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-10 03:34:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-09 03:34:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-11 03:34:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-10 03:34:11 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-10 03:34:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-09 03:34:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-09 03:34:11 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-08 03:34:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-09-07 03:34:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-10 03:34:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-06 03:34:10 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 64.0 days (Expected ~30) between 1757241250 and 1762774450
+
+================================================================================
+
+Record #50 | Subscription ID: 5ahPorRs2ZS
+----------------------------------------
+  2024-05-19 08:42:56 | Amt:   2.00 | 14-day history event recording monthly
+  2024-06-18 08:42:57 | Amt:   2.00 | 14-day history event recording monthly
+  2024-07-18 08:42:57 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-17 08:42:57 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-17 08:42:57 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-16 08:42:57 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-18 08:42:57 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-18 08:42:58 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-12 08:42:57 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-10 08:42:57 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 90.0 days (Expected ~30) between 1755013377 and 1762792977
+
+================================================================================
+
+Record #51 | Subscription ID: 5pFMe1vLwpA
+----------------------------------------
+  2025-03-10 10:16:14 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-04-24 05:04:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-05-14 10:16:15 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-06-14 10:16:15 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-07-10 10:16:15 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-08-14 10:16:15 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-09-14 10:16:15 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-11-10 10:16:15 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 57.0 days (Expected ~30) between 1757870175 and 1762798575
+
+================================================================================
+
+Record #52 | Subscription ID: 4WXavPhqKQU
+----------------------------------------
+  2023-09-09 11:03:42 | Amt:   5.81 | 
+  2023-10-09 11:03:40 | Amt:   5.81 | 
+  2023-11-09 11:03:40 | Amt:   7.00 | 
+  2023-12-09 11:03:39 | Amt:   7.00 | 
+  2024-01-09 11:03:39 | Amt:   7.00 | 
+  2024-02-09 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-03-09 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-04-09 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-05-09 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-06-09 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-07-09 11:03:40 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-08-09 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-09-10 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-10-09 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-01-09 11:03:40 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-02-09 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-03-09 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-04-09 11:03:40 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-05-09 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-06-09 11:03:40 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-07-09 11:03:44 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-09-09 11:03:40 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-11-10 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-12-09 11:03:39 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 62.0 days (Expected ~30) between 1757441020 and 1762801419
+
+================================================================================
+
+Record #53 | Subscription ID: 5sRWktYtAFb
+----------------------------------------
+  2025-05-14 12:09:32 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-17 12:09:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-13 12:09:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-16 12:09:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-11 12:09:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-10 12:09:34 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-10 12:09:33 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1757617773 and 1762805374
+
+================================================================================
+
+Record #54 | Subscription ID: 5vaaAo9Mun7
+----------------------------------------
+  2025-07-13 14:06:30 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-16 14:06:30 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-10 13:06:30 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-19 13:06:30 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 86.0 days (Expected ~30) between 1755378390 and 1762808790
+
+================================================================================
+
+Record #55 | Subscription ID: 5xhfgR5WuZo
+----------------------------------------
+  2025-08-13 01:59:25 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-11 00:59:26 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-11 00:59:27 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 90.0 days (Expected ~30) between 1755075565 and 1762851566
+
+================================================================================
+
+Record #56 | Subscription ID: 5fRc7yYXRBo
+----------------------------------------
+  2024-09-10 06:51:56 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-10-10 06:51:58 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-11-10 06:51:57 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-12-10 06:51:58 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-01-10 06:51:57 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-02-10 06:51:57 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-03-10 06:51:57 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-04-10 06:51:57 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-05-10 06:51:57 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-06-14 06:51:59 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-08-14 06:51:57 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-11 06:51:57 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  GAP DETECTED: 89.0 days (Expected ~30) between 1755179517 and 1762872717
+
+================================================================================
+
+Record #57 | Subscription ID: 5vPLGcsv295
+----------------------------------------
+  2025-07-14 05:31:47 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-09-23 05:31:48 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-11-11 23:43:20 | Amt:   8.00 | 30-day video history event recording AI monthly
+  GAP DETECTED: 49.8 days (Expected ~30) between 1758630708 and 1762933400
+
+================================================================================
+
+Record #58 | Subscription ID: 5dZFaAj1BwG
+----------------------------------------
+  2024-08-03 06:59:21 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-09-03 06:59:22 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-10-03 06:59:22 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-11-04 06:59:22 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-12-03 06:59:23 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-01-03 06:59:22 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-02-03 06:59:23 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-03-12 06:59:22 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-04-03 06:59:22 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-07-12 06:59:22 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-09-12 06:59:22 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-11-12 06:59:22 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-12-12 06:59:22 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 61.0 days (Expected ~30) between 1757685562 and 1762959562
+
+================================================================================
+
+Record #59 | Subscription ID: 5eMk8uuvarb
+----------------------------------------
+  2024-08-19 10:11:54 | Amt:   3.00 | 14-day history event recording monthly
+  2024-09-18 10:11:55 | Amt:   3.00 | 14-day history event recording monthly
+  2024-10-18 10:11:55 | Amt:   3.00 | 14-day history event recording monthly
+  2024-11-17 10:11:55 | Amt:   3.00 | 14-day history event recording monthly
+  2024-12-17 10:11:55 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-16 10:11:55 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-15 10:11:55 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-17 10:11:55 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-16 10:11:55 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-15 10:11:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-15 10:13:43 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-15 10:11:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-13 10:11:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-12 10:11:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-12 10:11:55 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1757783516 and 1762971116
+
+================================================================================
+
+Record #60 | Subscription ID: 5cfRksynQNd
+----------------------------------------
+  2024-07-20 15:52:01 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-10 15:52:01 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-09 15:52:01 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-10 15:52:01 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-08 15:52:02 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-06 15:52:01 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-08 15:52:01 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-08 15:52:01 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-06 15:52:02 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-10 15:52:04 | Amt:   2.00 | 14-day history event recording monthly
+  2025-09-04 15:52:01 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-12 15:52:02 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-03 15:52:02 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 69.0 days (Expected ~30) between 1757026321 and 1762991522
+
+================================================================================
+
+Record #61 | Subscription ID: 5nXxfrJvz3y
+----------------------------------------
+  2025-02-16 00:01:08 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-17 23:05:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-16 23:05:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-16 23:05:57 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-15 23:05:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-15 23:06:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-14 23:05:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-17 23:05:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-12 23:05:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-12 23:05:57 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 56.0 days (Expected ~30) between 1758175556 and 1763017556
+
+================================================================================
+
+Record #62 | Subscription ID: 5yNZuM7L2o1
+----------------------------------------
+  2025-09-13 10:39:50 | Amt:   6.00 | 30-day video history event recording monthly
+  2025-11-13 09:39:51 | Amt:   6.00 | 30-day video history event recording monthly
+  2025-12-13 09:39:51 | Amt:   6.00 | 30-day video history event recording monthly
+  GAP DETECTED: 61.0 days (Expected ~30) between 1757785190 and 1763055591
+
+================================================================================
+
+Record #63 | Subscription ID: 5qHgQZLYdzW
+----------------------------------------
+  2025-04-13 10:51:05 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  2025-05-13 10:51:06 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  2025-06-13 10:51:05 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  2025-08-13 10:51:05 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  2025-09-13 10:51:05 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  2025-11-13 10:51:06 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  2025-12-13 10:51:06 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  GAP DETECTED: 61.0 days (Expected ~30) between 1757785865 and 1763059866
+
+================================================================================
+
+Record #64 | Subscription ID: 5xJzNAUAwUQ
+----------------------------------------
+  2025-08-22 09:21:36 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-21 09:21:37 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-13 11:58:57 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-20 08:21:38 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 53.2 days (Expected ~30) between 1758471697 and 1763063937
+
+================================================================================
+
+Record #65 | Subscription ID: 5hMZ8supYy9
+----------------------------------------
+  2024-10-20 03:29:54 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-19 03:29:55 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-18 03:29:55 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-17 03:29:56 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-19 03:29:56 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-18 03:29:56 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-18 03:29:56 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-17 03:29:55 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-17 03:29:55 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-14 03:29:55 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-15 03:29:55 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 120.0 days (Expected ~30) between 1752748195 and 1763119795
+
+================================================================================
+
+Record #66 | Subscription ID: 5uvz4mdxBJY
+----------------------------------------
+  2025-06-17 07:15:03 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-18 07:15:04 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-14 06:15:04 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 119.0 days (Expected ~30) between 1752848104 and 1763129704
+
+================================================================================
+
+Record #67 | Subscription ID: 5uNQW8AZtyd
+----------------------------------------
+  2025-06-23 09:45:14 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-24 09:45:16 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-22 09:45:16 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-21 09:45:15 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-14 08:21:23 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-20 08:45:15 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-20 08:45:16 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 54.0 days (Expected ~30) between 1758473115 and 1763137283
+
+================================================================================
+
+Record #68 | Subscription ID: 5osXE6J2bY1
+----------------------------------------
+  2025-02-13 08:37:30 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-15 08:37:32 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-14 08:37:31 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-14 08:37:32 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-13 08:37:31 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-13 08:37:31 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-12 08:37:31 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-11 08:37:31 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-14 08:37:31 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 64.0 days (Expected ~30) between 1757605051 and 1763138251
+
+================================================================================
+
+Record #69 | Subscription ID: 5eT6dU3tfcS
+----------------------------------------
+  2024-08-21 11:03:09 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-21 11:03:10 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-21 11:03:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-27 11:03:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-17 11:03:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-19 11:03:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-18 11:03:11 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-18 11:03:11 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-17 11:03:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-17 11:03:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-16 11:03:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-09-16 11:03:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-14 11:03:10 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-14 11:03:10 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 59.0 days (Expected ~30) between 1758045790 and 1763146990
+
+================================================================================
+
+Record #70 | Subscription ID: 5hRiwLTjoyG
+----------------------------------------
+  2024-10-21 07:37:58 | Amt:   3.00 | 14-day history event recording monthly
+  2024-12-20 07:37:59 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-19 07:38:00 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-18 07:38:00 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-20 07:37:59 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-19 07:38:00 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-19 07:37:59 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-18 07:37:59 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-17 07:38:00 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-16 07:37:59 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-15 07:37:59 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1758033479 and 1763221079
+
+================================================================================
+
+Record #71 | Subscription ID: 57BqrXZq2KN
+----------------------------------------
+  2024-03-25 10:45:44 | Amt:   3.00 | 14-day history event recording monthly
+  2024-04-24 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2024-05-24 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2024-06-23 10:45:46 | Amt:   3.00 | 14-day history event recording monthly
+  2024-07-23 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2024-08-22 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2024-09-21 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2024-10-21 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2024-11-20 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2024-12-20 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-19 10:45:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-18 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-20 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-19 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-19 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-18 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-18 10:45:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-17 10:45:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-15 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-15 10:45:45 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 90.0 days (Expected ~30) between 1755452746 and 1763232345
+
+================================================================================
+
+Record #72 | Subscription ID: 5mBTex2GYPb
+----------------------------------------
+  2025-01-06 12:28:51 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-02-06 12:28:52 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-03-07 12:28:53 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-04-06 12:28:52 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-07-10 12:28:52 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-08-10 12:28:52 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-11-15 12:28:52 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-12-15 12:28:53 | Amt:   5.00 | 30-day video history event recording monthly
+  GAP DETECTED: 97.0 days (Expected ~30) between 1754854132 and 1763238532
+
+================================================================================
+
+Record #73 | Subscription ID: 578nAcqEGom
+----------------------------------------
+  2024-03-15 12:52:07 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-04-15 12:52:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-05-15 12:52:09 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-06-15 12:52:09 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-07-15 12:52:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-08-15 12:52:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-09-15 12:52:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-10-15 12:52:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-11-15 12:52:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-12-15 12:52:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-01-15 12:52:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-02-15 12:52:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-03-15 12:52:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-06-15 12:52:09 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-07-15 12:54:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-11-15 12:52:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-12-15 12:52:08 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 123.0 days (Expected ~30) between 1752609248 and 1763239928
+
+================================================================================
+
+Record #74 | Subscription ID: 4Zxxjb2r4MJ
+----------------------------------------
+  2023-11-15 14:26:26 | Amt:  26.00 | 
+  2025-11-15 14:26:26 | Amt:  26.00 | 14-day video history event recording annually  
+  GAP DETECTED: 731.0 days (Expected ~30) between 1700087186 and 1763245586
+
+================================================================================
+
+Record #75 | Subscription ID: 5a8s1892n15
+----------------------------------------
+  2024-05-16 01:15:25 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-06-16 01:15:26 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-07-16 01:15:26 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-08-16 01:15:26 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-09-16 01:15:26 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-10-16 01:15:26 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-11-16 01:15:26 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-12-16 01:15:26 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-01-16 01:15:26 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-02-16 01:15:27 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-03-24 06:52:58 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-04-26 07:09:00 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-07-16 01:15:26 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-11-16 01:15:26 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-12-16 01:15:26 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 123.0 days (Expected ~30) between 1752653726 and 1763284526
+
+================================================================================
+
+Record #76 | Subscription ID: 5qe877FGfv7
+----------------------------------------
+  2025-03-21 12:05:52 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-20 12:05:54 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-20 12:05:53 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-28 12:05:53 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-19 12:05:53 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-27 12:05:53 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-17 12:05:53 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-16 12:05:54 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-16 12:05:53 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1758135953 and 1763323554
+
+================================================================================
+
+Record #77 | Subscription ID: 57Eq4YW1CKj
+----------------------------------------
+  2024-03-26 12:09:03 | Amt:   2.00 | 14-day history event recording monthly
+  2024-04-25 12:09:04 | Amt:   2.00 | 14-day history event recording monthly
+  2024-05-25 12:09:04 | Amt:   2.00 | 14-day history event recording monthly
+  2024-06-24 12:09:04 | Amt:   2.00 | 14-day history event recording monthly
+  2024-07-24 12:09:05 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-23 12:09:05 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-22 12:09:05 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-22 12:09:04 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-21 12:09:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-21 12:09:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-23 12:09:04 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-21 12:09:04 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-20 12:09:04 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-20 12:09:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-19 12:09:04 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-20 12:09:04 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-27 12:09:04 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-16 12:09:06 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-20 12:09:04 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 81.0 days (Expected ~30) between 1756321744 and 1763323746
+
+================================================================================
+
+Record #78 | Subscription ID: 58W28saFcH3
+----------------------------------------
+  2024-04-21 12:24:40 | Amt:   3.00 | 14-day history event recording monthly
+  2024-05-21 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  2024-06-20 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  2024-07-20 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  2024-08-22 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  2024-09-18 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  2024-11-18 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-25 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-15 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-17 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-16 12:24:42 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-16 12:24:42 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-15 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-15 12:26:07 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-14 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-13 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-16 12:24:41 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 64.0 days (Expected ~30) between 1757791481 and 1763324681
+
+================================================================================
+
+Record #79 | Subscription ID: 5wPj18zBCod
+----------------------------------------
+  2025-08-16 13:32:28 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-09-16 13:32:28 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-11-16 12:32:28 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-12-16 12:32:28 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 61.0 days (Expected ~30) between 1758054748 and 1763325148
+
+================================================================================
+
+Record #80 | Subscription ID: 5qehQu3oa8o
+----------------------------------------
+  2025-03-21 13:31:13 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-20 13:31:15 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-20 13:31:14 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-19 13:31:15 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-19 13:31:15 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-16 13:31:14 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-16 13:31:15 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 120.0 days (Expected ~30) between 1752957075 and 1763328674
+
+================================================================================
+
+Record #81 | Subscription ID: 5y216T1vQgS
+----------------------------------------
+  2025-08-28 04:36:48 | Amt:  10.00 | 14-day video history CVR recording pro monthly
+  2025-09-29 04:36:49 | Amt:  10.00 | 14-day video history CVR recording pro monthly
+  2025-11-16 13:53:42 | Amt:  10.00 | 14-day video history CVR recording pro monthly
+  GAP DETECTED: 48.4 days (Expected ~30) between 1759145809 and 1763330022
+
+================================================================================
+
+Record #82 | Subscription ID: 5qfKfnSyqfU
+----------------------------------------
+  2025-03-22 01:51:51 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-03 15:19:52 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-20 01:51:52 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-17 01:51:52 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-17 01:51:53 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 120.0 days (Expected ~30) between 1753001512 and 1763373112
+
+================================================================================
+
+Record #83 | Subscription ID: 53q7LrPrias
+----------------------------------------
+  2024-01-13 10:13:32 | Amt:   7.00 | 
+  2024-02-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-03-13 10:13:32 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-04-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-05-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-06-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-07-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-08-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-09-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-10-13 10:13:32 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-11-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-12-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-01-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-02-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-03-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-04-13 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-05-13 10:13:32 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-06-14 10:13:32 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-07-22 10:13:44 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-08-14 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-09-17 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-11-17 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-12-17 10:13:31 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 61.0 days (Expected ~30) between 1758129211 and 1763403211
+
+================================================================================
+
+Record #84 | Subscription ID: 5uk9gk5q8ko
+----------------------------------------
+  2025-06-13 14:48:44 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-07-17 14:48:45 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-08-17 14:48:45 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-09-13 14:48:45 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-11-17 13:48:45 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-12-13 13:48:46 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  GAP DETECTED: 65.0 days (Expected ~30) between 1757800125 and 1763416125
+
+================================================================================
+
+Record #85 | Subscription ID: 5c7jLuEVcfy
+----------------------------------------
+  2024-06-25 15:32:47 | Amt:   2.00 | 14-day history event recording monthly
+  2024-07-25 15:32:48 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-24 15:32:48 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-23 15:32:49 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-23 15:32:48 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-22 15:32:48 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-22 15:32:48 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-21 15:32:48 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-20 15:32:48 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-22 15:32:49 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-21 15:32:48 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-21 15:32:48 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-20 15:32:49 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-20 15:32:48 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-28 15:32:53 | Amt:   2.00 | 14-day history event recording monthly
+  2025-09-22 15:32:53 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-17 15:32:48 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 56.0 days (Expected ~30) between 1758580373 and 1763422368
+
+================================================================================
+
+Record #86 | Subscription ID: 56JNHEaTXYd
+----------------------------------------
+  2024-03-07 12:28:25 | Amt:   2.00 | 14-day history event recording monthly
+  2024-04-06 12:28:27 | Amt:   2.00 | 14-day history event recording monthly
+  2024-05-06 12:28:26 | Amt:   2.00 | 14-day history event recording monthly
+  2024-06-05 12:28:26 | Amt:   2.00 | 14-day history event recording monthly
+  2024-06-09 00:25:49 | Amt:   4.08 | 
+  2024-07-13 00:25:47 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-08-09 00:25:47 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-09-09 00:25:47 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-10-09 00:25:48 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-11-09 00:25:47 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-01-13 00:25:47 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-04-13 00:25:47 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-06-09 00:25:47 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-09-09 00:25:48 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-11-18 00:25:47 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 70.0 days (Expected ~30) between 1757402748 and 1763454347
+
+================================================================================
+
+Record #87 | Subscription ID: 5wqc6iWuMXo
+----------------------------------------
+  2025-07-26 09:27:40 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-18 05:41:16 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  GAP DETECTED: 114.9 days (Expected ~30) between 1753547260 and 1763473276
+
+================================================================================
+
+Record #88 | Subscription ID: 58kBicv8Pi3
+----------------------------------------
+  2024-04-23 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2024-05-23 09:33:47 | Amt:   3.00 | 14-day history event recording monthly
+  2024-06-22 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2024-07-22 09:33:47 | Amt:   3.00 | 14-day history event recording monthly
+  2024-08-21 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2024-09-20 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2024-10-20 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2024-11-19 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2024-12-19 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-18 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-21 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-19 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-18 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-18 09:33:47 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-17 09:33:47 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-17 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-25 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-15 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-18 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-14 09:33:46 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 64.0 days (Expected ~30) between 1757954026 and 1763487226
+
+================================================================================
+
+Record #89 | Subscription ID: 4ZFPSSb7E4J
+----------------------------------------
+  2023-11-18 12:42:47 | Amt:  23.00 | 
+  2025-11-18 12:42:48 | Amt:  23.00 | 14-day video history event recording annually  
+  GAP DETECTED: 731.0 days (Expected ~30) between 1700340167 and 1763498568
+
+================================================================================
+
+Record #90 | Subscription ID: 5jepvrUj9kA
+----------------------------------------
+  2024-11-18 14:00:34 | Amt:   5.00 | 30-day video history event recording monthly
+  2024-12-18 14:00:35 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-01-18 14:00:35 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-03-18 14:00:36 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-07-19 14:00:35 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-09-18 14:00:36 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-11-18 14:00:36 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-12-18 14:00:36 | Amt:   5.00 | 30-day video history event recording monthly
+  GAP DETECTED: 61.0 days (Expected ~30) between 1758229236 and 1763503236
+
+================================================================================
+
+Record #91 | Subscription ID: 5e1U99pfZpE
+----------------------------------------
+  2024-08-16 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-15 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-15 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-14 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-14 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-13 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-12 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-14 17:22:06 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-13 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-13 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-12 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-12 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-11 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-09-10 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-18 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-09 17:22:05 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 69.0 days (Expected ~30) between 1757550125 and 1763515325
+
+================================================================================
+
+Record #92 | Subscription ID: 5awSXKHen95
+----------------------------------------
+  2024-05-24 07:58:34 | Amt:   2.00 | 14-day history event recording monthly
+  2024-06-23 07:58:36 | Amt:   2.00 | 14-day history event recording monthly
+  2024-07-23 07:58:36 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-24 07:58:35 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-22 07:58:35 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-21 07:58:35 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-21 07:58:35 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-20 07:58:35 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-20 07:58:35 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-20 07:58:35 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-19 07:58:35 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-21 07:58:35 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-19 07:58:35 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-19 07:58:35 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 90.0 days (Expected ~30) between 1755788315 and 1763567915
+
+================================================================================
+
+Record #93 | Subscription ID: 5q86Z9Bn51Y
+----------------------------------------
+  2025-03-19 09:02:46 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  2025-07-23 09:02:47 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  2025-08-19 09:02:47 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  2025-09-28 09:02:47 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  2025-11-19 09:02:47 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  2025-12-19 09:02:47 | Amt:  14.00 | 14-day video history CVR recording AI monthly
+  GAP DETECTED: 52.0 days (Expected ~30) between 1759075367 and 1763571767
+
+================================================================================
+
+Record #94 | Subscription ID: 5gAc8WSNRnb
+----------------------------------------
+  2024-09-25 11:33:52 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-24 11:33:54 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-07 00:09:14 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-23 11:33:54 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-22 11:33:53 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-10 18:48:48 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-03 15:19:59 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-23 11:33:53 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-23 11:33:53 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-22 11:33:53 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-21 11:33:53 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-19 11:33:53 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-20 11:33:53 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 90.0 days (Expected ~30) between 1755801233 and 1763580833
+
+================================================================================
+
+Record #95 | Subscription ID: 5o8zcYVe7T3
+----------------------------------------
+  2025-03-19 12:11:52 | Amt:   6.00 | 30-day video history event recording monthly
+  2025-04-19 12:11:52 | Amt:   6.00 | 30-day video history event recording monthly
+  2025-07-19 12:11:52 | Amt:   6.00 | 30-day video history event recording monthly
+  2025-08-19 12:11:53 | Amt:   6.00 | 30-day video history event recording monthly
+  2025-09-19 12:11:52 | Amt:   6.00 | 30-day video history event recording monthly
+  2025-11-19 12:11:52 | Amt:   6.00 | 30-day video history event recording monthly
+  2025-12-19 12:11:52 | Amt:   6.00 | 30-day video history event recording monthly
+  GAP DETECTED: 61.0 days (Expected ~30) between 1758309112 and 1763583112
+
+================================================================================
+
+Record #96 | Subscription ID: 5ntd2DpQgqC
+----------------------------------------
+  2025-01-23 22:48:44 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-22 22:48:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-24 22:48:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-23 22:48:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-23 22:48:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-22 22:48:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-22 22:48:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-21 22:48:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-20 22:48:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-19 22:48:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-19 22:48:45 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1758433725 and 1763621325
+
+================================================================================
+
+Record #97 | Subscription ID: 5wC5jhN3G43
+----------------------------------------
+  2025-07-30 14:14:44 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-29 14:14:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-28 14:14:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-20 04:50:24 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 52.6 days (Expected ~30) between 1759094085 and 1763643024
+
+================================================================================
+
+Record #98 | Subscription ID: 5hsnxwh9EHw
+----------------------------------------
+  2024-10-26 05:09:01 | Amt:   3.00 | 14-day history event recording monthly
+  2024-11-25 05:09:02 | Amt:   3.00 | 14-day history event recording monthly
+  2024-12-25 05:09:01 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-24 05:09:01 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-23 05:09:01 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-25 05:09:01 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-24 05:09:02 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-24 05:09:02 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-23 05:09:01 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-23 05:09:01 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-22 05:09:01 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-21 05:09:01 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-20 05:09:01 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-20 05:09:01 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1758456541 and 1763644141
+
+================================================================================
+
+Record #99 | Subscription ID: 5jaU4ypmUyy
+----------------------------------------
+  2024-11-17 08:15:35 | Amt:  53.00 | 7-day video history CVR recording annually
+  2024-11-20 05:09:19 | Amt:  15.87 | 
+  2025-11-20 05:09:17 | Amt:  69.00 | 30-day video history event recording pro annually
+  GAP DETECTED: 365.0 days (Expected ~30) between 1732108159 and 1763644157
+
+================================================================================
+
+Record #100 | Subscription ID: 5kajQeWyZgo
+----------------------------------------
+  2024-12-20 15:18:55 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-01-24 15:18:55 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-02-20 15:18:55 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-03-20 15:18:55 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-04-20 15:18:55 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-05-20 15:18:55 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-06-20 15:18:55 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-07-20 15:18:55 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-08-20 15:18:55 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-09-20 15:18:55 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-11-20 15:18:56 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  2025-12-20 15:18:55 | Amt:   8.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 61.0 days (Expected ~30) between 1758406735 and 1763680736
+
+================================================================================
+
+Record #101 | Subscription ID: 5eyfiXadtGm
+----------------------------------------
+  2024-08-27 19:14:13 | Amt:   3.00 | 14-day history event recording monthly
+  2024-09-26 19:14:13 | Amt:   3.00 | 14-day history event recording monthly
+  2024-10-26 19:14:14 | Amt:   3.00 | 14-day history event recording monthly
+  2024-11-25 19:14:13 | Amt:   3.00 | 14-day history event recording monthly
+  2024-12-25 19:14:14 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-24 19:14:13 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-23 19:14:14 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-25 19:14:13 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-24 19:14:13 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-24 19:14:14 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-23 19:14:13 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-23 19:14:14 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-22 19:14:13 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-21 19:14:13 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-20 19:14:13 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-20 19:14:14 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1758507253 and 1763694853
+
+================================================================================
+
+Record #102 | Subscription ID: 5syaEnE4LF3
+----------------------------------------
+  2025-05-21 05:26:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-20 05:26:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-20 05:26:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-19 05:26:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-27 05:26:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-21 05:26:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-17 05:26:40 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 55.0 days (Expected ~30) between 1758976001 and 1763731600
+
+================================================================================
+
+Record #103 | Subscription ID: 5xFHK9qomQy
+----------------------------------------
+  2025-08-21 09:04:39 | Amt:   3.42 | 30-day video history event recording AI monthly
+  2025-09-21 09:04:38 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-11-21 08:04:39 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-12-21 08:04:39 | Amt:   9.00 | 30-day video history event recording AI monthly
+  GAP DETECTED: 61.0 days (Expected ~30) between 1758470678 and 1763741079
+
+================================================================================
+
+Record #104 | Subscription ID: 53vVowXUGiW
+----------------------------------------
+  2024-01-01 11:26:57 | Amt:   2.00 | 
+  2024-01-31 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2024-03-01 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2024-03-31 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2024-04-30 11:26:59 | Amt:   2.00 | 14-day history event recording monthly
+  2024-05-30 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2024-06-29 11:26:59 | Amt:   2.00 | 14-day history event recording monthly
+  2024-07-30 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-29 11:26:59 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-27 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2024-11-26 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2024-12-26 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2025-01-25 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2025-02-24 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-30 11:26:59 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-25 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-25 11:26:59 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-28 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-24 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-23 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2025-09-22 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-21 11:26:58 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1758565618 and 1763753218
+
+================================================================================
+
+Record #105 | Subscription ID: 5cJVUE8LqQQ
+----------------------------------------
+  2024-07-21 14:00:41 | Amt:   5.00 | 30-day video history event recording monthly
+  2024-08-21 14:00:41 | Amt:   5.00 | 30-day video history event recording monthly
+  2024-09-23 14:00:41 | Amt:   5.00 | 30-day video history event recording monthly
+  2024-11-21 14:00:41 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-01-25 14:00:41 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-03-21 14:00:41 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-04-21 14:00:41 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-05-25 14:00:41 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-06-21 14:00:41 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-07-22 14:00:51 | Amt:   5.00 | 30-day video history event recording monthly
+  2025-11-21 14:00:41 | Amt:   5.00 | 30-day video history event recording monthly
+  GAP DETECTED: 122.0 days (Expected ~30) between 1753218051 and 1763762441
+
+================================================================================
+
+Record #106 | Subscription ID: 5whArKfarsQ
+----------------------------------------
+  2025-07-23 17:01:32 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-08-27 17:02:10 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-09-23 17:02:04 | Amt:   8.00 | 30-day video history event recording AI monthly
+  2025-11-21 17:35:36 | Amt:   8.00 | 30-day video history event recording AI monthly
+  GAP DETECTED: 59.1 days (Expected ~30) between 1758672124 and 1763775336
+
+================================================================================
+
+Record #107 | Subscription ID: 5pS1kwRrcL5
+----------------------------------------
+  2025-03-27 01:00:04 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-26 01:00:08 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-26 01:00:04 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-25 01:00:04 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-25 01:00:13 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-24 01:00:05 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-23 01:00:05 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-22 01:00:07 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-22 01:00:04 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1758614405 and 1763802007
+
+================================================================================
+
+Record #108 | Subscription ID: 4ZRLrgWubGG
+----------------------------------------
+  2023-11-22 01:01:21 | Amt:  26.00 | 
+  2025-11-22 01:01:21 | Amt:  26.00 | 14-day video history event recording annually  
+  GAP DETECTED: 731.0 days (Expected ~30) between 1700643681 and 1763802081
+
+================================================================================
+
+Record #109 | Subscription ID: 5p3BZixzZgw
+----------------------------------------
+  2025-02-25 06:06:45 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-27 06:06:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-26 06:06:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-26 06:06:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-25 06:06:47 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-25 06:06:49 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-24 06:06:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-23 06:06:46 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-22 06:06:47 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-22 06:06:46 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 60.0 days (Expected ~30) between 1758632806 and 1763820407
+
+================================================================================
+
+Record #110 | Subscription ID: 4ZSGMdpznA1
+----------------------------------------
+  2023-11-22 07:58:09 | Amt:  23.00 | 
+  2025-11-22 07:58:09 | Amt:  23.00 | 14-day video history event recording annually  
+  GAP DETECTED: 731.0 days (Expected ~30) between 1700668689 and 1763827089
+
+================================================================================
+
+Record #111 | Subscription ID: 5bXbkVYrKXW
+----------------------------------------
+  2024-06-22 09:59:00 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-07-22 09:59:01 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-08-22 09:59:02 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-09-22 09:59:02 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-10-22 09:59:01 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-11-22 09:59:01 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-12-22 09:59:01 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-01-22 09:59:02 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-02-22 09:59:01 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-03-31 17:36:14 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-04-30 14:22:10 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-06-26 09:59:02 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-07-26 09:59:02 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-08-22 09:59:01 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-09-26 09:59:01 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-11-22 09:59:01 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 57.0 days (Expected ~30) between 1758905941 and 1763834341
+
+================================================================================
+
+Record #112 | Subscription ID: 5ixL7f22ro9
+----------------------------------------
+  2024-11-19 13:46:15 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-12-18 13:46:15 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-01-18 13:46:15 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-02-18 13:46:15 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-03-18 13:46:16 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-04-18 13:46:15 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-06-18 13:46:16 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-07-18 13:46:15 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-08-19 13:46:16 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-09-19 13:46:15 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-11-22 13:46:15 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-12-22 13:46:15 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 64.0 days (Expected ~30) between 1758314775 and 1763847975
+
+================================================================================
+
+Record #113 | Subscription ID: 5yHukMBQ9fC
+----------------------------------------
+  2025-09-11 11:59:39 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-22 19:29:45 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  GAP DETECTED: 72.4 days (Expected ~30) between 1757617179 and 1763868585
+
+================================================================================
+
+Record #114 | Subscription ID: 59T7SaK3RFE
+----------------------------------------
+  2024-05-10 23:43:14 | Amt:  26.00 | 14-day video history event recording annually  
+  2024-11-23 00:27:09 | Amt:  56.58 | 
+  2025-11-23 00:27:08 | Amt:  69.00 | 30-day video history event recording pro annually
+  GAP DETECTED: 365.0 days (Expected ~30) between 1732350429 and 1763886428
+
+================================================================================
+
+Record #115 | Subscription ID: 59QmabKHCbm
+----------------------------------------
+  2024-05-10 00:13:14 | Amt:  26.00 | 14-day video history event recording annually  
+  2024-11-23 00:28:04 | Amt:  57.27 | 
+  2025-11-23 00:28:03 | Amt:  69.00 | 30-day video history event recording pro annually
+  GAP DETECTED: 365.0 days (Expected ~30) between 1732350484 and 1763886483
+
+================================================================================
+
+Record #116 | Subscription ID: 5fjBB2Kw2cw
+----------------------------------------
+  2024-08-30 11:31:38 | Amt:   3.00 | 14-day history event recording monthly
+  2024-09-29 11:31:39 | Amt:   3.00 | 14-day history event recording monthly
+  2024-11-28 11:31:39 | Amt:   3.00 | 14-day history event recording monthly
+  2024-12-28 11:31:39 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-27 11:31:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-26 11:31:39 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-28 11:31:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-27 11:31:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-27 11:31:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-26 11:31:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-26 11:31:39 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-25 11:31:39 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-03 11:31:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-23 11:31:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-23 11:31:39 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 51.0 days (Expected ~30) between 1759516301 and 1763926300
+
+================================================================================
+
+Record #117 | Subscription ID: 5rpaJHRrheW
+----------------------------------------
+  2025-04-27 13:12:35 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-27 13:12:36 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-30 13:12:35 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-25 13:12:35 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-23 13:12:35 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 90.0 days (Expected ~30) between 1756152755 and 1763932355
+
+================================================================================
+
+Record #118 | Subscription ID: 5A4kkeT99ZE
+----------------------------------------
+  2025-10-09 00:13:00 | Amt:  11.00 | 14-day video history CVR recording AI monthly
+  2025-11-24 01:38:05 | Amt:  11.00 | 14-day video history CVR recording AI monthly
+  GAP DETECTED: 46.1 days (Expected ~30) between 1759993980 and 1763977085
+
+================================================================================
+
+Record #119 | Subscription ID: 5jKmAZBiSef
+----------------------------------------
+  2024-11-29 04:01:24 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-08 00:14:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-14 19:04:50 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-14 15:22:33 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-27 04:01:25 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-27 04:01:25 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-24 04:01:25 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 120.0 days (Expected ~30) between 1753614085 and 1763985685
+
+================================================================================
+
+Record #120 | Subscription ID: 5twZsN35ULY
+----------------------------------------
+  2025-05-28 07:23:11 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-28 07:23:12 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-05 07:23:12 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-26 07:23:15 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-24 07:23:13 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-24 07:23:13 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 90.0 days (Expected ~30) between 1756218195 and 1763997793
+
+================================================================================
+
+Record #121 | Subscription ID: 4ZYmSgZ1ysL
+----------------------------------------
+  2023-11-24 07:56:43 | Amt:   6.00 | 
+  2023-12-24 07:56:42 | Amt:   6.00 | 
+  2024-01-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-02-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-03-24 07:56:43 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-04-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-05-24 07:56:45 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-06-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-07-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-08-24 07:56:43 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-09-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-10-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-11-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-12-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-01-24 07:56:43 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-02-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-03-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-04-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-05-24 07:56:43 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-06-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-07-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-08-24 07:56:46 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-09-28 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-11-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-12-24 07:56:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 57.0 days (Expected ~30) between 1759071402 and 1763999802
+
+================================================================================
+
+Record #122 | Subscription ID: 5wPkybzfrz3
+----------------------------------------
+  2025-08-03 13:46:06 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-03 13:46:07 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-24 08:29:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-01 12:46:07 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 51.8 days (Expected ~30) between 1759524367 and 1764001796
+
+================================================================================
+
+Record #123 | Subscription ID: 5sHvw4oYv55
+----------------------------------------
+  2025-05-24 12:40:48 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-06-24 12:40:47 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-07-24 12:40:47 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-08-24 12:40:47 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-09-24 12:40:47 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-11-24 12:40:47 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-12-24 12:40:47 | Amt:   9.00 | 30-day video history event recording AI monthly
+  GAP DETECTED: 61.0 days (Expected ~30) between 1758742847 and 1764016847
+
+================================================================================
+
+Record #124 | Subscription ID: 5yGdiaMyPcW
+----------------------------------------
+  2025-09-25 01:09:59 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-11-25 00:09:59 | Amt:   9.00 | 30-day video history event recording AI monthly
+  2025-12-25 00:09:59 | Amt:   9.00 | 30-day video history event recording AI monthly
+  GAP DETECTED: 61.0 days (Expected ~30) between 1758787799 and 1764058199
+
+================================================================================
+
+Record #125 | Subscription ID: 5hoZGNinVQm
+----------------------------------------
+  2024-10-25 00:30:46 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-11-25 00:30:46 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-12-25 00:30:47 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-01-25 00:30:46 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-02-25 00:30:46 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-03-29 00:30:46 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-05-29 00:30:46 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-08-29 00:30:46 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-11-25 00:30:47 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-12-25 00:30:46 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 88.0 days (Expected ~30) between 1756452646 and 1764059447
+
+================================================================================
+
+Record #126 | Subscription ID: 54FK7D2rZKE
+----------------------------------------
+  2024-01-25 10:40:26 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-02-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-03-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-04-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-05-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-06-25 10:40:28 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-08-03 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-08-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-09-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-10-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-11-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-03-06 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-03-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-05-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-06-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-07-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-09-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-25 10:40:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  GAP DETECTED: 61.0 days (Expected ~30) between 1758822027 and 1764096027
+
+================================================================================
+
+Record #127 | Subscription ID: 5jPKWvFENFS
+----------------------------------------
+  2024-11-30 17:21:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-02 17:21:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-28 17:21:42 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-30 17:21:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-29 17:21:42 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-29 17:21:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-28 17:21:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-01 17:21:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-05 17:21:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-30 17:21:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-25 17:21:41 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 56.0 days (Expected ~30) between 1759278101 and 1764120101
+
+================================================================================
+
+Record #128 | Subscription ID: 5anexzaKigf
+----------------------------------------
+  2024-06-18 04:46:08 | Amt:   3.00 | 14-day history event recording monthly
+  2024-07-03 23:10:25 | Amt:   3.00 | 14-day history event recording monthly
+  2024-08-02 23:10:25 | Amt:   3.00 | 14-day history event recording monthly
+  2024-09-01 23:10:24 | Amt:   3.00 | 14-day history event recording monthly
+  2024-10-01 23:10:24 | Amt:   3.00 | 14-day history event recording monthly
+  2024-10-31 23:10:25 | Amt:   3.00 | 14-day history event recording monthly
+  2024-11-30 23:10:25 | Amt:   3.00 | 14-day history event recording monthly
+  2024-12-30 23:10:25 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-29 23:10:24 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-28 23:10:24 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-30 23:10:24 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-29 23:10:25 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-29 23:10:24 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-28 23:10:24 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-28 23:10:24 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-25 23:10:24 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-25 23:10:24 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 120.0 days (Expected ~30) between 1753769424 and 1764141024
+
+================================================================================
+
+Record #129 | Subscription ID: 5hD1771nDCu
+----------------------------------------
+  2024-10-16 23:18:34 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-11-16 23:18:35 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2024-12-16 23:18:35 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-01-20 23:18:35 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-02-16 23:18:36 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-03-16 23:18:36 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-04-20 23:18:35 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-05-25 23:18:37 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-06-20 23:18:35 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-08-16 23:18:35 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-25 23:18:35 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  GAP DETECTED: 101.0 days (Expected ~30) between 1755411515 and 1764141515
+
+================================================================================
+
+Record #130 | Subscription ID: 5opNQHGr4zj
+----------------------------------------
+  2025-03-01 05:53:31 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-04-03 05:53:31 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-04-25 05:53:32 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-05-29 05:53:31 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-07-25 05:53:31 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-10-04 05:53:33 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-11-26 05:53:31 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  2025-12-25 05:53:31 | Amt:   6.00 | 7-day video history CVR recording monthly 
+  GAP DETECTED: 53.0 days (Expected ~30) between 1759582413 and 1764165211
+
+================================================================================
+
+Record #131 | Subscription ID: 5bGXg2fWmZo
+----------------------------------------
+  2024-06-30 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  2024-07-30 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  2024-08-29 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  2024-09-28 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  2024-10-28 09:19:57 | Amt:   3.00 | 14-day history event recording monthly
+  2024-11-27 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  2024-12-27 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-01-26 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-02-25 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-03-27 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-04-26 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-26 09:19:57 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-25 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-25 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-26 09:19:56 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 124.0 days (Expected ~30) between 1753460396 and 1764177596
+
+================================================================================
+
+Record #132 | Subscription ID: 5i7B9yfMysU
+----------------------------------------
+  2024-10-26 17:25:42 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-01-26 17:25:43 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-02-27 17:25:44 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-03-27 17:25:43 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-04-26 17:25:43 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-05-26 17:25:43 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-06-26 17:25:44 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-07-26 17:25:43 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-08-26 17:25:44 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-09-26 17:25:43 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-11-26 17:25:44 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-12-26 17:25:43 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 61.0 days (Expected ~30) between 1758932743 and 1764206744
+
+================================================================================
+
+Record #133 | Subscription ID: 5ygZ8gHWgGU
+----------------------------------------
+  2025-09-02 11:41:24 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-02 11:41:25 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-27 09:41:29 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 56.0 days (Expected ~30) between 1759430485 and 1764265289
+
+================================================================================
+
+Record #134 | Subscription ID: 5AfBwp6DvSy
+----------------------------------------
+  2025-10-12 23:52:44 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-27 13:09:09 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-12-13 06:16:04 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  GAP DETECTED: 45.6 days (Expected ~30) between 1760338364 and 1764277749
+
+================================================================================
+
+Record #135 | Subscription ID: 5u6ZBfGbBwY
+----------------------------------------
+  2025-06-08 23:17:25 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-07-08 23:17:27 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-08-08 23:17:26 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-09-08 23:17:26 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-10-08 23:17:26 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-11-28 01:42:32 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  2025-12-08 22:17:26 | Amt:   5.00 | 7-day video history CVR recording monthly 
+  GAP DETECTED: 50.1 days (Expected ~30) between 1759990646 and 1764322952
+
+================================================================================
+
+Record #136 | Subscription ID: 5qaofBc57X3
+----------------------------------------
+  2025-08-04 04:23:15 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-30 04:23:14 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-08 04:23:14 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-28 04:23:14 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 51.0 days (Expected ~30) between 1759922594 and 1764332594
+
+================================================================================
+
+Record #137 | Subscription ID: 54PT9KyBJMf
+----------------------------------------
+  2024-01-28 07:41:58 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-02-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-03-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-04-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-05-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-06-28 07:42:00 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-07-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-08-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-09-28 07:42:00 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-10-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-11-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-12-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-01-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-02-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-03-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-04-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-05-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-06-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-07-29 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-08-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-09-28 07:41:59 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-11-28 07:42:00 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 61.0 days (Expected ~30) between 1759070519 and 1764344520
+
+================================================================================
+
+Record #138 | Subscription ID: 5arAPTPFS2o
+----------------------------------------
+  2024-06-05 12:12:39 | Amt:   2.00 | 14-day history event recording monthly
+  2024-07-05 12:12:39 | Amt:   2.00 | 14-day history event recording monthly
+  2024-08-04 12:12:39 | Amt:   2.00 | 14-day history event recording monthly
+  2024-09-03 12:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2024-10-04 12:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-03-02 12:12:39 | Amt:   2.00 | 14-day history event recording monthly
+  2025-04-05 12:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-01 12:12:39 | Amt:   2.00 | 14-day history event recording monthly
+  2025-05-31 12:12:39 | Amt:   2.00 | 14-day history event recording monthly
+  2025-06-30 12:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-07-30 12:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-08-29 12:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-10-07 12:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-11-28 12:12:38 | Amt:   2.00 | 14-day history event recording monthly
+  2025-12-27 12:12:39 | Amt:   2.00 | 14-day history event recording monthly
+  GAP DETECTED: 52.0 days (Expected ~30) between 1759864358 and 1764360758
+
+================================================================================
+
+Record #139 | Subscription ID: 5wKt5LSy98J
+----------------------------------------
+  2025-08-02 04:56:39 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-01 04:56:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-01 04:56:40 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-28 13:07:00 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-30 03:56:41 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-30 03:56:40 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 58.4 days (Expected ~30) between 1759319800 and 1764364020
+
+================================================================================
+
+Record #140 | Subscription ID: 5d7eb4f5raj
+----------------------------------------
+  2024-07-29 02:38:35 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-08-29 02:38:36 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-09-29 02:38:36 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-10-29 02:38:35 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-11-29 02:38:35 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2024-12-29 02:38:35 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-01-29 02:38:35 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-02-28 02:38:35 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-03-29 02:38:35 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-04-29 02:38:36 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-05-29 02:38:36 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-06-29 02:38:35 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-07-29 02:38:35 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-08-29 02:38:35 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-09-29 02:38:36 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-11-29 02:38:35 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  2025-12-29 02:38:36 | Amt:   6.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 61.0 days (Expected ~30) between 1759138716 and 1764412715
+
+================================================================================
+
+Record #141 | Subscription ID: 5qgwd89oSP3
+----------------------------------------
+  2025-04-04 08:26:19 | Amt:   3.00 | 14-day history event recording monthly
+  2025-05-04 08:26:19 | Amt:   3.00 | 14-day history event recording monthly
+  2025-06-03 08:26:20 | Amt:   3.00 | 14-day history event recording monthly
+  2025-07-03 08:26:19 | Amt:   3.00 | 14-day history event recording monthly
+  2025-08-02 08:26:31 | Amt:   3.00 | 14-day history event recording monthly
+  2025-09-02 08:26:20 | Amt:   3.00 | 14-day history event recording monthly
+  2025-10-10 08:26:19 | Amt:   3.00 | 14-day history event recording monthly
+  2025-11-30 08:26:20 | Amt:   3.00 | 14-day history event recording monthly
+  2025-12-30 08:26:20 | Amt:   3.00 | 14-day history event recording monthly
+  GAP DETECTED: 51.0 days (Expected ~30) between 1760109979 and 1764519980
+
+================================================================================
+
+Record #142 | Subscription ID: 4ZrTtrnQsmy
+----------------------------------------
+  2023-10-30 14:30:02 | Amt:   7.00 | 
+  2023-11-30 14:30:04 | Amt:   7.00 | 
+  2023-12-30 14:30:03 | Amt:   7.00 | 
+  2024-01-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-02-29 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-03-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-04-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-05-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-06-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-07-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-08-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-09-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-10-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-11-30 14:30:04 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2024-12-30 14:30:04 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-01-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-02-28 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-03-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-04-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-05-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-06-30 14:30:04 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-08-30 14:30:03 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-09-30 14:30:04 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  2025-11-30 14:30:06 | Amt:   7.00 | 30-day video history event recording pro monthly 
+  GAP DETECTED: 61.0 days (Expected ~30) between 1759267804 and 1764541806
+
+================================================================================
+

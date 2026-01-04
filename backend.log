@@ -532,3 +532,263 @@ INFO:     Finished server process [94488]
 INFO:     Started server process [95315]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'deduplicate_orders.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [95315]
+INFO:     Started server process [6469]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'deduplicate_orders.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6469]
+INFO:     Started server process [6960]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'deduplicate_orders.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6960]
+INFO:     Started server process [7120]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'deduplicate_orders.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7120]
+INFO:     Started server process [7133]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'deduplicate_orders.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7133]
+INFO:     Started server process [7146]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'deduplicate_orders.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7146]
+INFO:     Started server process [7153]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'deduplicate_orders.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7153]
+INFO:     Started server process [7254]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'deduplicate_orders.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7254]
+INFO:     Started server process [7346]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'deduplicate_orders.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7346]
+INFO:     Started server process [7449]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'debug_calculate_sequence.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7449]
+INFO:     Started server process [11415]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'backfill_order_sequence.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11415]
+INFO:     Started server process [11779]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'backfill_order_sequence.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11779]
+INFO:     Started server process [11792]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'backfill_order_sequence.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11792]
+INFO:     Started server process [11804]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'backfill_order_sequence.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11804]
+INFO:     Started server process [11812]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'backfill_order_sequence.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11812]
+INFO:     Started server process [11912]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'debug_update_user_times.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11912]
+INFO:     Started server process [12873]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'debug_update_user_times.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12873]
+INFO:     Started server process [12968]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'debug_update_user_times.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12968]
+INFO:     Started server process [13061]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13061]
+INFO:     Started server process [13342]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13342]
+INFO:     Started server process [13348]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Backend initialized. Schema file: /Users/petercheng/Desktop/code/bi-1/backend/bi_schema.json
+Reports file: /Users/petercheng/Desktop/code/bi-1/backend/bi_reports.json
+INFO:     127.0.0.1:64931 - "GET /api/reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64932 - "GET /api/schema HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64932 - "GET /api/schema HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64943 - "GET /api/reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64944 - "GET /api/schema HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64943 - "GET /api/reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64943 - "OPTIONS /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64944 - "OPTIONS /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64959 - "OPTIONS /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64960 - "OPTIONS /api/query HTTP/1.1" 200 OK
+Executing SQL: 
+        SELECT 
+            DATE_FORMAT(pay_time, '%Y-%m') as x_result, 
+            SUM(cny_amount) as y_result 
+        FROM `Fact_Order`
+        
+     GROUP BY x_result ORDER BY x_result | Params: []
+Executing SQL: 
+        SELECT 
+            DATE_FORMAT(join_date, '%Y-%m') as x_result, 
+            COUNT(uid) as y_result 
+        FROM `Dim_User`
+        
+     GROUP BY x_result ORDER BY x_result | Params: []
+Executing SQL: 
+        SELECT 
+            DATE_FORMAT(join_date, '%Y-%m') as x_result, 
+            COUNT(uid) as y_result 
+        FROM `Dim_User`
+        
+     GROUP BY x_result ORDER BY x_result | Params: []
+INFO:     127.0.0.1:64950 - "GET /api/schema HTTP/1.1" 200 OK
+Executing SQL: 
+        SELECT 
+            DATE_FORMAT(pay_time, '%Y-%m') as x_result, 
+            SUM(cny_amount) as y_result 
+        FROM `Fact_Order`
+        
+     GROUP BY x_result ORDER BY x_result | Params: []
+INFO:     127.0.0.1:64958 - "GET /api/filter-values/Dim_User/app_key HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64950 - "GET /api/filter-values/Dim_User/region_key HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64958 - "GET /api/filter-values/Dim_User/app_key HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64958 - "GET /api/filter-values/Dim_User/region_key HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64944 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64960 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64943 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64959 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65005 - "GET /api/reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65006 - "GET /api/schema HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65005 - "GET /api/schema HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65015 - "GET /api/reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65022 - "GET /api/reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65016 - "GET /api/schema HTTP/1.1" 200 OK
+Executing SQL: 
+        SELECT 
+            DATE_FORMAT(join_date, '%Y-%m') as x_result, 
+            COUNT(uid) as y_result 
+        FROM `Dim_User`
+        
+     GROUP BY x_result ORDER BY x_result | Params: []
+Executing SQL: 
+        SELECT 
+            DATE_FORMAT(pay_time, '%Y-%m') as x_result, 
+            SUM(cny_amount) as y_result 
+        FROM `Fact_Order`
+        
+     GROUP BY x_result ORDER BY x_result | Params: []
+Executing SQL: 
+        SELECT 
+            DATE_FORMAT(join_date, '%Y-%m') as x_result, 
+            COUNT(uid) as y_result 
+        FROM `Dim_User`
+        
+     GROUP BY x_result ORDER BY x_result | Params: []
+Executing SQL: 
+        SELECT 
+            DATE_FORMAT(pay_time, '%Y-%m') as x_result, 
+            SUM(cny_amount) as y_result 
+        FROM `Fact_Order`
+        
+     GROUP BY x_result ORDER BY x_result | Params: []
+INFO:     127.0.0.1:65016 - "GET /api/schema HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65029 - "GET /api/filter-values/Dim_User/app_key HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65016 - "GET /api/filter-values/Dim_User/region_key HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65029 - "GET /api/filter-values/Dim_User/app_key HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65029 - "GET /api/filter-values/Dim_User/region_key HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65026 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65022 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65015 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65030 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65076 - "GET /api/reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65077 - "GET /api/schema HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65076 - "GET /api/schema HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13348]
+INFO:     Stopping reloader process [73268]
